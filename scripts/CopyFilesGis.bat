@@ -1,7 +1,7 @@
 rem Script to copy all files necessary for QMS (GISInternals version)
 
-del /s/q Files
-mkdir Files
+del /s/q ..\msvc_64\Files
+mkdir ..\msvc_64\Files
 
 rem Include user settings
 call CopyFilesGis_add.bat
@@ -114,6 +114,6 @@ copy ..\..\LICENSE 1LICENSE.txt
 rem Copy qt.conf -----------------------------------------------------------
 copy ..\qt.conf
 
-cd ..
+cd ..\..\scripts
 
 pause

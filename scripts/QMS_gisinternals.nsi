@@ -76,15 +76,15 @@
 ;!define MUI_COMPONENTSPAGE_SMALLDESC ;No value
 !define MUI_INSTFILESPAGE_COLORS "FFFFFF 000000" ;Two colors
 
-!define MUI_ICON   "QMapShack.ico"
-!define MUI_UNICON "QMapShack.ico"
+!define MUI_ICON   "..\msvc_64\QMapShack.ico"
+!define MUI_UNICON "..\msvc_64\QMapShack.ico"
 
 !define MUI_HEADERIMAGE
-!define MUI_HEADERIMAGE_BITMAP   "MUI_HEADERIMAGE.bmp"
-!define MUI_HEADERIMAGE_UNBITMAP "MUI_HEADERIMAGE.bmp"
+!define MUI_HEADERIMAGE_BITMAP   "..\msvc_64\MUI_HEADERIMAGE.bmp"
+!define MUI_HEADERIMAGE_UNBITMAP "..\msvc_64\MUI_HEADERIMAGE.bmp"
 
-!define MUI_WELCOMEFINISHPAGE_BITMAP "MUI_WELCOMEFINISHPAGE.bmp"
-!define MUI_UNWELCOMEFINISHPAGE_BITMAP "MUI_WELCOMEFINISHPAGE.bmp"
+!define MUI_WELCOMEFINISHPAGE_BITMAP "..\msvc_64\MUI_WELCOMEFINISHPAGE.bmp"
+!define MUI_UNWELCOMEFINISHPAGE_BITMAP "..\msvc_64\MUI_WELCOMEFINISHPAGE.bmp"
 
 ; Page welcome description
 !define MUI_WELCOMEPAGE_TITLE "QMapShack "
@@ -107,7 +107,7 @@
 
   !insertmacro MUI_PAGE_WELCOME  
   !insertmacro MUI_PAGE_LICENSE "..\LICENSE"
-  !insertmacro MUI_PAGE_LICENSE "LICENSE_Gisinternals.txt"
+  !insertmacro MUI_PAGE_LICENSE "..\msvc_64\LICENSE_Gisinternals.txt"
   !insertmacro MUI_PAGE_COMPONENTS
   !insertmacro MUI_PAGE_DIRECTORY
   Var StartMenuFolder
@@ -152,7 +152,7 @@
 Section "MSVC++ 2022 Runtime" MSVC
 
   SetOutPath $INSTDIR
-  File Files\VC_redist.x64.exe
+  File ..\msvc_64\Files\VC_redist.x64.exe
   ExecWait '"$INSTDIR\VC_redist.x64.exe"'
   Delete "$INSTDIR\VC_redist.x64.exe"
   
@@ -172,66 +172,67 @@ Section "QMapShack/QMapTool" QMapShack
   
   ;BEGIN QMapShack Files    
   SetOutPath $INSTDIR
-    File Files\*.*
-    File LICENSE_Gisinternals.txt
+    File ..\msvc_64\Files\*.*
+    File ..\msvc_64\LICENSE_Gisinternals.txt
+    File ..\scripts\QMSCommit.log
 
   SetOutPath "$INSTDIR\translations"
-    File Files\translations\qmapshack_*.qm
-    File Files\translations\qmaptool_*.qm
-    File Files\translations\qmt_rgb2pct_*.qm
+    File ..\msvc_64\Files\translations\qmapshack_*.qm
+    File ..\msvc_64\Files\translations\qmaptool_*.qm
+    File ..\msvc_64\Files\translations\qmt_rgb2pct_*.qm
 
   SetOutPath "$INSTDIR\doc\HTML"
-    File Files\doc\HTML\QMSHelp.qch
-    File Files\doc\HTML\QMSHelp.qhc
-    File Files\doc\HTML\QMTHelp.qch
-    File Files\doc\HTML\QMTHelp.qhc
+    File ..\msvc_64\Files\doc\HTML\QMSHelp.qch
+    File ..\msvc_64\Files\doc\HTML\QMSHelp.qhc
+    File ..\msvc_64\Files\doc\HTML\QMTHelp.qch
+    File ..\msvc_64\Files\doc\HTML\QMTHelp.qhc
 
   SetOutPath "$INSTDIR\doc\HTML\.QMSHelp"
-    File Files\doc\HTML\.QMSHelp\fts
+    File ..\msvc_64\Files\doc\HTML\.QMSHelp\fts
 
   SetOutPath "$INSTDIR\doc\HTML\.QMTHelp"
-    File Files\doc\HTML\.QMTHelp\fts
+    File ..\msvc_64\Files\doc\HTML\.QMTHelp\fts
  
   SetOutPath "$INSTDIR\imageformats\"
-    File Files\imageformats\qgif.dll
-    File Files\imageformats\qjpeg.dll
-    File Files\imageformats\qsvg.dll
-    File Files\imageformats\qtiff.dll
-    File Files\imageformats\qico.dll
-    File Files\imageformats\qtga.dll
+    File ..\msvc_64\Files\imageformats\qgif.dll
+    File ..\msvc_64\Files\imageformats\qjpeg.dll
+    File ..\msvc_64\Files\imageformats\qsvg.dll
+    File ..\msvc_64\Files\imageformats\qtiff.dll
+    File ..\msvc_64\Files\imageformats\qico.dll
+    File ..\msvc_64\Files\imageformats\qtga.dll
 
   SetOutPath "$INSTDIR\sqldrivers\"
-    File Files\sqldrivers\qsqlite.dll
-    File Files\sqldrivers\qsqlmysql.dll
-    File Files\sqldrivers\qsqlodbc.dll
-    File Files\sqldrivers\qsqlpsql.dll
+    File ..\msvc_64\Files\sqldrivers\qsqlite.dll
+    File ..\msvc_64\Files\sqldrivers\qsqlmysql.dll
+    File ..\msvc_64\Files\sqldrivers\qsqlodbc.dll
+    File ..\msvc_64\Files\sqldrivers\qsqlpsql.dll
 
   SetOutPath "$INSTDIR\platforms\"
-    File Files\platforms\qwindows.dll
+    File ..\msvc_64\Files\platforms\qwindows.dll
 
   SetOutPath "$INSTDIR\printsupport\"
-    File Files\printsupport\windowsprintersupport.dll
+    File ..\msvc_64\Files\printsupport\windowsprintersupport.dll
     
   SetOutPath "$INSTDIR\translations"
-    File Files\translations\qt*.qm
+    File ..\msvc_64\Files\translations\qt*.qm
 
   SetOutPath "$INSTDIR\translations\qtwebengine_locales"
-    File Files\translations\qtwebengine_locales\*.pak
+    File ..\msvc_64\Files\translations\qtwebengine_locales\*.pak
 
   SetOutPath "$INSTDIR\resources"
-    File Files\resources\*.*
+    File ..\msvc_64\Files\resources\*.*
  
   SetOutPath "$INSTDIR\data\"
-    File /r Files\data\*.*
+    File /r ..\msvc_64\Files\data\*.*
 
   SetOutPath "$INSTDIR\gdalplugins"
-    File Files\gdalplugins\*.dll    
+    File ..\msvc_64\Files\gdalplugins\*.dll    
 
   SetOutPath "$INSTDIR\share\"
-    File /r Files\share\*.*
+    File /r ..\msvc_64\Files\share\*.*
 
   SetOutPath "$INSTDIR\routino-xml\"
-    File /r Files\routino-xml\*.*
+    File /r ..\msvc_64\Files\routino-xml\*.*
 
 
   SetOutPath $INSTDIR

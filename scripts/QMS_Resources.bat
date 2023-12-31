@@ -23,5 +23,5 @@ for %%a in (qmapshack qmaptool) do (
    echo #include "QMS_resources.h"     >> QMS_tmp.rc
    
    %RH%  -open QMS_tmp.rc -save QMS_tmp.res -action compile -log con
-   %RH%  -open .\Files\!vector1[%%i]!.exe -save .\Files\!vector1[%%i]!.exe -action addoverwrite -resource QMS_tmp.res -log con
+   %RH%  -open ..\msvc_64\Files\!vector1[%%i]!.exe -save ..\msvc_64\Files\!vector1[%%i]!.exe -action addoverwrite -resource QMS_tmp.res -log con
 )) 
