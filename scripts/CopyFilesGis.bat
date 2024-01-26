@@ -110,6 +110,7 @@ cd ..
 rem Copy 3rd party SW description and LICENSE ----------------------------
 copy ..\3rdparty.txt
 copy ..\..\LICENSE 1LICENSE.txt
+copy ..\..\scripts\QMSCommit.log
 
 rem Copy qt.conf -----------------------------------------------------------
 copy ..\qt.conf
