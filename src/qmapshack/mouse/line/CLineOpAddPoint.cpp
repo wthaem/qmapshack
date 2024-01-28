@@ -62,6 +62,7 @@ bool CLineOpAddPoint::abortStep() {
 }
 
 void CLineOpAddPoint::leftClick(const QPoint& pos) {
+    qDebug() << "OpAddpoint";
   if (idxFocus == NOIDX) {
     return;
   }
@@ -69,7 +70,9 @@ void CLineOpAddPoint::leftClick(const QPoint& pos) {
   if (addPoint) {
     // drop the new point at current position
     // update subpoints of previous and this point
+    qDebug() << "OpAddpoint before slot";
     slotTimeoutRouting();
+    qDebug() << "OpAddpoint after slot";
 
     // if isPoint is true the line has been appended/prepended
     // in this case go on with adding another point
@@ -115,7 +118,9 @@ void CLineOpAddPoint::leftClick(const QPoint& pos) {
 
     addPoint = true;
   }
+  qDebug() << "OpAddpoint before complupd";
   canvas->slotTriggerCompleteUpdate(CCanvas::eRedrawMouse);
+  qDebug() << "OpAddpoint after complupd";
 }
 
 void CLineOpAddPoint::mouseMove(const QPoint& pos) {

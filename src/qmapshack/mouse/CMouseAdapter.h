@@ -25,6 +25,9 @@
 #include <QPoint>
 #include <QPointer>
 
+#include <QDebug>
+
+
 #include "canvas/CCanvas.h"
 
 class CCanvas;

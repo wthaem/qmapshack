@@ -48,9 +48,7 @@ CMapTMS::CMapTMS(const QString& filename, CMapDraw* parent) : IMapOnline(parent)
   qDebug() << "------------------------------";
   qDebug() << "TMS: try to open" << filename;
 
-  proj.init(
-      "EPSG:3857",
-      "EPSG:4326");
+  proj.init("EPSG:3857", "EPSG:4326");
 
   qDebug() << "tms:" << proj.getProjSrc();
 
@@ -104,6 +102,17 @@ CMapTMS::CMapTMS(const QString& filename, CMapDraw* parent) : IMapOnline(parent)
 
     layers[idx].strUrl = xmlLayer.namedItem("ServerUrl").toElement().text();
     layers[idx].script = xmlLayer.namedItem("Script").toElement().text();
+
+    layers[idx].crs = xmlLayer.namedItem("CRS").toElement().text();
+    layers[idx].proj.init(layers[idx].crs.toStdString().c_str(), "+proj=longlat +datum=WGS84 +no_defs +type=crs");
+
+    qDebug() << layers[idx].crs.toStdString().c_str() << layers[idx].proj.getProjTar() << layers[idx].proj.isValid();
+
+    if(!layers[idx].proj.isValid())
+        {
+         qDebug() << "***Not valid!***";
+        }
+
     layers[idx].minZoomLevel = minZoomLevel;
     layers[idx].maxZoomLevel = maxZoomLevel;
 
@@ -159,8 +168,9 @@ void CMapTMS::getLayers(QListWidget& list) /* override */
     int i = 0;
     for (const layer_t& layer : qAsConst(layers)) {
       QListWidgetItem* item = new QListWidgetItem(layer.title, &list);
-      item->setCheckState(layer.enabled ? Qt::Checked : Qt::Unchecked);
+      int enabled = layer.enabled;
       item->setData(Qt::UserRole, i++);
+      item->setCheckState(enabled ? Qt::Checked : Qt::Unchecked);
     }
 
     connect(&list, &QListWidget::itemChanged, this, &CMapTMS::slotLayersChanged);
@@ -258,15 +268,91 @@ QString CMapTMS::createUrl(const layer_t& layer, int x, int y, int z) {
     args << z << x << y;
     QJSValue res = fun.call(args);
     return res.toString();
-  } else if (!layer.script.isEmpty()) {
+  } 
+  
+   else if (!layer.script.isEmpty()) {
+
+        if (layer.crs.isEmpty())
+        {
+
     QJSEngine engine;
     QJSValue fun = engine.evaluate(layer.script);
+
+       if(fun.isError())
+        {
+            qDebug() << "Uncaught exception at line"
+                     << fun.property("lineNumber").toInt()
+                     << ":" << fun.toString();
+        }
+
 
     QJSValueList args;
     args << z << x << y;
     QJSValue res = fun.call(args);
-    return res.toString();
-  }
+        
+        {
+            qDebug() << res.toString();
+        }    
+        
+         return res.toString();
+        }
+        
+        else     // WT part with CRS tag in TMS
+        {
+
+         // x = 5;
+         // y = 3;
+         // z = 3;
+         QPointF pt1(tile2lon(x, z)* DEG_TO_RAD, tile2lat(y + 1, z)* DEG_TO_RAD);  // <=== ???? should be deg?
+         QPointF pt2(tile2lon(x + 1, z)* DEG_TO_RAD,tile2lat(y, z)* DEG_TO_RAD);
+
+         //QPointF pt1(tile2lon(x, z), tile2lat(y + 1, z));  // <=== ???? should be deg?
+         //QPointF pt2(tile2lon(x + 1, z),tile2lat(y, z));
+
+         //QPointF pt1(tile2lat(y + 1, z), tile2lon(x, z));  // <=== ????  deg?
+         //QPointF pt2(tile2lat(y, z), tile2lon(x + 1, z));
+
+         {
+            qDebug() << "4326 coords:" << pt1.x() << pt1.y() << pt2.x() << pt2.y() << x << y << z;  // 
+         }  
+        
+         layer.proj.transform(pt1, PJ_INV);      // transform 4326 ==> TMS CRS
+         layer.proj.transform(pt2, PJ_INV);
+
+        {
+            qDebug() << "target coords:" << pt1.x() << pt1.y() << pt2.x() << pt2.y() << x << y << z;
+        }  
+  
+        QJSEngine engine;
+        QJSValue fun = engine.evaluate(layer.script);
+
+       if(fun.isError())
+        {
+            qDebug() << "Uncaught exception at line"
+                     << fun.property("lineNumber").toInt()
+                     << ":" << fun.toString();
+        }
+
+        QJSValueList args;
+        
+        if (layer.crs.startsWith("+proj=longlat") || layer.crs.startsWith("+proj=latlong"))
+        {
+            args << pt1.x() * RAD_TO_DEG << pt1.y() * RAD_TO_DEG << pt2.x() * RAD_TO_DEG << pt2.y() * RAD_TO_DEG;            
+            //args << pt1.x() << pt1.y() << pt2.x() << pt2.y();
+
+        } 
+        else
+        {            
+            args << pt1.x() << pt1.y() << pt2.x() << pt2.y();
+        }    
+        QJSValue res = fun.call(args);           // expects target coordinates (degrees or meters)
+        
+        {
+            qDebug() << "final URL:" << res.toString() << x << y << z;
+        }    
+            return res.toString();
+        }
+     }
 
   return layer.strUrl.arg(z).arg(x).arg(y);
 }
@@ -345,16 +431,20 @@ void CMapTMS::draw(IDrawContext::buffer_t& buf) /* override */
 
     //        qDebug() << col1 << col2 << row1 << row2 << (col2 - col1) << (row2 - row1) << ((col2 - col1) * (row2 -
     //        row1));
+        qDebug() << "Col/row info:" << col1 << col2 << row1 << row2 << (col2 - col1) << (row2 - row1) << ((col2 - col1) * (row2 - row1));
 
     // start to request tiles. draw tiles in cache, queue urls of tile yet to be requested
     for (qint32 row = row1; row <= row2; row++) {
       for (qint32 col = col1; col <= col2; col++) {
         QString url = createUrl(layer, col, row, z);
         //                qDebug() << url;
+                qDebug() << "URL4draw:" << url;
 
         if (diskCache->contains(url)) {
           QImage img;
           diskCache->restore(url, img);
+          qDebug() << "cached url";
+
 
           QPolygonF l;
 
@@ -364,8 +454,12 @@ void CMapTMS::draw(IDrawContext::buffer_t& buf) /* override */
           qreal yy2 = tile2lat(row + 1, z) * DEG_TO_RAD;
 
           l << QPointF(xx1, yy1) << QPointF(xx2, yy1) << QPointF(xx2, yy2) << QPointF(xx1, yy2);
+                   qDebug() << xx1* RAD_TO_DEG << yy1* RAD_TO_DEG << QPointF(xx2, yy1) << QPointF(xx2, yy2) << QPointF(xx1, yy2);
+
           drawTile(img, l, p);
         } else {
+                qDebug() << "loaded url";
+
           urlQueue << url;
         }
       }

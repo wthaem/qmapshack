@@ -118,11 +118,12 @@ static void readFitLocation(const CFitMessage& mesg, IGisItem::wpt_t& wpt) {
   wpt.sym = "Default";
 }
 
-QString wptIconNames[26]{"Default",     "Summit",      "Valley",       "Water",       "Food",        "Danger",
-                         "Left",        "Right",       "Straight",     "FirstAid",    "4thCategory", "3rdCategory",
-                         "2ndCategory", "1stCategory", "HorsCategory", "Sprint",      "LeftFork",    "RightFork",
-                         "MiddleFork",  "SlightLeft",  "SharpLeft",    "SlightRight", "SharpRight",  "UTurn",
-                         "Start",       "End"};
+QString wptIconNames[53]{"Default", "Summit", "Valley", "Water", "Food", "Danger", "Left", "Right", "Straight", "FirstAid", 
+"4thCategory", "3rdCategory", "2ndCategory", "1stCategory", "HorsCategory", "Sprint", "LeftFork", "RightFork", "MiddleFork", 
+"SlightLeft", "SharpLeft", "SlightRight", "SharpRight", "UTurn", "Start", "End", "Campsite", "Aid_station", "Rest_area", 
+"General_distance", "Service", "Energy_gel", "Sports_drink", "Mile_marker", "Checkpoint", "Shelter", "Meeting_spot", "Overlook", 
+"Toilet", "Shower", "Gear", "Sharp_curve", "Steep_incline", "Tunnel", "Bridge", "Obstacle", "Crossing", "Store", "Transition", 
+"Navaid", "Transport", "Alert", "Info"};
 
 static void readFitCoursePoint(const CFitMessage& mesg, IGisItem::wpt_t& wpt) {
   if (mesg.isFieldValueValid(eCoursePointName)) {

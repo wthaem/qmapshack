@@ -54,6 +54,9 @@ class CMapTMS : public IMapOnline {
     QString title;
     QString strUrl;
     QString script;
+        QString crs;
+        CProj proj;
+    
   };
 
   QVector<layer_t> layers;

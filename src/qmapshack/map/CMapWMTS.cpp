@@ -78,7 +78,14 @@ CMapWMTS::CMapWMTS(const QString& filename, CMapDraw* parent) : IMapOnline(paren
   // read setup of all layers
   const QDomNode& xmlContents = xmlCapabilities.namedItem("Contents");
   const QDomNodeList& xmlLayers = xmlContents.toElement().elementsByTagName("Layer");
-  const int N = xmlLayers.count();
+  //const int N = xmlLayers.count();
+  
+    int N = xmlLayers.count();
+    if (xmlLayers.count() > 10)
+    {
+        N = 10;
+    }    
+  
   for (int n = 0; n < N; n++) {
     QString str;
     QStringList values;
@@ -260,8 +267,9 @@ void CMapWMTS::getLayers(QListWidget& list) {
     int i = 0;
     for (const layer_t& layer : qAsConst(layers)) {
       QListWidgetItem* item = new QListWidgetItem(layer.title, &list);
-      item->setCheckState(layer.enabled ? Qt::Checked : Qt::Unchecked);
+      bool enabled = layer.enabled;
       item->setData(Qt::UserRole, i++);
+      item->setCheckState(enabled ? Qt::Checked : Qt::Unchecked);
     }
 
     connect(&list, &QListWidget::itemChanged, this, &CMapWMTS::slotLayersChanged);
@@ -478,6 +486,8 @@ void CMapWMTS::draw(IDrawContext::buffer_t& buf) /* override */
         url = url.replace("{TileMatrix}", tileMatrixId, Qt::CaseInsensitive);
         url = url.replace("{TileRow}", QString::number(row), Qt::CaseInsensitive);
         url = url.replace("{TileCol}", QString::number(col), Qt::CaseInsensitive);
+
+        qDebug() << "URL4draw:" << url;
 
         if (diskCache->contains(url)) {
           QImage img;

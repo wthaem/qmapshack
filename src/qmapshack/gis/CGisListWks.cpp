@@ -900,6 +900,8 @@ void CGisListWks::slotLoadWorkspace() {
   slotGeoSearch(static_cast<QAction*>(CMainWindow::self().findChild<QAction*>("actionGeoSearch"))->isChecked());
 
   for (const QString& filename : qlOpts->arguments) {
+     qDebug() << "loading argument file '" + filename;
+
     CGisWorkspace::self().loadGisProject(filename);
   }
 
