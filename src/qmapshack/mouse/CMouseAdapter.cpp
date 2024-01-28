@@ -42,6 +42,8 @@ void CMouseAdapter::unfocus() { delegate->unfocus(); }
 
 void CMouseAdapter::mousePressEvent(QMouseEvent* e) {
   // set firstPos and mouseDidMove to suppress small movements when clicking
+  
+    qDebug() << "enter CMouseAdapter::mousepressEvent";  
   startMouseMove(e->pos());
   buttonPressTime.start();
   if (e->button() == Qt::LeftButton) {
@@ -53,10 +55,12 @@ void CMouseAdapter::mousePressEvent(QMouseEvent* e) {
   }
   // make sure a click is actually shorter than longButtonPressTimeout
   ignoreClick = false;
+   qDebug() << "leave CMouseAdapter::mousepressEvent";  
 }
 
 void CMouseAdapter::mouseMoveEvent(QMouseEvent* e) {
   const QPoint& pos = e->pos();
+
 
   // do not take the mouse as moving unless it has been moved
   // by significant distance away from starting point.
@@ -68,6 +72,7 @@ void CMouseAdapter::mouseMoveEvent(QMouseEvent* e) {
   }
 
   if (mouseDidMove) {
+      
     if (e->buttons() & Qt::LeftButton) {
       delegate->mouseDragged(firstPos, lastPos, pos);
     } else {
@@ -76,9 +81,12 @@ void CMouseAdapter::mouseMoveEvent(QMouseEvent* e) {
   }
 
   lastPos = pos;
+  
 }
 
 void CMouseAdapter::mouseReleaseEvent(QMouseEvent* e) {
+    
+  qDebug() << "enter CMouseAdapter::mouseReleaseEvent";  
   longPressTimer->stop();
   if (e->button() == Qt::LeftButton) {
     // suppress clicks when mouse was moved for more a few pixel
@@ -91,6 +99,7 @@ void CMouseAdapter::mouseReleaseEvent(QMouseEvent* e) {
     }
   }
 
+  qDebug() << "leave CMouseAdapter::mouseReleaseEvent";  
   mouseDidMove = false;
 }
 

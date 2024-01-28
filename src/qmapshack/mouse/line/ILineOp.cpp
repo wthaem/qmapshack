@@ -202,8 +202,12 @@ void ILineOp::startDelayedRouting() {
 
 void ILineOp::slotTimeoutRouting() {
   timerRouting->stop();
+  qDebug() << "ILineOp: before finalize";
+  
   finalizeOperation(idxFocus);
-  canvas->slotTriggerCompleteUpdate(CCanvas::eRedrawMouse);
+  qDebug() << "ILineOp: after finalize";
+    canvas->slotTriggerCompleteUpdate(CCanvas::eRedrawMouse);
+    qDebug() << "ILineop: after triggerupdate";
 }
 
 void ILineOp::drawBg(QPainter& p) {
@@ -327,10 +331,14 @@ void ILineOp::tryRouting(IGisLine::point_t& pt1, IGisLine::point_t& pt2) const {
     }
     showRoutingErrorMessage(QString());
   } catch (const QString& msg) {
+        qDebug() << "ILineOp: catch";
+
     showRoutingErrorMessage(msg);
   }
   // that is a workaround for canvas loosing mouse tracking caused by CProgressDialog being modal:
   canvas->setMouseTracking(true);
+    qDebug() << "ILineOp: after setmousetracking";
+
 }
 
 void ILineOp::finalizeOperation(qint32 idx) {
@@ -341,9 +349,13 @@ void ILineOp::finalizeOperation(qint32 idx) {
   if (parentHandler->useAutoRouting()) {
     CCanvasCursorLock cursorLock(Qt::WaitCursor, __func__);
     if (idx > 0) {
+  qDebug() << "ILineOp: before tryrouting1";
+          
       tryRouting(points[idx - 1], points[idx]);
     }
     if (idx < (points.size() - 1)) {
+  qDebug() << "ILineOp: before tryrouting2";
+
       tryRouting(points[idx], points[idx + 1]);
     }
   } else if (parentHandler->useVectorRouting() || parentHandler->useTrackRouting()) {

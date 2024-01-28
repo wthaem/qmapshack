@@ -18,6 +18,7 @@
 
 #include "CRouterBRouterToolShell.h"
 
+#include <QDebug>
 #include <QTimer>
 
 CRouterBRouterToolShell::CRouterBRouterToolShell(QTextBrowser* textBrowser, QWidget* parent) : IToolShell(parent) {
@@ -34,11 +35,21 @@ void CRouterBRouterToolShell::start(const QString& dir, const QString& command, 
   stdOut("cd " + dir);
   stdOut(command + " " + args.join(" ") + "\n");
   cmd.setWorkingDirectory(dir);
+  
+  qDebug() << "dir:" << dir;
+  qDebug() << "args:" << args;
+  qDebug() << "command:" << command;
+
   cmd.start(command, args);
+  
+    qDebug() << "after cmd.start";
+    
   cmd.waitForStarted();
+    qDebug() << "after waitforstarted" ;
 }
 
 void CRouterBRouterToolShell::stop() {
+    qDebug() << "shell::stop" << cmd.state();  
   if (cmd.state() != QProcess::NotRunning) {
     isBeingStopped = true;
 #ifdef USE_KILL_FOR_SHUTDOWN
@@ -52,6 +63,9 @@ void CRouterBRouterToolShell::stop() {
 }
 
 void CRouterBRouterToolShell::slotStateChanged(const QProcess::ProcessState newState) {
+
+    qDebug() << "shell:slotstatechanged" << newState; 
+
   if (newState == QProcess::NotRunning && !isBeingStopped) {
     emit sigProcessError(QProcess::FailedToStart, text->toPlainText());
   }
@@ -59,6 +73,8 @@ void CRouterBRouterToolShell::slotStateChanged(const QProcess::ProcessState newS
 }
 
 void CRouterBRouterToolShell::slotError(const QProcess::ProcessError error) {
+    
+qDebug() << "shell::sloterror" << isBeingKilled << "  " << cmd.errorString();     
   if (isBeingKilled) {
     return;
   }
@@ -66,6 +82,8 @@ void CRouterBRouterToolShell::slotError(const QProcess::ProcessError error) {
 }
 
 void CRouterBRouterToolShell::finished(const int exitCode, const QProcess::ExitStatus status) {
+    
+qDebug() << "shell::finished:" << status;     
   if (status == QProcess::ExitStatus::NormalExit) {
     text->setTextColor(Qt::darkGreen);
     text->append(tr("!!! done !!!\n"));

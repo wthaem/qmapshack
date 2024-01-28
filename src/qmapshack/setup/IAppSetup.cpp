@@ -25,9 +25,11 @@
 #include "setup/CAppSetupMac.h"
 #elif defined(Q_OS_LINUX) || defined(Q_OS_FREEBSD) || defined(__FreeBSD_kernel__) || defined(__GNU__)
 #include "setup/CAppSetupLinux.h"
+
 #elif defined(Q_OS_WIN32)
 #include "setup/CAppSetupWin.h"
 #endif
+
 
 #include "setup/CLogHandler.h"
 

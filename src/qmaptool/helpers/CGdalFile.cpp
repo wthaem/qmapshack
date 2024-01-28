@@ -42,7 +42,7 @@ void CGdalFile::load(const QString& filename) {
   dataset = (GDALDataset*)GDALOpenShared(filename.toUtf8(), GA_ReadOnly);
 
   if (nullptr == dataset) {
-    QMessageBox::warning(canvas, tr("Error..."), tr("Failed to load file: %1").arg(filename));
+    QMessageBox::warning(canvas, tr("Error..."), tr("Failed to load file: %1. GDALOpen failed").arg(filename));
     return;
   }
 
@@ -53,7 +53,7 @@ void CGdalFile::load(const QString& filename) {
   if (nullptr == pBand) {
     GDALClose(dataset);
     dataset = nullptr;
-    QMessageBox::warning(canvas, tr("Error..."), tr("Failed to load file: %1").arg(filename));
+    QMessageBox::warning(canvas, tr("Error..."), tr("Failed to load file: %1. Missing bands").arg(filename));
     return;
   }
   hasOverviews = pBand->GetOverviewCount();

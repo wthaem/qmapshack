@@ -284,6 +284,8 @@ QNetworkRequest CRouterBRouter::getRequest(const QVector<QPointF>& routePoints, 
 }
 
 int CRouterBRouter::calcRoute(const QPointF& p1, const QPointF& p2, QPolygonF& coords, qreal* costs) {
+    
+  qDebug() << "hasfastrouting:" << hasFastRouting();  
   if (!hasFastRouting()) {
     return -1;
   }
@@ -293,6 +295,7 @@ int CRouterBRouter::calcRoute(const QPointF& p1, const QPointF& p2, QPolygonF& c
   QList<IGisItem*> nogos;
   CGisWorkspace::self().getNogoAreas(nogos);
 
+  qDebug() << "points:" << points;
   return synchronousRequest(points, nogos, coords, costs);
 }
 
@@ -303,48 +306,62 @@ int CRouterBRouter::synchronousRequest(const QVector<QPointF>& points, const QLi
     return -1;
   }
 
+  qDebug() << "after mutex";
   if (setup->installMode == CRouterBRouterSetup::eModeLocal && localBRouter->isBRouterNotRunning()) {
     localBRouter->startBRouter();
   }
 
+  qDebug() << "after startbrouter";
   synchronous = true;
 
   QNetworkReply* reply = networkAccessManager->get(getRequest(points, nogos));
 
+  qDebug() << "after reply";
   try {
+      
+      
     reply->setProperty("options", getOptions());
     reply->setProperty("time", QDateTime::currentDateTimeUtc().toMSecsSinceEpoch());
 
     CProgressDialog progress(tr("Calculate route with %1").arg(getOptions()), 0, NOINT, nullptr);
 
+      qDebug() << "after progress";
     QEventLoop eventLoop;
     connect(&progress, &CProgressDialog::rejected, reply, &QNetworkReply::abort);
     connect(reply, &QNetworkReply::finished, &eventLoop, &QEventLoop::quit);
     eventLoop.exec(QEventLoop::AllEvents);
 
     const QNetworkReply::NetworkError& netErr = reply->error();
+      qDebug() << "after networkerror";
     if (netErr == QNetworkReply::RemoteHostClosedError && nogos.size() > 1 && !isMinimumVersion(1, 4, 10)) {
+          qDebug() << "before throw1";
       throw tr("this version of BRouter does not support more then 1 nogo-area");
     } else if (netErr != QNetworkReply::NoError) {
+          qDebug() << "before throw2: " << netErr << " " << reply->errorString();
       throw reply->errorString();
     }
+      qDebug() << "before slotclearerror";
     slotClearError();
 
+      qDebug() << "after clearerror";
     const QByteArray& res = reply->readAll();
 
     if (res.isEmpty()) {
       throw tr("response is empty");
     }
 
+  qDebug() << "after res.isempty";
     QDomDocument xml;
     xml.setContent(res);
     const QDomElement& xmlGpx = xml.documentElement();
 
     if (xmlGpx.isNull() || xmlGpx.tagName() != "gpx") {
+        qDebug() << "before throw3";
       throw QString(res);
     }
     setup->parseBRouterVersion(xmlGpx.attribute("creator"));
 
+qDebug() << "after router version";
     // read the shape
     const QDomNodeList& xmlLatLng =
         xmlGpx.firstChildElement("trk").firstChildElement("trkseg").elementsByTagName("trkpt");
@@ -356,6 +373,7 @@ int CRouterBRouter::synchronousRequest(const QVector<QPointF>& points, const QLi
       point.setY(elem.attribute("lat").toFloat() * DEG_TO_RAD);
     }
 
+    qDebug() << "before costs";
     // find costs of route (copied and adapted from CGisItemRte::setResultFromBrouter)
     if (costs != nullptr) {
       const QDomNodeList& nodes = xml.childNodes();
@@ -380,11 +398,15 @@ int CRouterBRouter::synchronousRequest(const QVector<QPointF>& points, const QLi
         break;
       }
     }
+    qDebug() << "after costs";
   } catch (const QString& msg) {
+      qDebug() << "catch";
     coords.clear();
     if (!msg.isEmpty()) {
       reply->deleteLater();
+      qDebug() << "before mutex unlock";
       mutex.unlock();
+      qDebug() << "after mutex unlock - before throw4. msg: " << msg;
       throw tr("Bad response from server: %1").arg(msg);
     }
   }
@@ -392,6 +414,8 @@ int CRouterBRouter::synchronousRequest(const QVector<QPointF>& points, const QLi
   reply->deleteLater();
   slotCloseStatusMsg();
   mutex.unlock();
+  
+    qDebug() << "after mutex unlock";
   return coords.size();
 }
 
