@@ -150,7 +150,8 @@ class CMapIMG : public IMap {
     QPoint pt;
     QRect rect;
     QString str;
-    CGarminTyp::label_type_e type = CGarminTyp::eStandard;
+    CGarminTyp::point_property property;
+    bool isNight = false;
   };
 
   quint8 scale2bits(const QPointF& scale);
@@ -165,7 +166,7 @@ class CMapIMG : public IMap {
                   bool fast, const QRectF& viewport, polytype_t& polylines, polytype_t& polygons, pointtype_t& points,
                   pointtype_t& pois);
   bool intersectsWithExistingLabel(const QRect& rect) const;
-  void addLabel(const CGarminPoint& pt, const QRect& rect, CGarminTyp::label_type_e type);
+  void addLabel(const CGarminPoint& pt, const QRect& rect, const CGarminTyp::point_property& property, bool isDay);
   void drawPolygons(QPainter& p, polytype_t& lines);
   void drawPolylines(QPainter& p, polytype_t& lines, const QPointF& scale);
   void drawPoints(QPainter& p, pointtype_t& pts, QVector<QRectF>& rectPois);

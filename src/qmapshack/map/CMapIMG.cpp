@@ -1797,7 +1797,8 @@ bool CMapIMG::intersectsWithExistingLabel(const QRect& rect) const {
   return false;
 }
 
-void CMapIMG::addLabel(const CGarminPoint& pt, const QRect& rect, CGarminTyp::label_type_e type) {
+void CMapIMG::addLabel(const CGarminPoint& pt, const QRect& rect, const CGarminTyp::point_property& property,
+                       bool isNight) {
   QString str;
   if (pt.hasLabel()) {
     str = pt.getLabelText();
@@ -1808,22 +1809,18 @@ void CMapIMG::addLabel(const CGarminPoint& pt, const QRect& rect, CGarminTyp::la
   strlbl.pt = pt.pos.toPoint();
   strlbl.str = str;
   strlbl.rect = rect;
-  strlbl.type = type;
+  strlbl.property = property;
+  strlbl.isNight = isNight;
 }
 
 void CMapIMG::drawPoints(QPainter& p, pointtype_t& pts, QVector<QRectF>& rectPois) {
   pointtype_t::iterator pt = pts.begin();
   while (pt != pts.end()) {
-    //        if((pt->type > 0x1600) && (zoomFactor > CResources::self().getZoomLevelThresholdPois()))
-    //        {
-    //            ++pt;
-    //            continue;
-    //        };
-
     map->convertRad2Px(pt->pos);
 
-    const QImage& icon =
-        CMainWindow::self().isNight() ? pointProperties[pt->type].imgNight : pointProperties[pt->type].imgDay;
+    const CGarminTyp::point_property& property = pointProperties[pt->type];
+
+    const QImage& icon = CMainWindow::self().isNight() ? property.imgNight : property.imgDay;
     const QSizeF& size = icon.size();
 
     if (isCluttered(rectPois, QRectF(pt->pos, size))) {
@@ -1838,12 +1835,8 @@ void CMapIMG::drawPoints(QPainter& p, pointtype_t& pts, QVector<QRectF>& rectPoi
 
     bool showLabel = true;
 
-    if (pointProperties.contains(pt->type)) {
-      p.drawImage(pt->pos.x() - (size.width() / 2), pt->pos.y() - (size.height() / 2), icon);
-      showLabel = pointProperties[pt->type].labelType != CGarminTyp::eNone;
-    } else {
-      p.drawPixmap(pt->pos.x() - 4, pt->pos.y() - 4, QPixmap(":/icons/8x8/bullet_blue.png"));
-    }
+    p.drawImage(pt->pos.x() - (size.width() / 2), pt->pos.y() - (size.height() / 2), icon);
+    showLabel = property.labelType != CGarminTyp::eNone;
 
     if (CMainWindow::self().isPoiText() && showLabel) {
       // calculate bounding rectangle with a border of 2 px
@@ -1853,7 +1846,7 @@ void CMapIMG::drawPoints(QPainter& p, pointtype_t& pts, QVector<QRectF>& rectPoi
 
       // if no intersection was found, add label to list
       if (!intersectsWithExistingLabel(rect)) {
-        addLabel(*pt, rect, CGarminTyp::eStandard);
+        addLabel(*pt, rect, property, CMainWindow::self().isNight());
       }
     }
     ++pt;
@@ -1861,13 +1854,11 @@ void CMapIMG::drawPoints(QPainter& p, pointtype_t& pts, QVector<QRectF>& rectPoi
 }
 
 void CMapIMG::drawPois(QPainter& p, pointtype_t& pts, QVector<QRectF>& rectPois) {
-  CGarminTyp::label_type_e labelType = CGarminTyp::eStandard;
-
   for (CGarminPoint& pt : pts) {
     map->convertRad2Px(pt.pos);
 
-    const QImage& icon =
-        CMainWindow::self().isNight() ? pointProperties[pt.type].imgNight : pointProperties[pt.type].imgDay;
+    const CGarminTyp::point_property& property = pointProperties[pt.type];
+    const QImage& icon = CMainWindow::self().isNight() ? property.imgNight : property.imgDay;
     const QSizeF& size = icon.size();
 
     if (isCluttered(rectPois, QRectF(pt.pos, size))) {
@@ -1879,13 +1870,7 @@ void CMapIMG::drawPois(QPainter& p, pointtype_t& pts, QVector<QRectF>& rectPois)
       continue;
     }
 
-    labelType = CGarminTyp::eStandard;
-    if (pointProperties.contains(pt.type)) {
-      p.drawImage(pt.pos.x() - (size.width() / 2), pt.pos.y() - (size.height() / 2), icon);
-      labelType = pointProperties[pt.type].labelType;
-    } else {
-      p.drawPixmap(pt.pos.x() - 4, pt.pos.y() - 4, QPixmap(":/icons/8x8/bullet_red.png"));
-    }
+    p.drawImage(pt.pos.x() - (size.width() / 2), pt.pos.y() - (size.height() / 2), icon);
 
     if (CMainWindow::self().isPoiText()) {
       // calculate bounding rectangle with a border of 2 px
@@ -1895,7 +1880,7 @@ void CMapIMG::drawPois(QPainter& p, pointtype_t& pts, QVector<QRectF>& rectPois)
 
       // if no intersection was found, add label to list
       if (!intersectsWithExistingLabel(rect)) {
-        addLabel(pt, rect, labelType);
+        addLabel(pt, rect, property, CMainWindow::self().isNight());
       }
     }
   }
@@ -1908,7 +1893,8 @@ void CMapIMG::drawLabels(QPainter& p, const QVector<strlbl_t>& lbls) {
   fonts[CGarminTyp::eLarge].setPointSize(f.pointSize() + 2);
 
   for (const strlbl_t& lbl : lbls) {
-    CDraw::text(lbl.str, p, lbl.pt, Qt::black, fonts[lbl.type]);
+    CDraw::text(lbl.str, p, lbl.pt, lbl.isNight ? lbl.property.colorLabelNight : lbl.property.colorLabelDay,
+                fonts[lbl.property.labelType]);
   }
 }
 
