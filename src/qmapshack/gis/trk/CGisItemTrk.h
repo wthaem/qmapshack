@@ -911,7 +911,6 @@ class CGisItemTrk : public IGisItem, public IGisLine {
   struct interpolate_t {
     bool valid = false;
     quality_e Q = eQualityCoarse;
-    alglib::ae_int_t info = -1;
     alglib::ae_int_t m = 0;
     alglib::spline1dinterpolant p;
     alglib::spline1dfitreport rep;
