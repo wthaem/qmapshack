@@ -40,15 +40,8 @@ CMapRMAP::CMapRMAP(const QString& filename, CMapDraw* parent) : IMap(eFeatVisibi
   QByteArray charbuf(20, 0);
   stream.readRawData(charbuf.data(), 19);
 
-  QString str = "CompeGPSRasterImage";
-  
-  QString substring = QString(charbuf).left(19); 
-  QString substring1 = str.left(19); 
-  
-//  if (substring != substring1) { <=============== WT
-  // if (str.toUtf8() != charbuf) {
-  // if (QString("CompeGPSRasterImage") != QString(charbuf)) {
-  if ( "CompeGPSRasterImage" != QString(charbuf.data())){    
+
+  if ("CompeGPSRasterImage" != QString(charbuf.data())) {
     QMessageBox::warning(CMainWindow::getBestWidgetForParent(), tr("Error..."), tr("This is not a TwoNav RMAP file."),
                          QMessageBox::Abort, QMessageBox::Abort); 
     return;
