@@ -23,6 +23,10 @@
 #include "map/CMapDraw.h"
 #include "version.h"
 
+#include <QDebug>
+
+
+
 CDiskCache::CDiskCache(const QString& path, qint32 maxSizeMB, qint32 expirationDays, QObject* parent)
     : QObject(parent), dir(path), maxSizeMB(maxSizeMB), expirationDays(expirationDays) {
   dummy.fill(Qt::transparent);
@@ -59,6 +63,9 @@ void CDiskCache::store(const QString& key, QImage& img) {
 
   if (!img.isNull()) {
     img.save(dir.absoluteFilePath(filename));
+    
+    qDebug() << "Cached tile:" << key << ". File:" << dir.absoluteFilePath(filename);
+    
     table[hash] = filename;
     cache[hash] = img;
   } else {
