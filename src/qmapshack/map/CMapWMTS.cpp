@@ -79,6 +79,15 @@ CMapWMTS::CMapWMTS(const QString& filename, CMapDraw* parent) : IMapOnline(paren
   const QDomNode& xmlContents = xmlCapabilities.namedItem("Contents");
   const QDomNodeList& xmlLayers = xmlContents.toElement().elementsByTagName("Layer");
   const int N = xmlLayers.count();
+  
+    int N = xmlLayers.count();
+    if (xmlLayers.count() > 10)
+    {
+        N = 10;
+    }    
+    
+  
+  
   for (int n = 0; n < N; n++) {
     QString str;
     QStringList values;
