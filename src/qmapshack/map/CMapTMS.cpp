@@ -102,6 +102,18 @@ CMapTMS::CMapTMS(const QString& filename, CMapDraw* parent) : IMapOnline(parent)
 
     layers[idx].strUrl = xmlLayer.namedItem("ServerUrl").toElement().text();
     layers[idx].script = xmlLayer.namedItem("Script").toElement().text();
+    
+    layers[idx].crs = xmlLayer.namedItem("CRS").toElement().text();
+    layers[idx].proj.init(layers[idx].crs.toStdString().c_str(), "+proj=longlat +datum=WGS84 +no_defs +type=crs");
+
+    qDebug() << layers[idx].crs.toStdString().c_str() << layers[idx].proj.getProjTar() << layers[idx].proj.isValid();
+
+    if(!layers[idx].proj.isValid())
+        {
+         qDebug() << "***Not valid!***";
+        }    
+    
+    
     layers[idx].minZoomLevel = minZoomLevel;
     layers[idx].maxZoomLevel = maxZoomLevel;
 
@@ -257,15 +269,86 @@ QString CMapTMS::createUrl(const layer_t& layer, int x, int y, int z) {
     args << z << x << y;
     QJSValue res = fun.call(args);
     return res.toString();
-  } else if (!layer.script.isEmpty()) {
+  } 
+  
+  else if (!layer.script.isEmpty()) {
+      
+      if (layer.crs.isEmpty())
+        {
     QJSEngine engine;
     QJSValue fun = engine.evaluate(layer.script);
+
+      if(fun.isError())
+        {
+            qDebug() << "Uncaught exception at line"
+                     << fun.property("lineNumber").toInt()
+                     << ":" << fun.toString();
+        }
 
     QJSValueList args;
     args << z << x << y;
     QJSValue res = fun.call(args);
-    return res.toString();
-  }
+
+             return res.toString();
+        }
+     }
+
+        else     // WT part with CRS tag in TMS
+        {
+
+         // x = 5;
+         // y = 3;
+         // z = 3;
+         QPointF pt1(tile2lon(x, z)* DEG_TO_RAD, tile2lat(y + 1, z)* DEG_TO_RAD);  // <=== ???? should be deg?
+         QPointF pt2(tile2lon(x + 1, z)* DEG_TO_RAD,tile2lat(y, z)* DEG_TO_RAD);
+
+         //QPointF pt1(tile2lon(x, z), tile2lat(y + 1, z));  // <=== ???? should be deg?
+         //QPointF pt2(tile2lon(x + 1, z),tile2lat(y, z));
+
+         //QPointF pt1(tile2lat(y + 1, z), tile2lon(x, z));  // <=== ????  deg?
+         //QPointF pt2(tile2lat(y, z), tile2lon(x + 1, z));
+
+         {
+            qDebug() << "4326 coords:" << pt1.x() << pt1.y() << pt2.x() << pt2.y() << x << y << z;  // 
+         }  
+        
+         layer.proj.transform(pt1, PJ_INV);      // transform 4326 ==> TMS CRS
+         layer.proj.transform(pt2, PJ_INV);
+
+        {
+            qDebug() << "target coords:" << pt1.x() << pt1.y() << pt2.x() << pt2.y() << x << y << z;
+        }  
+  
+        QJSEngine engine;
+        QJSValue fun = engine.evaluate(layer.script);
+
+       if(fun.isError())
+        {
+            qDebug() << "Uncaught exception at line"
+                     << fun.property("lineNumber").toInt()
+                     << ":" << fun.toString();
+        }
+
+        QJSValueList args;
+        
+        if (layer.crs.startsWith("+proj=longlat") || layer.crs.startsWith("+proj=latlong"))
+        {
+            args << pt1.x() * RAD_TO_DEG << pt1.y() * RAD_TO_DEG << pt2.x() * RAD_TO_DEG << pt2.y() * RAD_TO_DEG;            
+            //args << pt1.x() << pt1.y() << pt2.x() << pt2.y();
+
+        } 
+        else
+        {            
+            args << pt1.x() << pt1.y() << pt2.x() << pt2.y();
+        }    
+        QJSValue res = fun.call(args);           // expects target coordinates (degrees or meters)
+        
+        {
+            qDebug() << "final URL:" << res.toString() << x << y << z;
+        }    
+            return res.toString();
+        }
+     }
 
   return layer.strUrl.arg(z).arg(x).arg(y);
 }
