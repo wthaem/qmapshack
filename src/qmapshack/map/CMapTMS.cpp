@@ -290,7 +290,7 @@ QString CMapTMS::createUrl(const layer_t& layer, int x, int y, int z) {
     QJSValue res = fun.call(args);
 
              return res.toString();
-        }
+      
      }
 
         else     // WT part with CRS tag in TMS
