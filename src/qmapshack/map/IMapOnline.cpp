@@ -116,7 +116,7 @@ void IMapOnline::slotRequestFinished(QNetworkReply* reply) {
 
   // debug output any error
   if (reply->error()) {
-    qDebug() << "Request to" << url << "failed:" << reply->errorString();
+    qDebug() << "Request to" << url << "failed:" << reply->errorString() << " Error: " << reply->error();
   }
 
   // delete reply object
