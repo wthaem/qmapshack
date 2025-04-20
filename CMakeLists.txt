@@ -52,10 +52,6 @@ include(ConfigureChecks.cmake)
 # All boolean options
 ###############################################################################################
 
-# Translation related
-option(UPDATE_TRANSLATIONS  "Update source translation translations/*.ts files"     OFF)
-option(KEEP_OLD_TRANSLATIONS "Keep obsolete translations"                           ON)
-
 # Feature related
 option(BUILD_QMAPSHACK      "Build QMapShack Binary"                                ON)
 option(BUILD_QMAPTOOL       "Build QMapTool Binary including command line tools"    ON)
@@ -68,13 +64,6 @@ endif(WIN32)
 
 # Compiler related
 option(BUILD_FOR_LOCAL_SYSTEM "Build for local system ONLY (resulting binary might not work on other systems!)" OFF)
-
-if(KEEP_OLD_TRANSLATIONS)
-    set(KEEP_OLD_TRANSLATIONS "")
-else(KEEP_OLD_TRANSLATIONS)
-    set(KEEP_OLD_TRANSLATIONS "-no-obsolete")
-endif(KEEP_OLD_TRANSLATIONS)
-
 
 ###############################################################################################
 # All OS and compiler specific tweaks
@@ -194,6 +183,10 @@ find_package(ROUTINO                REQUIRED)
 find_package(QuaZip-Qt6             REQUIRED)
 find_package(ALGLIB                         ) # optional as we can use our local version
 
+qt_standard_project_setup(
+    I18N_TRANSLATED_LANGUAGES ca cs de es fr it nl ru
+)
+
 if(${PROJ_VERSION} VERSION_LESS 8.0.0)
     message( SEND_ERROR "You need at least PROJ 8.0.0 or newer.")
 endif()
@@ -252,6 +245,7 @@ endif(BUILD_QMAPTOOL)
 ###############################################################################################
 if (UNIX AND NOT WIN32 AND NOT APPLE)
 if(BUILD_QMAPSHACK)
+    install( FILES        qmapshack.desktop                 DESTINATION     ${XDG_APPS_DIR} )
     install( FILES        src/icons/48x48/QMapShack.png     DESTINATION     ${DATA_INSTALL_PREFIX}/pixmaps )
     install( DIRECTORY    src/icons/qmapshack/hicolor       DESTINATION     ${ICON_INSTALL_DIR} )
     install( FILES        qmapshack.1                       DESTINATION     ${MAN_INSTALL_DIR}/man1  )
@@ -260,6 +254,7 @@ if(BUILD_QMAPSHACK)
 endif(BUILD_QMAPSHACK)
 
 if(BUILD_QMAPTOOL)
+    install( FILES        qmaptool.desktop                  DESTINATION     ${XDG_APPS_DIR} )
     install( FILES        src/icons/48x48/QMapTool.png      DESTINATION     ${DATA_INSTALL_PREFIX}/pixmaps )
     install( DIRECTORY    src/icons/qmaptool/hicolor        DESTINATION     ${ICON_INSTALL_DIR} )
     install( FILES        qmaptool.1                        DESTINATION     ${MAN_INSTALL_DIR}/man1  )

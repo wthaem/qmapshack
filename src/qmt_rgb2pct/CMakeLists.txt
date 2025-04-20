@@ -1,8 +1,3 @@
-# Prevent custom commands/targets outputs to be deleted by make clean
-# We need this to prevent .ts files from being deleted with make clean, when
-# UPDATE_TRANSLATIONS=ON
-# WARNING: Only works with Makefile generator.
-set_directory_properties(PROPERTIES CLEAN_NO_CUSTOM TRUE)
 # Find includes in corresponding build directories
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 # Instruct CMake to run moc automatically when needed.
@@ -33,6 +28,11 @@ set( UIS
 set( RCS
 )
 
+set( TRANSLATIONS
+    locale/${APPLICATION_NAME}.ts
+    locale/${APPLICATION_NAME}_de.ts
+)
+
 ###############################################################################################
 # Some Qt magic
 ###############################################################################################
@@ -43,13 +43,11 @@ qt6_add_resources(RC_SRCS ${RCS})
 ###############################################################################################
 # Translation related stuff
 ###############################################################################################
-# translate_ts(${APPLICATION_NAME}_QM_FILES
-#     UPDATE_TRANSLATIONS ${UPDATE_TRANSLATIONS}
-#     UPDATE_OPTIONS "-I${CMAKE_CURRENT_SOURCE_DIR}" ${KEEP_OLD_TRANSLATIONS}
-#     SOURCES ${SRCS} ${HDRS} ${UIS}
-#     TEMPLATE ${APPLICATION_NAME}
-#     TRANSLATION_DIR "locale"
-# )
+
+qt_add_translations(${APPLICATION_NAME}
+    TS_FILES ${TRANSLATIONS}
+    QM_FILES_OUTPUT_VARIABLE ${APPLICATION_NAME}_QM_FILES
+)
 
 ###############################################################################################
 # Build source file and include paths lists
