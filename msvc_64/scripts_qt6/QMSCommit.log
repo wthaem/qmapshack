@@ -1,0 +1,11 @@
+Logfile created:     2025-04-20 11:03:03 with QMSCommit.py
+
+QMS directory:       d:\QtProjects\QMS\QMS4Qt6
+QMS basis version:   1.17.1
+Used local branch:   porting_qt6_cache
+Last commit hash:    020f123cc052e6563005c328dadbaf5802a48b70
+Last commit message: IMapOnline.cpp: add reply->error()
+Last commit author:  wthaem
+Last commit date:    2025-02-06 16:14:32+01:00
+Remote QMS repos:    ['wthaem/porting_qt6_cache']
+Remote repo URLs:    {'wthaem': 'https://github.com/wthaem/qmapshack.git'}
