@@ -18,11 +18,11 @@ pause
 call %%a\CopyFilesGis_add.bat
 )
 
-rem Copy QMapShack Files -------------------------------------------
-copy %QMSI_BUILD_PATH%\bin\Release\qmapshack.exe
-copy %QMSI_BUILD_PATH%\bin\Release\qmaptool.exe
-copy %QMSI_BUILD_PATH%\bin\Release\qmt_map2jnx.exe
-copy %QMSI_BUILD_PATH%\bin\Release\qmt_rgb2pct.exe
+rem Copy QMapShack Files (removed bin subdir! 28.04.25 ------
+copy %QMSI_BUILD_PATH%\Release\qmapshack.exe
+copy %QMSI_BUILD_PATH%\Release\qmaptool.exe
+copy %QMSI_BUILD_PATH%\Release\qmt_map2jnx.exe
+copy %QMSI_BUILD_PATH%\Release\qmt_rgb2pct.exe
 
 
 rem Copy Qt files -------------------------------------------------
