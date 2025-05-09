@@ -583,7 +583,7 @@ CRouterBRouterLocalSetupStatus CRouterBRouterSetup::checkLocalBRouterInstallatio
   bool isJavaOutdated =
       classMajorVersion != NOINT && (javaMajorVersion == NOINT || javaMajorVersion < classMajorVersion);
 
-  if (isBRouterJar && !isJavaOutdated) {
+  if (isBRouterJar && isJavaValid) {
     QProcess cmd;
 
     cmd.setWorkingDirectory(localDir);
@@ -602,7 +602,7 @@ CRouterBRouterLocalSetupStatus CRouterBRouterSetup::checkLocalBRouterInstallatio
 
   bool isValidBRouterVersion = versionMajor != NOINT && versionMinor != NOINT && versionPatch != NOINT;
 
-  isLocalBRouterValid = isBRouterJar && isValidBRouterVersion && isJavaExisting && !isJavaOutdated;
+  isLocalBRouterValid = isValidBRouterVersion;
 
   return CRouterBRouterLocalSetupStatus(isJavaExisting, isJavaValid, isJavaOutdated, isBRouterJar, isBRouterCandidate,
                                         isValidBRouterVersion);
@@ -751,10 +751,10 @@ bool CRouterBRouterSetup::isLocalBRouterDefaultDir() const { return localDir == 
 void CRouterBRouterSetup::setJava(const QString& path) {
   localJavaExecutable = path;
 
-  if (tryJavaVersion({"-version"}, "[\\S]+ version \"(\\d+)(\\.\\d+)*\" .*")) {
+  if (tryJavaVersion({"-version"}, "[\\S]+ version \"(\\d+)(\\.\\d+)*(-\\S+)?\" .*")) {
     return;
   }
-  if (tryJavaVersion({"--version"}, "[\\S]+ (\\d+)(\\.\\d+)* .*")) {
+  if (tryJavaVersion({"--version"}, "[\\S]+ (\\d+)(\\.\\d+)*(-\\S+)? .*")) {
     return;
   }
 
