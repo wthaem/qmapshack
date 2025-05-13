@@ -20,6 +20,7 @@
 
 #include "CMainWindow.h"
 #include "canvas/CCanvas.h"
+#include "gis/fit2/CFit2Project.h"
 #if defined(Q_OS_LINUX) || defined(Q_OS_FREEBSD)
 #include "device/CDeviceWatcherLinux.h"
 #endif
@@ -44,7 +45,6 @@
 #include "gis/db/CSelectDBFolder.h"
 #include "gis/db/CSetupFolder.h"
 #include "gis/db/macros.h"
-#include "gis/fit/CFitProject.h"
 #include "gis/gpx/CGpxProject.h"
 #include "gis/ovl/CGisItemOvlArea.h"
 #include "gis/prj/IGisProject.h"
@@ -845,7 +845,7 @@ void CGisListWks::slotLoadWorkspace() {
         }
 
         case IGisProject::eTypeFit: {
-          project = new CFitProject(name, this);
+          project = new CFit2Project(name, this);
           project->setCheckState(CGisListDB::eColumnCheckbox, visible);
           *project << stream;
           break;

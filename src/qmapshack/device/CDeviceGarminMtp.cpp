@@ -20,8 +20,9 @@
 
 #include "device/CDeviceAccessGvfsMtp.h"
 #include "device/CDeviceAccessKMtp.h"
+#include "device/CDeviceGarminArchiveMtp.h"
 #include "gis/CGisListWks.h"
-#include "gis/fit/CFitProject.h"
+#include "gis/fit2/CFit2Project.h"
 #include "gis/gpx/CGpxProject.h"
 
 CDeviceGarminMtp::CDeviceGarminMtp(const GVFSMount& mount, const QString& storagePath, const QString& key,
@@ -108,6 +109,8 @@ void CDeviceGarminMtp::setup() {
   } else {
     // build paths for memory card storages that do not have a GarminDevice.xml
     pathGpx = "GPX";
+    pathActivities = "Activities";
+    pathCourses = "Courses";
   }
 
   setText(CGisListWks::eColumnName, QString("%1 (%2)").arg(description, device->decription()));
@@ -123,6 +126,15 @@ void CDeviceGarminMtp::setup() {
 
   createProjectsFromFiles(pathGpx, "gpx");
   createProjectsFromFiles(pathActivities, "fit");
+  createProjectsFromFiles(pathCourses, "fit");
+  if (!pathLocations.isEmpty()) {
+    createProjectsFromFiles(pathLocations, "fit");
+  }
+
+  if (device->listDirsOnStorage(pathGpx).contains("Archive") &&
+      !device->listFilesOnStorage(QDir(pathGpx).filePath("Archive")).isEmpty()) {
+    new CDeviceGarminArchiveMtp(QDir(pathGpx).filePath("Archive"), device, this);
+  };
 }
 
 bool CDeviceGarminMtp::removeFromDevice(const QString& filename) {
@@ -170,7 +182,7 @@ void CDeviceGarminMtp::createProjectsFromFiles(QString subdirectory, QString ext
       if (extension == "gpx") {
         project = new CGpxProject(tempFile, d.filePath(file), this);
       } else if (extension == "fit") {
-        project = new CFitProject(tempFile, d.filePath(file), this);
+        project = new CFit2Project(tempFile, d.filePath(file), this);
       }
       if (project && !project->isValid()) {
         delete project;

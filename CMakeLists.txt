@@ -23,6 +23,7 @@ endif()
 ###############################################################################################
 # this is not only the QMS version it will be the package version, too.
 project(QMapShack VERSION 1.17.1 LANGUAGES CXX C)
+set(CMAKE_CXX_STANDARD 11)
 
 # FOR A RELEASE:
 # remove "development" for a release
@@ -64,6 +65,13 @@ endif(WIN32)
 
 # Compiler related
 option(BUILD_FOR_LOCAL_SYSTEM "Build for local system ONLY (resulting binary might not work on other systems!)" OFF)
+
+###############################################################################################
+# Translation options
+###############################################################################################
+option(UPDATE_TRANSLATIONS "Update translation files" ON)
+option(UPDATE_TRANSLATIONS_PURGE_OBSOLETE "Remove obsolete translations" OFF)
+
 
 ###############################################################################################
 # All OS and compiler specific tweaks
@@ -219,6 +227,11 @@ if(NOT ALGLIB_FOUND AND BUILD_QMAPSHACK)
 endif(NOT ALGLIB_FOUND AND BUILD_QMAPSHACK)
 
 add_definitions(-DHELPPATH=${HTML_INSTALL_DIR})
+
+###############################################################################################
+# Create library from Garmin's FIT SDK
+###############################################################################################
+add_subdirectory(3rdparty/GarminFitSdk/)
 
 ###############################################################################################
 # Create global config.h
