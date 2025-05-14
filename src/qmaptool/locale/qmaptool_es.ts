@@ -4,7 +4,7 @@
 <context>
     <name>CCanvas</name>
     <message>
-        <location filename="../canvas/CCanvas.cpp" line="89"/>
+        <location filename="../canvas/CCanvas.cpp" line="80"/>
         <source>No map view available.</source>
         <translation>Vista de mapa no disponible.</translation>
     </message>
@@ -17,22 +17,22 @@
         <translation>Mostrar salida de depuración en la consola.</translation>
     </message>
     <message>
-        <location filename="../setup/CCommandProcessor.cpp" line="34"/>
+        <location filename="../setup/CCommandProcessor.cpp" line="36"/>
         <source>Print debug output to logfile (temp. path).</source>
         <translation>Mostrar salida de depuración en archivo log (Carpeta temporal).</translation>
     </message>
     <message>
-        <location filename="../setup/CCommandProcessor.cpp" line="37"/>
+        <location filename="../setup/CCommandProcessor.cpp" line="41"/>
         <source>Do not show splash screen.</source>
         <translation>No mostrar pantalla de bienvenida.</translation>
     </message>
     <message>
-        <location filename="../setup/CCommandProcessor.cpp" line="40"/>
+        <location filename="../setup/CCommandProcessor.cpp" line="46"/>
         <source>File with QMapTool configuration.</source>
         <translation>Archivo con la configuración de QMapTool.</translation>
     </message>
     <message>
-        <location filename="../setup/CCommandProcessor.cpp" line="40"/>
+        <location filename="../setup/CCommandProcessor.cpp" line="46"/>
         <source>file</source>
         <translation>archivo</translation>
     </message>
@@ -40,23 +40,23 @@
 <context>
     <name>CDialogRefPoint</name>
     <message>
-        <location filename="../overlay/refmap/CDialogRefPoint.cpp" line="39"/>
+        <location filename="../overlay/refmap/CDialogRefPoint.cpp" line="35"/>
         <source>bad coordinate</source>
         <translation>Coordenada incorrecta</translation>
     </message>
     <message>
-        <location filename="../overlay/refmap/CDialogRefPoint.cpp" line="58"/>
-        <location filename="../overlay/refmap/CDialogRefPoint.cpp" line="64"/>
+        <location filename="../overlay/refmap/CDialogRefPoint.cpp" line="51"/>
+        <location filename="../overlay/refmap/CDialogRefPoint.cpp" line="56"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
     <message>
-        <location filename="../overlay/refmap/CDialogRefPoint.cpp" line="58"/>
+        <location filename="../overlay/refmap/CDialogRefPoint.cpp" line="51"/>
         <source>Bad value for X pixel.</source>
         <translation>Valor incorrecto para el pixel X.</translation>
     </message>
     <message>
-        <location filename="../overlay/refmap/CDialogRefPoint.cpp" line="64"/>
+        <location filename="../overlay/refmap/CDialogRefPoint.cpp" line="56"/>
         <source>Bad value for Y pixel.</source>
         <translation>Valor incorrecto para el pixel Y.</translation>
     </message>
@@ -92,7 +92,7 @@
         <translation type="obsolete">(desconocido)</translation>
     </message>
     <message>
-        <location filename="../canvas/CDrawContextPixel.cpp" line="74"/>
+        <location filename="../canvas/CDrawContextPixel.cpp" line="63"/>
         <source>Failed to load</source>
         <translation>Fallo al cargar</translation>
     </message>
@@ -100,7 +100,7 @@
 <context>
     <name>CDrawContextProj</name>
     <message>
-        <location filename="../canvas/CDrawContextProj.cpp" line="72"/>
+        <location filename="../canvas/CDrawContextProj.cpp" line="59"/>
         <source>Failed to load</source>
         <translation type="unfinished">Fallo al cargar</translation>
     </message>
@@ -108,40 +108,40 @@
 <context>
     <name>CGdalFile</name>
     <message>
-        <location filename="../helpers/CGdalFile.cpp" line="53"/>
-        <location filename="../helpers/CGdalFile.cpp" line="81"/>
-        <location filename="../helpers/CGdalFile.cpp" line="111"/>
+        <location filename="../helpers/CGdalFile.cpp" line="45"/>
+        <location filename="../helpers/CGdalFile.cpp" line="56"/>
+        <location filename="../helpers/CGdalFile.cpp" line="78"/>
         <source>Error...</source>
         <translation type="unfinished">Error...</translation>
     </message>
     <message>
-        <location filename="../helpers/CGdalFile.cpp" line="53"/>
-        <location filename="../helpers/CGdalFile.cpp" line="81"/>
+        <location filename="../helpers/CGdalFile.cpp" line="45"/>
+        <location filename="../helpers/CGdalFile.cpp" line="56"/>
         <source>Failed to load file: %1</source>
         <translation type="unfinished">Fallo al cargar el archivo: %1</translation>
     </message>
     <message>
-        <location filename="../helpers/CGdalFile.cpp" line="111"/>
+        <location filename="../helpers/CGdalFile.cpp" line="78"/>
         <source>File must be 8 bit palette or gray indexed.</source>
         <translation type="unfinished">El archivo debe de tener una paleta superior a 8 bits o gris indexado.</translation>
     </message>
     <message>
-        <location filename="../helpers/CGdalFile.cpp" line="196"/>
+        <location filename="../helpers/CGdalFile.cpp" line="170"/>
         <source>(color table)</source>
         <translation type="unfinished">(tabla de color)</translation>
     </message>
     <message>
-        <location filename="../helpers/CGdalFile.cpp" line="200"/>
+        <location filename="../helpers/CGdalFile.cpp" line="174"/>
         <source>(RGB)</source>
         <translation type="unfinished">(RGB)</translation>
     </message>
     <message>
-        <location filename="../helpers/CGdalFile.cpp" line="204"/>
+        <location filename="../helpers/CGdalFile.cpp" line="178"/>
         <source>(RGBA)</source>
         <translation type="unfinished">(RGBA)</translation>
     </message>
     <message>
-        <location filename="../helpers/CGdalFile.cpp" line="208"/>
+        <location filename="../helpers/CGdalFile.cpp" line="182"/>
         <source>(unknown)</source>
         <translation type="unfinished">(desconocido)</translation>
     </message>
@@ -149,71 +149,71 @@
 <context>
     <name>CGridPlacer</name>
     <message>
-        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="34"/>
+        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="33"/>
         <source>Select one of the corners and place the marker at the corresponding grid crossing on the map. All 4 corners have to be placed.</source>
         <translation>Seleccionar una de las esquinas y colocar el marcador en el cruce de cuadrícula correspondiente en el mapa. Las 4 esquinas deben de estar colocadas.</translation>
     </message>
     <message>
-        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="160"/>
+        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="133"/>
         <source>Point 1 - not set</source>
         <translation>Punto 1 - no establecido</translation>
     </message>
     <message>
-        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="164"/>
+        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="135"/>
         <source>Point 1 - ok</source>
         <translation>Punto 1 - ok</translation>
     </message>
     <message>
-        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="169"/>
-        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="174"/>
+        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="139"/>
+        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="143"/>
         <source>Point 1 - bad</source>
         <translation>Punto 1 - error</translation>
     </message>
     <message>
-        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="185"/>
+        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="151"/>
         <source>Point 2 - ok</source>
         <translation>Punto 2 - ok</translation>
     </message>
     <message>
-        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="190"/>
-        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="195"/>
+        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="155"/>
+        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="159"/>
         <source>Point 2 - bad</source>
         <translation>Punto 2 - error</translation>
     </message>
     <message>
-        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="207"/>
+        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="167"/>
         <source>Point 3 - ok</source>
         <translation>Punto 3 - ok</translation>
     </message>
     <message>
-        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="212"/>
-        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="217"/>
+        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="171"/>
+        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="175"/>
         <source>Point 3 - bad</source>
         <translation>Punto 3 - error</translation>
     </message>
     <message>
-        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="229"/>
+        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="183"/>
         <source>Point 4 - ok</source>
         <translation>Punto 4 - ok</translation>
     </message>
     <message>
-        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="234"/>
-        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="239"/>
+        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="187"/>
+        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="191"/>
         <source>Point 4 - bad</source>
         <translation>Punto 4 - error</translation>
     </message>
     <message>
-        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="181"/>
+        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="149"/>
         <source>Point 2 - not set</source>
         <translation>Punto 2 - no establecido</translation>
     </message>
     <message>
-        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="203"/>
+        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="165"/>
         <source>Point 3 - not set</source>
         <translation>Punto 3 - no establecido</translation>
     </message>
     <message>
-        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="225"/>
+        <location filename="../overlay/gridtool/CGridPlacer.cpp" line="181"/>
         <source>Point 4 - not set</source>
         <translation>Punto 4 - no establecido</translation>
     </message>
@@ -237,22 +237,22 @@
 <context>
     <name>CHelp</name>
     <message>
-        <location filename="../../common/help/CHelp.cpp" line="31"/>
+        <location filename="../../common/help/CHelp.cpp" line="29"/>
         <source>Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../common/help/CHelp.cpp" line="46"/>
+        <location filename="../../common/help/CHelp.cpp" line="43"/>
         <source>Content</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../common/help/CHelp.cpp" line="47"/>
+        <location filename="../../common/help/CHelp.cpp" line="44"/>
         <source>Index</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../common/help/CHelp.cpp" line="48"/>
+        <location filename="../../common/help/CHelp.cpp" line="45"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
@@ -260,7 +260,7 @@
 <context>
     <name>CHelpIndex</name>
     <message>
-        <location filename="../../common/help/CHelpIndex.cpp" line="29"/>
+        <location filename="../../common/help/CHelpIndex.cpp" line="26"/>
         <source>Search:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -268,7 +268,7 @@
 <context>
     <name>CHelpSearch</name>
     <message>
-        <location filename="../../common/help/CHelpSearch.cpp" line="31"/>
+        <location filename="../../common/help/CHelpSearch.cpp" line="30"/>
         <source>Search:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -276,7 +276,7 @@
 <context>
     <name>CItemListWidget</name>
     <message>
-        <location filename="../items/CItemListWidget.cpp" line="103"/>
+        <location filename="../items/CItemListWidget.cpp" line="86"/>
         <source>Select files...</source>
         <translation>Seleccionar archivos...</translation>
     </message>
@@ -284,7 +284,7 @@
 <context>
     <name>CItemMapLayer</name>
     <message>
-        <location filename="../items/CItemMapLayer.cpp" line="34"/>
+        <location filename="../items/CItemMapLayer.cpp" line="32"/>
         <source>Layer</source>
         <translation type="unfinished"></translation>
     </message>
@@ -292,17 +292,17 @@
 <context>
     <name>CItemTreeWidget</name>
     <message>
-        <location filename="../items/CItemTreeWidget.cpp" line="159"/>
+        <location filename="../items/CItemTreeWidget.cpp" line="133"/>
         <source>&lt;p&gt;The current map &lt;i&gt;&apos;%1&apos;&lt;/i&gt; does not match the projection of previous loaded maps. All map files need to have the same projection.&lt;/p&gt;&lt;p&gt;&lt;b&gt;This file&lt;/b&gt;: %2&lt;/p&gt;&lt;p&gt;&lt;b&gt;Expected&lt;/b&gt;: %3&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../items/CItemTreeWidget.cpp" line="164"/>
+        <location filename="../items/CItemTreeWidget.cpp" line="139"/>
         <source>Error...</source>
         <translation type="unfinished">Error...</translation>
     </message>
     <message>
-        <location filename="../items/CItemTreeWidget.cpp" line="235"/>
+        <location filename="../items/CItemTreeWidget.cpp" line="199"/>
         <source>Select files...</source>
         <translation type="unfinished">Seleccionar archivos...</translation>
     </message>
@@ -310,32 +310,32 @@
 <context>
     <name>COverlayCutMap</name>
     <message>
-        <location filename="../overlay/COverlayCutMap.cpp" line="224"/>
+        <location filename="../overlay/COverlayCutMap.cpp" line="197"/>
         <source>Delete mask...</source>
         <translation>Borrar máscara...</translation>
     </message>
     <message>
-        <location filename="../overlay/COverlayCutMap.cpp" line="224"/>
+        <location filename="../overlay/COverlayCutMap.cpp" line="197"/>
         <source>Are you sure to delete complete mask?</source>
         <translation>¿Estás seguro de eliminar la máscara completa?</translation>
     </message>
     <message>
-        <location filename="../overlay/COverlayCutMap.cpp" line="241"/>
+        <location filename="../overlay/COverlayCutMap.cpp" line="213"/>
         <source>Save mask...</source>
         <translation>Guardar máscara...</translation>
     </message>
     <message>
-        <location filename="../overlay/COverlayCutMap.cpp" line="289"/>
+        <location filename="../overlay/COverlayCutMap.cpp" line="256"/>
         <source>Load mask...</source>
         <translation>Cargar máscara...</translation>
     </message>
     <message>
-        <location filename="../overlay/COverlayCutMap.cpp" line="303"/>
+        <location filename="../overlay/COverlayCutMap.cpp" line="268"/>
         <source>Failed...</source>
         <translation>Fallo...</translation>
     </message>
     <message>
-        <location filename="../overlay/COverlayCutMap.cpp" line="303"/>
+        <location filename="../overlay/COverlayCutMap.cpp" line="268"/>
         <source>Not a shape file.</source>
         <translation>No es un archivo shape.</translation>
     </message>
@@ -343,7 +343,7 @@
 <context>
     <name>COverlayGridTool</name>
     <message>
-        <location filename="../overlay/COverlayGridTool.cpp" line="34"/>
+        <location filename="../overlay/COverlayGridTool.cpp" line="33"/>
         <source>Before you proceed with &apos;ok&apos;:
 Please cross check all data once again. A bad reference coordinate will ruin all the work. Also cross check if the selected area contains as many reference points as possible at the border. You can easily delete points outside the map in the Reference Tool. But it&apos;s much more effort to set additional points in case you miss some.  When you are done press &apos;ok&apos; to transfer the derived reference points to the Reference Tool.
 
@@ -357,7 +357,7 @@ El siguiente paso será usar la herramienta de referencia para ajustar la posici
 <context>
     <name>COverlayRefMap</name>
     <message>
-        <location filename="../overlay/COverlayRefMap.cpp" line="42"/>
+        <location filename="../overlay/COverlayRefMap.cpp" line="41"/>
         <source>If you used the Grid Tool you have to fine tune the reference points by placing them as much as possible on the grid crossing. Be aware that if you over scale you get jumping points by rounding effects. Be precise but do not make religion out of the task.
 If your mouse focus is on the map you can use the N and B keys to jump forward an backward in the reference point list. 
 The is also the option to fine tune the reference points in auto-mode. In this mode the next reference point is selected automatically right after you placed the current one. This is very convenient for a large number of reference points.</source>
@@ -366,32 +366,32 @@ Si el mapa esta en el primer plano del foco del ratón, puedes usar las teclas N
 También es la opción para ajustar los puntos de referencia en modo automático. En este modo, el siguiente punto de referencia se selecciona automáticamente justo después de que coloques el actual, muy conveniente cuando los puntos son muchos.</translation>
     </message>
     <message>
-        <location filename="../overlay/COverlayRefMap.cpp" line="614"/>
+        <location filename="../overlay/COverlayRefMap.cpp" line="517"/>
         <source>Save reference points...</source>
         <translation>Guardar puntos de referencia...</translation>
     </message>
     <message>
-        <location filename="../overlay/COverlayRefMap.cpp" line="653"/>
+        <location filename="../overlay/COverlayRefMap.cpp" line="552"/>
         <source>Load reference points...</source>
         <translation>Cargar puntos de referencia...</translation>
     </message>
     <message>
-        <location filename="../overlay/COverlayRefMap.cpp" line="694"/>
+        <location filename="../overlay/COverlayRefMap.cpp" line="587"/>
         <source>Delete all reference points...</source>
         <translation>Borrar todos los puntos de referencia...</translation>
     </message>
     <message>
-        <location filename="../overlay/COverlayRefMap.cpp" line="694"/>
+        <location filename="../overlay/COverlayRefMap.cpp" line="588"/>
         <source>Are you sure to delete all reference points in the list?</source>
         <translation>¿Estás seguro de borrar todos los puntos de la lista?</translation>
     </message>
     <message>
-        <location filename="../overlay/COverlayRefMap.cpp" line="729"/>
+        <location filename="../overlay/COverlayRefMap.cpp" line="614"/>
         <source>Delete...</source>
         <translation>Borrar...</translation>
     </message>
     <message>
-        <location filename="../overlay/COverlayRefMap.cpp" line="729"/>
+        <location filename="../overlay/COverlayRefMap.cpp" line="614"/>
         <source>Delete all selected reference points?</source>
         <translation>¿Borrar los puntos seleccionados?</translation>
     </message>
@@ -399,35 +399,58 @@ También es la opción para ajustar los puntos de referencia en modo automático
 <context>
     <name>COverlayRefMapPoint</name>
     <message>
-        <location filename="../overlay/refmap/COverlayRefMapPoint.cpp" line="43"/>
+        <location filename="../overlay/refmap/COverlayRefMapPoint.cpp" line="40"/>
         <source>bad coordinate</source>
         <translation>Coordenada errónea</translation>
     </message>
 </context>
 <context>
-    <name>CProjWizard</name>
+    <name>CProj</name>
     <message>
-        <location filename="../overlay/refmap/CProjWizard.cpp" line="62"/>
-        <source>north</source>
-        <translation>Norte</translation>
-    </message>
-    <message>
-        <location filename="../overlay/refmap/CProjWizard.cpp" line="63"/>
-        <source>south</source>
-        <translation>Sur</translation>
-    </message>
-    <message>
-        <location filename="../overlay/refmap/CProjWizard.cpp" line="227"/>
-        <source>Error...</source>
-        <translation>Error...</translation>
-    </message>
-    <message>
-        <location filename="../overlay/refmap/CProjWizard.cpp" line="227"/>
+        <location filename="../../common/gis/proj_x.cpp" line="153"/>
         <source>The value
 &apos;%1&apos;
 is not a valid coordinate system definition:
 %2</source>
-        <translation>El valor
+        <translation type="unfinished">El valor
+&apos;%1&apos;
+No es una definición válida del sistema de coordenadas:
+%2</translation>
+    </message>
+    <message>
+        <location filename="../../common/gis/proj_x.cpp" line="162"/>
+        <source>Lat/Lon projection is not allowed in this case.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>CProjWizard</name>
+    <message>
+        <location filename="../overlay/refmap/CProjWizard.cpp" line="45"/>
+        <source> (Spheroid: %1)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../overlay/refmap/CProjWizard.cpp" line="59"/>
+        <source>north</source>
+        <translation>Norte</translation>
+    </message>
+    <message>
+        <location filename="../overlay/refmap/CProjWizard.cpp" line="60"/>
+        <source>south</source>
+        <translation>Sur</translation>
+    </message>
+    <message>
+        <location filename="../overlay/refmap/CProjWizard.cpp" line="199"/>
+        <source>Error...</source>
+        <translation>Error...</translation>
+    </message>
+    <message>
+        <source>The value
+&apos;%1&apos;
+is not a valid coordinate system definition:
+%2</source>
+        <translation type="vanished">El valor
 &apos;%1&apos;
 No es una definición válida del sistema de coordenadas:
 %2</translation>
@@ -436,17 +459,17 @@ No es una definición válida del sistema de coordenadas:
 <context>
     <name>CSetupExtTools</name>
     <message>
+        <location filename="../setup/CSetupExtTools.cpp" line="61"/>
+        <location filename="../setup/CSetupExtTools.cpp" line="62"/>
         <location filename="../setup/CSetupExtTools.cpp" line="63"/>
         <location filename="../setup/CSetupExtTools.cpp" line="64"/>
         <location filename="../setup/CSetupExtTools.cpp" line="65"/>
         <location filename="../setup/CSetupExtTools.cpp" line="66"/>
-        <location filename="../setup/CSetupExtTools.cpp" line="67"/>
-        <location filename="../setup/CSetupExtTools.cpp" line="68"/>
         <source>&lt;b style=&apos;color: red;&apos;&gt;not found&lt;/b&gt;</source>
         <translation>&lt;b style=&apos;color: red;&apos;&gt;no encontrado&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../setup/CSetupExtTools.cpp" line="80"/>
+        <location filename="../setup/CSetupExtTools.cpp" line="77"/>
         <source>Select %1 binary...</source>
         <translation>Seleccionar %1 binario</translation>
     </message>
@@ -454,50 +477,50 @@ No es una definición válida del sistema de coordenadas:
 <context>
     <name>CShell</name>
     <message>
-        <location filename="../shell/CShell.cpp" line="41"/>
+        <location filename="../shell/CShell.cpp" line="40"/>
         <source>Execution of external program `%1` failed: </source>
         <translation>La ejecución del programa externo `%1` falló:</translation>
     </message>
     <message>
-        <location filename="../shell/CShell.cpp" line="45"/>
+        <location filename="../shell/CShell.cpp" line="43"/>
         <source>Process cannot be started.
 </source>
         <translation>El proceso no se puede iniciar.
 </translation>
     </message>
     <message>
-        <location filename="../shell/CShell.cpp" line="46"/>
+        <location filename="../shell/CShell.cpp" line="44"/>
         <source>Make sure the required packages are installed, `%1` exists and is executable.
 </source>
         <translation>Asegúrate de que los paquetes requeridos están instalados, `%1` existe y es ejecutable.</translation>
     </message>
     <message>
-        <location filename="../shell/CShell.cpp" line="50"/>
+        <location filename="../shell/CShell.cpp" line="49"/>
         <source>External process crashed.
 </source>
         <translation>Proceso externo bloqueado.</translation>
     </message>
     <message>
-        <location filename="../shell/CShell.cpp" line="54"/>
+        <location filename="../shell/CShell.cpp" line="53"/>
         <source>An unknown error occurred.
 </source>
         <translation>Ha ocurrido un error desconocido</translation>
     </message>
     <message>
-        <location filename="../shell/CShell.cpp" line="146"/>
+        <location filename="../shell/CShell.cpp" line="130"/>
         <source>!!! failed !!!
 </source>
         <translation>!!! falló !!!</translation>
     </message>
     <message>
-        <location filename="../shell/CShell.cpp" line="161"/>
+        <location filename="../shell/CShell.cpp" line="143"/>
         <source>
 Canceled by user&apos;s request.
 </source>
         <translation>Cancelado por el usuario.</translation>
     </message>
     <message>
-        <location filename="../shell/CShell.cpp" line="191"/>
+        <location filename="../shell/CShell.cpp" line="168"/>
         <source>!!! done !!!
 </source>
         <translation>¡¡¡ hecho !!!</translation>
@@ -506,7 +529,7 @@ Canceled by user&apos;s request.
 <context>
     <name>CToolAddOverview</name>
     <message>
-        <location filename="../tool/CToolAddOverview.cpp" line="30"/>
+        <location filename="../tool/CToolAddOverview.cpp" line="29"/>
         <source>Add Overviews</source>
         <translation>Añadir niveles de zoom</translation>
     </message>
@@ -519,7 +542,7 @@ Canceled by user&apos;s request.
 <context>
     <name>CToolCutMap</name>
     <message>
-        <location filename="../tool/CToolCutMap.cpp" line="30"/>
+        <location filename="../tool/CToolCutMap.cpp" line="29"/>
         <source>Cut Map</source>
         <translation>Cortar Mapa</translation>
     </message>
@@ -532,7 +555,7 @@ Canceled by user&apos;s request.
 <context>
     <name>CToolExport</name>
     <message>
-        <location filename="../tool/CToolExport.cpp" line="30"/>
+        <location filename="../tool/CToolExport.cpp" line="29"/>
         <source>Export Maps</source>
         <translation>Exportar Mapas</translation>
     </message>
@@ -547,7 +570,7 @@ Canceled by user&apos;s request.
         <translation>Nota: Esta herramienta usa todos los archivos de la lista. Es necesario que todos tengan la misma proyección.</translation>
     </message>
     <message>
-        <location filename="../tool/CToolExport.cpp" line="114"/>
+        <location filename="../tool/CToolExport.cpp" line="104"/>
         <source>Select filename...</source>
         <translation>Seleccionar nombre de archivo...</translation>
     </message>
@@ -555,7 +578,7 @@ Canceled by user&apos;s request.
 <context>
     <name>CToolGrid</name>
     <message>
-        <location filename="../tool/CToolGrid.cpp" line="37"/>
+        <location filename="../tool/CToolGrid.cpp" line="35"/>
         <source>By placing 4 reference points at the corners of a grid square and referencing them by their top left corner, the width and height, all the other grid points can be estimated.</source>
         <translation>Al poner los 4 puntos de referencia en las esquinas de un cuadrado de la cuadrícula y referenciarlos en ancho y alto por su esquina superior izquierda, todos los otros puntos se pueden estimar.</translation>
     </message>
@@ -563,22 +586,22 @@ Canceled by user&apos;s request.
 <context>
     <name>CToolPalettize</name>
     <message>
-        <location filename="../tool/CToolPalettize.cpp" line="30"/>
+        <location filename="../tool/CToolPalettize.cpp" line="29"/>
         <source>Add Color Palette</source>
         <translation>Añadir Paleta de Color</translation>
     </message>
     <message>
-        <location filename="../tool/CToolPalettize.cpp" line="34"/>
+        <location filename="../tool/CToolPalettize.cpp" line="36"/>
         <source>Usually you use RGBA color while referencing a map because the large color space allows you to scale and rotate the map without any loss of quality. But it results into rather large files. The file size can be optimized by using a color palette instead of the RGBA color space. The impact on quality is low as long as you do not want to scale or rotate the map. If you want to combine files with a color palette all files need to have the same palette.</source>
         <translation>Por lo general, se utiliza color RGBA al referenciar un mapa, ya que el gran espacio de color permite escalar y rotar sin pérdida de calidad, pero los archivos resultan ser muy grandes, se puede optimizar utilizando una paleta de colores en lugar del espacio de color RGBA. El impacto en la calidad es bajo siempre y cuando no quieras escalar o rotar. Si quieres combinar archivos con paleta de colores, todos deben de tener la misma.</translation>
     </message>
     <message>
-        <location filename="../tool/CToolPalettize.cpp" line="46"/>
+        <location filename="../tool/CToolPalettize.cpp" line="48"/>
         <source>Note: This tool will use all files in the list as a combined input to derive an optimal palette. This will only work if all files have the same projection and scale.</source>
         <translation>Nota: Esta herramienta utilizará los archivos de la lista para obtener una paleta óptima. Solo funcionará si todos los archivos tienen la misma proyección y escala.</translation>
     </message>
     <message>
-        <location filename="../tool/CToolPalettize.cpp" line="109"/>
+        <location filename="../tool/CToolPalettize.cpp" line="113"/>
         <source>Select filename...</source>
         <translation>Seleccionar nombre de archivo...</translation>
     </message>
@@ -586,12 +609,12 @@ Canceled by user&apos;s request.
 <context>
     <name>CToolRefMap</name>
     <message>
-        <location filename="../tool/CToolRefMap.cpp" line="34"/>
+        <location filename="../tool/CToolRefMap.cpp" line="32"/>
         <source>Reference Map</source>
         <translation>Referenciar Mapa</translation>
     </message>
     <message>
-        <location filename="../tool/CToolRefMap.cpp" line="36"/>
+        <location filename="../tool/CToolRefMap.cpp" line="35"/>
         <source>A scan of a paper map can be converted to a referenced raster map if you place at least three reference points on the map. The more points the better the result. If your map has a grid you can place points on that grid with the grid tool.</source>
         <translation>Un mapa de papel escaneado se puede convertir en un mapa ráster referenciado poniendo al menos tres puntos de referencia en el mapa. Cuantos más puntos, mejor es el resultado. Si el mapa tiene una cuadrícula, se pueden poner puntos en esa cuadrícula con la herramienta de cuadrícula.</translation>
     </message>
@@ -1104,8 +1127,12 @@ o
     </message>
     <message>
         <location filename="../overlay/IOverlayRefMap.ui" line="316"/>
+        <source>Enter a valid projection string. Valid strings are &quot;+proj...&quot; or &quot;EPSG:...&quot;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Enter a valid projection string. Valid strings are &quot;+proj...&quot; or &quot;+init=epsg:...&quot;.</source>
-        <translation>Introducir una cadena de proyección válida. Las cadenas válidas son &quot;+proj...&quot; o &quot;+init=epsg:...&quot;.</translation>
+        <translation type="vanished">Introducir una cadena de proyección válida. Las cadenas válidas son &quot;+proj...&quot; o &quot;+init=epsg:...&quot;.</translation>
     </message>
     <message>
         <location filename="../overlay/IOverlayRefMap.ui" line="323"/>
@@ -1416,27 +1443,32 @@ o
         <translation>Crear niveles de zoom.</translation>
     </message>
     <message>
-        <location filename="../tool/IToolCutMap.ui" line="176"/>
+        <location filename="../tool/IToolCutMap.ui" line="155"/>
+        <source>GDAL Parameters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tool/IToolCutMap.ui" line="183"/>
         <source>Start</source>
         <translation>Iniciar</translation>
     </message>
     <message>
-        <location filename="../tool/IToolCutMap.ui" line="190"/>
+        <location filename="../tool/IToolCutMap.ui" line="197"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location filename="../tool/IToolCutMap.ui" line="201"/>
+        <location filename="../tool/IToolCutMap.ui" line="208"/>
         <source>For all files</source>
         <translation>Para todos los archivos</translation>
     </message>
     <message>
-        <location filename="../tool/IToolCutMap.ui" line="226"/>
+        <location filename="../tool/IToolCutMap.ui" line="233"/>
         <source>&lt;b style=&apos;color: red;&apos;&gt;No &quot;gdalwarp&quot; found. Please check setup!&lt;/b&gt;</source>
         <translation>lt;b style=&apos;color: red;&apos;&gt; &quot;Gdalwarp&quot;no encontrado. ¡Comprobar la configuración!&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../tool/IToolCutMap.ui" line="236"/>
+        <location filename="../tool/IToolCutMap.ui" line="243"/>
         <source>&lt;b style=&apos;color: red;&apos;&gt;No &quot;gdaladdo&quot; found. Please check setup!&lt;/b&gt;</source>
         <translation>&lt;b style=&apos;color: red;&apos;&gt; &quot;Gdaladdo&quot;no encontrado ¡Comprobar la configuración!&lt;/b&gt;</translation>
     </message>
@@ -1576,6 +1608,44 @@ o
     </message>
 </context>
 <context>
+    <name>IToolGDALGroupBox</name>
+    <message>
+        <location filename="../tool/IToolGDALGroupBox.ui" line="14"/>
+        <source>GroupBox</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tool/IToolGDALGroupBox.ui" line="17"/>
+        <source>GDAL Parameters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tool/IToolGDALGroupBox.ui" line="50"/>
+        <source>Resampling</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tool/IToolGDALGroupBox.ui" line="84"/>
+        <source>Compression</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tool/IToolGDALGroupBox.ui" line="118"/>
+        <source>Tiled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tool/IToolGDALGroupBox.ui" line="144"/>
+        <source>x</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tool/IToolGDALGroupBox.ui" line="188"/>
+        <source>Other:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>IToolGrid</name>
     <message>
         <location filename="../tool/IToolGrid.ui" line="14"/>
@@ -1695,32 +1765,37 @@ o
         <translation>Crear niveles de zoom.</translation>
     </message>
     <message>
-        <location filename="../tool/IToolPalettize.ui" line="170"/>
+        <location filename="../tool/IToolPalettize.ui" line="149"/>
+        <source>GDAL Parameter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tool/IToolPalettize.ui" line="177"/>
         <source>Start</source>
         <translation>Iniciar</translation>
     </message>
     <message>
-        <location filename="../tool/IToolPalettize.ui" line="184"/>
+        <location filename="../tool/IToolPalettize.ui" line="191"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location filename="../tool/IToolPalettize.ui" line="213"/>
+        <location filename="../tool/IToolPalettize.ui" line="220"/>
         <source>&lt;b style=&apos;color: red;&apos;&gt;No &quot;gdaladdo&quot; found. Please check setup!&lt;/b&gt;</source>
         <translation>&lt;b style=&apos;color: red;&apos;&gt;&quot;Gdaladdo&quot; no encontrado. ¡Comprobar la configuración!&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../tool/IToolPalettize.ui" line="223"/>
+        <location filename="../tool/IToolPalettize.ui" line="230"/>
         <source>&lt;b style=&apos;color: red;&apos;&gt;No &quot;gdal_translate&quot; found. Please check setup!&lt;/b&gt;</source>
         <translation>&lt;b style=&apos;color: red;&apos;&gt;&quot;Gdal_translate&quot; no encontrado. ¡Comprobar la configuración!&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../tool/IToolPalettize.ui" line="233"/>
+        <location filename="../tool/IToolPalettize.ui" line="240"/>
         <source>&lt;b style=&apos;color: red;&apos;&gt;No &quot;qmt_rgb2pct&quot; found. Please check setup!&lt;/b&gt;</source>
         <translation>&lt;b style=&apos;color: red;&apos;&gt;&quot;Qmt_rgb2pct&quot; no encontrado. ¡Comprobar la configuración!&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../tool/IToolPalettize.ui" line="247"/>
+        <location filename="../tool/IToolPalettize.ui" line="254"/>
         <source>Select filename</source>
         <translation>Seleccionar nombre de archivo</translation>
     </message>
@@ -1758,32 +1833,37 @@ o
         <translation>Crear niveles de zoom.</translation>
     </message>
     <message>
-        <location filename="../tool/IToolRefMap.ui" line="179"/>
+        <location filename="../tool/IToolRefMap.ui" line="158"/>
+        <source>GDAL Parameters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tool/IToolRefMap.ui" line="186"/>
         <source>Start</source>
         <translation>Iniciar</translation>
     </message>
     <message>
-        <location filename="../tool/IToolRefMap.ui" line="193"/>
+        <location filename="../tool/IToolRefMap.ui" line="200"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location filename="../tool/IToolRefMap.ui" line="204"/>
+        <location filename="../tool/IToolRefMap.ui" line="211"/>
         <source>For all files</source>
         <translation>Para todos los archivos</translation>
     </message>
     <message>
-        <location filename="../tool/IToolRefMap.ui" line="229"/>
+        <location filename="../tool/IToolRefMap.ui" line="236"/>
         <source>&lt;b style=&apos;color: red;&apos;&gt;No &quot;gdalwarp&quot; found. Please check setup!&lt;/b&gt;</source>
         <translation>&lt;b style=&apos;color: red;&apos;&gt;&quot;Gdalwarp&quot; no encontrado. ¡Comprobar la configuración!&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../tool/IToolRefMap.ui" line="239"/>
+        <location filename="../tool/IToolRefMap.ui" line="246"/>
         <source>&lt;b style=&apos;color: red;&apos;&gt;No &quot;gdal_translate&quot; found. Please check setup!&lt;/b&gt;</source>
         <translation>&lt;b style=&apos;color: red;&apos;&gt;&quot;Gdal_translate&quot; no encontrado. ¡Comprobar la configuración!&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../tool/IToolRefMap.ui" line="249"/>
+        <location filename="../tool/IToolRefMap.ui" line="256"/>
         <source>&lt;b style=&apos;color: red;&apos;&gt;No &quot;gdaladdo&quot; found. Please check setup!&lt;/b&gt;</source>
         <translation>&lt;b style=&apos;color: red;&apos;&gt;&quot;Gdaladdo&quot; no encontrado. ¡Comprobar la configuración!&lt;/b&gt;</translation>
     </message>
@@ -1791,18 +1871,18 @@ o
 <context>
     <name>IUnit</name>
     <message>
-        <location filename="../units/IUnit.cpp" line="740"/>
-        <location filename="../units/IUnit.cpp" line="746"/>
+        <location filename="../units/IUnit.cpp" line="714"/>
+        <location filename="../units/IUnit.cpp" line="721"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
     <message>
-        <location filename="../units/IUnit.cpp" line="740"/>
+        <location filename="../units/IUnit.cpp" line="715"/>
         <source>Bad position format. Must be: &quot;[N|S] ddd mm.sss [W|E] ddd mm.sss&quot; or &quot;[N|S] ddd.ddd [W|E] ddd.ddd&quot;</source>
         <translation>Formato de posición incorrecto. Debe ser: &quot;[N|S] ddd mm.sss [W|E] ddd mm.sss&quot; or &quot;[N|S] ddd.ddd [W|E] ddd.ddd&quot;</translation>
     </message>
     <message>
-        <location filename="../units/IUnit.cpp" line="746"/>
+        <location filename="../units/IUnit.cpp" line="721"/>
         <source>Position values out of bounds. </source>
         <translation>Valores de posición fuera de los límites.</translation>
     </message>

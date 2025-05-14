@@ -21,9 +21,9 @@ pause
 pushd %builddir%
 
 echo       
-echo Configuring...
+echo Configuring with -DCMAKE_CXX_FLAGS="/EHsc" ...
 
-cmake --fresh -G "Visual Studio 17 2022" -A x64 -S .. -B . -LA -DPKG=%1 -DQMSUSERCFG=%usercfg% -C  %scriptsdir%\CfgGisinternals.cfg
+cmake --fresh -G "Visual Studio 17 2022" -A x64 -S .. -B . -LA -DPKG=%1 -DQMSUSERCFG=%usercfg% -DCMAKE_CXX_FLAGS="/EHsc" -C  %scriptsdir%\CfgGisinternals.cfg
 
 pause
 
