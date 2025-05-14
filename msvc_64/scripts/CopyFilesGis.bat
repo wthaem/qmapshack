@@ -1,4 +1,4 @@
-@echo off
+rem @echo off
 
 
 rem Script to copy all files necessary for QMS (GISInternals version)
