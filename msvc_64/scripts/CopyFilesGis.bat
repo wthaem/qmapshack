@@ -1,7 +1,7 @@
 rem @echo off
 
 
-rem Script to copy all files necessary for QMS (GISInternals version)
+rem Script to copy all files necessary for QMS (GISInternals version) - run from scripts directory!
 
 rem Delete all files --------------------------------------------
 del /s/q ..\Files
@@ -37,17 +37,17 @@ mkdir translations
 
 for %%i in (ca, cs, de, en, es, fr, it, nl, ru) do (
 
-    copy %QMSI_QT_PATH%\translations\qt_%%i.qm translations
-    copy %QMSI_QT_PATH%\translations\qtbase_%%i.qm translations
-    copy %QMSI_QT_PATH%\translations\assistant_%%i.qm translations
-    copy %QMSI_QT_PATH%\translations\qt_help_%%i.qm translations
+    if exist %QMSI_QT_PATH%\translations\qt_%%i.qm (copy %QMSI_QT_PATH%\translations\qt_%%i.qm translations)
+    if exist %QMSI_QT_PATH%\translations\qtbase_%%i.qm (copy %QMSI_QT_PATH%\translations\qtbase_%%i.qm translations)
+    if exist %QMSI_QT_PATH%\translations\assistant_%%i.qm (copy %QMSI_QT_PATH%\translations\assistant_%%i.qm translations)
+    if exist %QMSI_QT_PATH%\translations\qt_help_%%i.qm (copy %QMSI_QT_PATH%\translations\qt_help_%%i.qm translations)
 )
 
 rem Qt6WebEngine translations
 cd translations
 mkdir qtwebengine_locales
 
-for %%i in (ca, cs, de, en-US, en-GB, es, fr, it, nl, ru) do copy %QMSI_QT_PATH%\translations\qtwebengine_locales\%%i.pak qtwebengine_locales
+for %%i in (ca, cs, de, en-US, en-GB, es, fr, it, nl, ru) do if exist %QMSI_QT_PATH%\translations\qtwebengine_locales\%%i.pak (copy %QMSI_QT_PATH%\translations\qtwebengine_locales\%%i.pak qtwebengine_locales)
 
 cd ..
 
