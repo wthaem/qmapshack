@@ -115,6 +115,30 @@ void CFit2Project::decodeFile(const QString& filename) {
   } catch (const fit::RuntimeException& e) {
     throw std::runtime_error((QStringLiteral("Exception decoding file: ") + e.what()).toStdString());
   }
+
+  createTrack("", "");
+}
+
+void CFit2Project::createTrack(const QString& name, const QString& comment) {
+  if (!segment.isEmpty()) {
+    track.segs.append(segment);
+    segment.pts.clear();
+  }
+
+  if (track.isEmpty()) {
+    return;
+  }
+
+  if (name.isEmpty()) {
+    track.name = IUnit::datetime2string(track.segs.first().pts.first().time, IUnit::eTimeFormatShort);
+  } else {
+    track.name = name;
+  }
+
+  track.cmt = comment;
+  new CGisItemTrk(track, this);
+
+  track = CTrackData();
 }
 
 void CFit2Project::OnMesg(fit::Mesg& mesg) {
@@ -168,6 +192,10 @@ void CFit2Project::OnMesg(fit::RecordMesg& mesg) {
   if (mesg.IsDistanceValid()) {
     trkpt.extensions["fit:distance"] = mesg.GetDistance();
   }
+  if (mesg.IsEnhancedRespirationRateValid()) {
+    trkpt.extensions["fit:respiration_rate"] = mesg.GetEnhancedRespirationRate();
+  }
+
   if (mesg.IsTemperatureValid()) {
     trkpt.extensions["gpxtpx:TrackPointExtension|gpxtpx:atemp"] = mesg.GetTemperature();
   }
@@ -204,16 +232,6 @@ void CFit2Project::OnMesg(fit::SessionMesg& mesg) {
   //   fit::Field* filed = mesg.GetFieldByIndex(i);
   //   qDebug() << "  " << filed->GetName();
   // }
-
-  if (!segment.isEmpty()) {
-    track.segs.append(segment);
-    segment.pts.clear();
-  }
-
-  QString name = IUnit::datetime2string(track.segs.first().pts.first().time, IUnit::eTimeFormatShort);
-  if (mesg.IsStartTimeValid()) {
-    name = IUnit::datetime2string(dateTimeFromFitToQt(mesg.GetStartTime()), IUnit::eTimeFormatShort);
-  }
 
   QString comment = "<div><b>Device Statistic</b><br/>";
   QString val, unit;
@@ -260,19 +278,14 @@ void CFit2Project::OnMesg(fit::SessionMesg& mesg) {
     comment += tr("number of laps: %1<br/>").arg(mesg.GetNumLaps());
   }
 
-  // if (mesg.IsSportValid()) {
-  //   comment += tr("sport: %1<br/>").arg(mesg.GetSport());
-  // }
-
   comment += "</div>";
 
-  if (!track.isEmpty()) {
-    track.name = name;
-    track.cmt = comment;
-    new CGisItemTrk(track, this);
+  QString name;
+  if (mesg.IsStartTimeValid()) {
+    name = IUnit::datetime2string(dateTimeFromFitToQt(mesg.GetStartTime()), IUnit::eTimeFormatShort);
   }
 
-  track = CTrackData();
+  createTrack(name, comment);
 }
 
 void CFit2Project::OnMesg(fit::LapMesg& mesg) {
@@ -322,11 +335,10 @@ void CFit2Project::OnMesg(fit::EventMesg& mesg) {
       case FIT_EVENT_TYPE_START:
       case FIT_EVENT_TYPE_STOP:
       case FIT_EVENT_TYPE_STOP_ALL:
-        if (!segment.isEmpty()) {
+        if (recordType == eRecordType::Course) {
+          createTrack("", "");
+        } else if (!segment.isEmpty()) {
           track.segs.append(segment);
-          if (recordType == eRecordType::Course) {
-            new CGisItemTrk(track, this);
-          }
           segment.pts.clear();
         }
         break;
