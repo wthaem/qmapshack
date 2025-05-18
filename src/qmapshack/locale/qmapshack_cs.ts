@@ -784,52 +784,6 @@ K vyřešení tohoto střetu můžete vytvořit a uložit klona, vynutit svoji v
     </message>
 </context>
 <context>
-    <name>CDeviceAccessGvfsMtp</name>
-    <message>
-        <location filename="../device/CDeviceAccessGvfsMtp.cpp" line="97"/>
-        <source>Send to Devices...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../device/CDeviceAccessGvfsMtp.cpp" line="98"/>
-        <source>Failed to send file &quot;%1&quot; to device. Reason: %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../device/CDeviceAccessGvfsMtp.cpp" line="111"/>
-        <source>Delete from Devices...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../device/CDeviceAccessGvfsMtp.cpp" line="112"/>
-        <source>Failed to delete file &quot;%1&quot; from device. Reason: %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>CDeviceAccessKMtp</name>
-    <message>
-        <location filename="../device/CDeviceAccessKMtp.cpp" line="89"/>
-        <source>Send to Devices...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../device/CDeviceAccessKMtp.cpp" line="90"/>
-        <source>Failed to send file &quot;%1&quot; to device.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../device/CDeviceAccessKMtp.cpp" line="103"/>
-        <source>Delete from Devices...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../device/CDeviceAccessKMtp.cpp" line="104"/>
-        <source>Failed to delete file &quot;%1&quot; from device. Reason: %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>CDeviceGarmin</name>
     <message>
         <location filename="../device/CDeviceGarmin.cpp" line="334"/>
@@ -867,7 +821,7 @@ K vyřešení tohoto střetu můžete vytvořit a uložit klona, vynutit svoji v
         <location filename="../device/CDeviceGarminArchiveMtp.cpp" line="31"/>
         <location filename="../device/CDeviceGarminArchiveMtp.cpp" line="111"/>
         <source>Archive - expand to load</source>
-        <translation type="unfinished">Archiv - Rozbalit k nahrání</translation>
+        <translation type="obsolete">Archiv - Rozbalit k nahrání</translation>
     </message>
     <message>
         <location filename="../device/CDeviceGarminArchiveMtp.cpp" line="48"/>
@@ -877,7 +831,7 @@ K vyřešení tohoto střetu můžete vytvořit a uložit klona, vynutit svoji v
     <message>
         <location filename="../device/CDeviceGarminArchiveMtp.cpp" line="93"/>
         <source>Archive - loaded</source>
-        <translation type="unfinished">Archiv - Nahráno</translation>
+        <translation type="obsolete">Archiv - Nahráno</translation>
     </message>
 </context>
 <context>
