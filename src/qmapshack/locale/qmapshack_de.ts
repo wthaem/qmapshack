@@ -724,47 +724,39 @@ Um den Konflikt zu lösen, erstellen und speichern Sie einen Klon, erzwingen Ihr
 <context>
     <name>CDeviceAccessGvfsMtp</name>
     <message>
-        <location filename="../device/CDeviceAccessGvfsMtp.cpp" line="97"/>
         <source>Send to Devices...</source>
-        <translation>Ans Gerät senden...</translation>
+        <translation type="vanished">Ans Gerät senden...</translation>
     </message>
     <message>
-        <location filename="../device/CDeviceAccessGvfsMtp.cpp" line="98"/>
         <source>Failed to send file &quot;%1&quot; to device. Reason: %2</source>
-        <translation>Die Datei %1 konnte nicht an das Gerät gesendet werden. Grund: %2</translation>
+        <translation type="vanished">Die Datei %1 konnte nicht an das Gerät gesendet werden. Grund: %2</translation>
     </message>
     <message>
-        <location filename="../device/CDeviceAccessGvfsMtp.cpp" line="111"/>
         <source>Delete from Devices...</source>
-        <translation>Vom Gerät löschen...</translation>
+        <translation type="vanished">Vom Gerät löschen...</translation>
     </message>
     <message>
-        <location filename="../device/CDeviceAccessGvfsMtp.cpp" line="112"/>
         <source>Failed to delete file &quot;%1&quot; from device. Reason: %2</source>
-        <translation>Die Datei %1 konnte nicht vom Gerät gelöscht werden. Grund: %2</translation>
+        <translation type="vanished">Die Datei %1 konnte nicht vom Gerät gelöscht werden. Grund: %2</translation>
     </message>
 </context>
 <context>
     <name>CDeviceAccessKMtp</name>
     <message>
-        <location filename="../device/CDeviceAccessKMtp.cpp" line="89"/>
         <source>Send to Devices...</source>
-        <translation>Ans Gerät senden...</translation>
+        <translation type="vanished">Ans Gerät senden...</translation>
     </message>
     <message>
-        <location filename="../device/CDeviceAccessKMtp.cpp" line="90"/>
         <source>Failed to send file &quot;%1&quot; to device.</source>
-        <translation>Die Datei %1 konnte nicht an das Gerät gesendet werden.</translation>
+        <translation type="vanished">Die Datei %1 konnte nicht an das Gerät gesendet werden.</translation>
     </message>
     <message>
-        <location filename="../device/CDeviceAccessKMtp.cpp" line="103"/>
         <source>Delete from Devices...</source>
-        <translation>Vom Gerät löschen...</translation>
+        <translation type="vanished">om Gerät löschen...</translation>
     </message>
     <message>
-        <location filename="../device/CDeviceAccessKMtp.cpp" line="104"/>
         <source>Failed to delete file &quot;%1&quot; from device. Reason: %2</source>
-        <translation>Die Datei %1 konnte nicht vom Gerät gelöscht werden. Grund: %2</translation>
+        <translation type="vanished">Die Datei %1 konnte nicht vom Gerät gelöscht werden. Grund: %2</translation>
     </message>
 </context>
 <context>
@@ -797,15 +789,12 @@ Um den Konflikt zu lösen, erstellen und speichern Sie einen Klon, erzwingen Ihr
 <context>
     <name>CDeviceGarminArchiveMtp</name>
     <message>
-        <location filename="../device/CDeviceGarminArchiveMtp.cpp" line="31"/>
-        <location filename="../device/CDeviceGarminArchiveMtp.cpp" line="75"/>
         <source>Archive - expand to load</source>
-        <translation>Archiv - zum Laden aufklappen</translation>
+        <translation type="vanished">Archiv - zum Laden aufklappen</translation>
     </message>
     <message>
-        <location filename="../device/CDeviceGarminArchiveMtp.cpp" line="42"/>
         <source>Archive - loaded</source>
-        <translation>Archiv - geladen</translation>
+        <translation type="vanished">Archiv - geladen</translation>
     </message>
 </context>
 <context>
