@@ -2938,22 +2938,17 @@ Questo filtro è progettato per rilevare e nascondere i nodi che soddisfano ques
         <translation>Cambia prossimità...</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="217"/>
-        <source>Change Icon...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../gis/CGisListWks.cpp" line="1075"/>
+        <location filename="../gis/CGisListWks.cpp" line="1050"/>
         <source>Waypoints</source>
         <translation>Waypoints</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1079"/>
+        <location filename="../gis/CGisListWks.cpp" line="1055"/>
         <source>Wayp. &amp; Tracks</source>
         <translation>Wayp. &amp; tracce</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1081"/>
+        <location filename="../gis/CGisListWks.cpp" line="1057"/>
         <source>Tracks</source>
         <translation>Tracce</translation>
     </message>
@@ -3003,8 +2998,8 @@ Questo filtro è progettato per rilevare e nascondere i nodi che soddisfano ques
         <translation>Modifica punti dell&apos;area</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="997"/>
-        <location filename="../gis/CGisListWks.cpp" line="1085"/>
+        <location filename="../gis/CGisListWks.cpp" line="973"/>
+        <location filename="../gis/CGisListWks.cpp" line="1061"/>
         <source>Set Track Color</source>
         <translation>Imposta il colore della traccia</translation>
     </message>
@@ -3014,12 +3009,13 @@ Questo filtro è progettato per rilevare e nascondere i nodi che soddisfano ques
         <translation>Elimina voci...</translation>
     </message>
     <message>
+        <location filename="../gis/CGisListWks.cpp" line="1053"/>
         <source>Change Icon</source>
         <translation type="vanished">Cambia icona</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1861"/>
-        <location filename="../gis/CGisListWks.cpp" line="1923"/>
+        <location filename="../gis/CGisListWks.cpp" line="1836"/>
+        <location filename="../gis/CGisListWks.cpp" line="1898"/>
         <source>&lt;b&gt;Update devices&lt;/b&gt;&lt;p&gt;Update %1&lt;br/&gt;Please wait...&lt;/p&gt;</source>
         <translation>&lt;b&gt;Aggiornamento dispositivi&lt;/b&gt;&lt;p&gt;Aggiornamento di %1&lt;br/&gt;Attendere prego...&lt;/p&gt;</translation>
     </message>
@@ -3034,22 +3030,22 @@ Questo filtro è progettato per rilevare e nascondere i nodi che soddisfano ques
         <translation>Spazio di lavoro in apertura. Attendere prego.</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1354"/>
+        <location filename="../gis/CGisListWks.cpp" line="1329"/>
         <source>Close all projects...</source>
         <translation>Chiudi tutti i progetti...</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1354"/>
+        <location filename="../gis/CGisListWks.cpp" line="1329"/>
         <source>This will remove all projects from the workspace.</source>
         <translation>Tutti i progetti nello spazio di lavoro saranno rimossi.</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1377"/>
+        <location filename="../gis/CGisListWks.cpp" line="1352"/>
         <source>Delete project...</source>
         <translation>Elimina progetto...</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1378"/>
+        <location filename="../gis/CGisListWks.cpp" line="1353"/>
         <source>Do you really want to delete %1?</source>
         <translation>Vuoi veramente eliminare %1?</translation>
     </message>
@@ -4646,7 +4642,7 @@ linea %2, colonna %3:
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../map/CMapTMS.cpp" line="117"/>
+        <location filename="../map/CMapTMS.cpp" line="125"/>
         <source>Layer %1</source>
         <translation>Layer %1</translation>
     </message>

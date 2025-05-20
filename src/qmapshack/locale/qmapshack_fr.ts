@@ -2932,22 +2932,17 @@ Il est possible de personnaliser ces deux paramètres. Il est conseillé de choi
         <translation>Changer le rayon de proximité...</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="217"/>
-        <source>Change Icon...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../gis/CGisListWks.cpp" line="1075"/>
+        <location filename="../gis/CGisListWks.cpp" line="1050"/>
         <source>Waypoints</source>
         <translation>Points isolés</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1079"/>
+        <location filename="../gis/CGisListWks.cpp" line="1055"/>
         <source>Wayp. &amp; Tracks</source>
         <translation>Points &amp; traces</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1081"/>
+        <location filename="../gis/CGisListWks.cpp" line="1057"/>
         <source>Tracks</source>
         <translation>Traces</translation>
     </message>
@@ -2997,8 +2992,8 @@ Il est possible de personnaliser ces deux paramètres. Il est conseillé de choi
         <translation>Éditer les points de la surface</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="997"/>
-        <location filename="../gis/CGisListWks.cpp" line="1085"/>
+        <location filename="../gis/CGisListWks.cpp" line="973"/>
+        <location filename="../gis/CGisListWks.cpp" line="1061"/>
         <source>Set Track Color</source>
         <translation>Choisir la couleur de la trace</translation>
     </message>
@@ -3008,6 +3003,7 @@ Il est possible de personnaliser ces deux paramètres. Il est conseillé de choi
         <translation></translation>
     </message>
     <message>
+        <location filename="../gis/CGisListWks.cpp" line="1053"/>
         <source>Change Icon</source>
         <translation type="vanished">Choisir l&apos;icône</translation>
     </message>
@@ -3022,28 +3018,28 @@ Il est possible de personnaliser ces deux paramètres. Il est conseillé de choi
         <translation>Chargement de l&apos;espace de travail. Patientez.</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1354"/>
+        <location filename="../gis/CGisListWks.cpp" line="1329"/>
         <source>Close all projects...</source>
         <translation>Fermer tous les projets...</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1354"/>
+        <location filename="../gis/CGisListWks.cpp" line="1329"/>
         <source>This will remove all projects from the workspace.</source>
         <translation>Ceci enlevera tous les projets de l&apos;espace de travail.</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1377"/>
+        <location filename="../gis/CGisListWks.cpp" line="1352"/>
         <source>Delete project...</source>
         <translation>Supprimer le projet...</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1378"/>
+        <location filename="../gis/CGisListWks.cpp" line="1353"/>
         <source>Do you really want to delete %1?</source>
         <translation>Êtes-vous sûr de vouloir supprimer %1?</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1861"/>
-        <location filename="../gis/CGisListWks.cpp" line="1923"/>
+        <location filename="../gis/CGisListWks.cpp" line="1836"/>
+        <location filename="../gis/CGisListWks.cpp" line="1898"/>
         <source>&lt;b&gt;Update devices&lt;/b&gt;&lt;p&gt;Update %1&lt;br/&gt;Please wait...&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mise à jour des appareils&lt;/b&gt;&lt;p&gt;Mise à jour de %1&lt;br/&gt;Patientez...&lt;/p&gt;</translation>
     </message>
@@ -4639,7 +4635,7 @@ ligne %2, colonne %3:
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../map/CMapTMS.cpp" line="117"/>
+        <location filename="../map/CMapTMS.cpp" line="125"/>
         <source>Layer %1</source>
         <translation>Calque %1</translation>
     </message>

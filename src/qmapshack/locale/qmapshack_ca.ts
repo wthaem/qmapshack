@@ -2957,8 +2957,8 @@ Podeu modificar els dos paràmetres per personalitzar el comportament del filtre
         <translation>Edita els Punts de l&apos;Àrea</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="997"/>
-        <location filename="../gis/CGisListWks.cpp" line="1085"/>
+        <location filename="../gis/CGisListWks.cpp" line="973"/>
+        <location filename="../gis/CGisListWks.cpp" line="1061"/>
         <source>Set Track Color</source>
         <translation>Definir color de la ruta</translation>
     </message>
@@ -2968,12 +2968,13 @@ Podeu modificar els dos paràmetres per personalitzar el comportament del filtre
         <translation>Deixar anar elements...</translation>
     </message>
     <message>
+        <location filename="../gis/CGisListWks.cpp" line="1053"/>
         <source>Change Icon</source>
         <translation type="vanished">Canvia la Icona</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1861"/>
-        <location filename="../gis/CGisListWks.cpp" line="1923"/>
+        <location filename="../gis/CGisListWks.cpp" line="1836"/>
+        <location filename="../gis/CGisListWks.cpp" line="1898"/>
         <source>&lt;b&gt;Update devices&lt;/b&gt;&lt;p&gt;Update %1&lt;br/&gt;Please wait...&lt;/p&gt;</source>
         <translation>&lt;b&gt;Modifica els dispositius &lt;/b&gt;&lt;p&gt;Modifica %1&lt;br/&gt;Si us plau, espereu...&lt;/p&gt;</translation>
     </message>
@@ -3013,37 +3014,37 @@ Podeu modificar els dos paràmetres per personalitzar el comportament del filtre
         <translation>S&apos;està carregant l&apos;espai de treball. Espera.</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1075"/>
+        <location filename="../gis/CGisListWks.cpp" line="1050"/>
         <source>Waypoints</source>
         <translation>Fites</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1079"/>
+        <location filename="../gis/CGisListWks.cpp" line="1055"/>
         <source>Wayp. &amp; Tracks</source>
         <translation>Fites i Tracks</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1081"/>
+        <location filename="../gis/CGisListWks.cpp" line="1057"/>
         <source>Tracks</source>
         <translation>Tracks</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1354"/>
+        <location filename="../gis/CGisListWks.cpp" line="1329"/>
         <source>Close all projects...</source>
         <translation>Tancar tots els projectes...</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1354"/>
+        <location filename="../gis/CGisListWks.cpp" line="1329"/>
         <source>This will remove all projects from the workspace.</source>
         <translation>S&apos;eliminaran tots els projectes de l&apos;espai de treball.</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1377"/>
+        <location filename="../gis/CGisListWks.cpp" line="1352"/>
         <source>Delete project...</source>
         <translation>Suprimeix el projecte...</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1378"/>
+        <location filename="../gis/CGisListWks.cpp" line="1353"/>
         <source>Do you really want to delete %1?</source>
         <translation>Esteu segur que voleu suprimir %1?</translation>
     </message>
@@ -4643,7 +4644,7 @@ línia %2, columna %3:
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../map/CMapTMS.cpp" line="117"/>
+        <location filename="../map/CMapTMS.cpp" line="125"/>
         <source>Layer %1</source>
         <translation>Capa %1</translation>
     </message>
