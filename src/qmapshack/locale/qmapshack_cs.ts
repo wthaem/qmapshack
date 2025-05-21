@@ -185,21 +185,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../canvas/CCanvas.cpp" line="324"/>
-        <source>&lt;h2&gt;Elevation Data&lt;/h2&gt;&lt;p&gt;Elevation data (Digital Elevation Model - DEM) is used in various functions of QMapShack and is completely independent from the maps. However the same principles as for maps apply. DEM data must always be defined by a single file that is recognized by QMapShack. This file has to be placed into one of the registered DEM folders (&lt;a href=&apos;DemFolders&apos;&gt;File-&gt;Setup DEM Paths&lt;/a&gt;). QMapShack will find it and list it. You can reload the list of DEM files by doing a right click on the DEM list and select &apos;Reload DEM&apos; from the menu.&lt;/p&gt;&lt;p&gt;Similar to raster maps DEM files have to be wrapped by a *.vrt file to be recognized. A *.vrt file can reference one or several other files. Again, you can use QMapShack&apos;s built-in VRT Builder (&lt;a href=&apos;VrtBuilder&apos;&gt;Tool-&gt;VRT Builder&lt;/a&gt;) to create such a file.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;h2&gt;&amp;nbsp;&lt;/h2&gt;&lt;p&gt;Impatient Users:&lt;p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&apos;GetDems&apos;&gt;I want some online DEMs.&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Patient Users:&lt;p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&apos;https://github.com/Maproom/qmapshack/wiki/DocMapDemSources&apos;&gt;Sources for DEM&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</source>
-        <translation type="obsolete">&lt;h2&gt;&amp;nbsp;&lt;/h2&gt;&lt;p&gt;Pro netrpělivé uživatele:&lt;p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&apos;GetDems&apos;&gt;Chci internetová výšková data (DEM).&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Pro trpělivé:&lt;p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&apos;https://github.com/Maproom/qmapshack/wiki/DocMapDemSources&apos;&gt;Zdroje pro výšková data (DEM)&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</translation>
-    </message>
-    <message>
-        <location filename="../canvas/CCanvas.cpp" line="1016"/>
+        <location filename="../canvas/CCanvas.cpp" line="1022"/>
         <source>Map Projection...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../canvas/CCanvas.cpp" line="1017"/>
+        <location filename="../canvas/CCanvas.cpp" line="1023"/>
         <source>Failed to setup map projection. Please configure a valid projection.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -223,7 +214,7 @@
         <translation>&lt;h2&gt;Routing&lt;/h2&gt;&lt;p&gt;QMapShack podporuje internetové služby pro stanovení směru cesty (vedení cesty). Pokud ale skutečně chcete využít možnosti stanovení směru cesty, potřebujete mít databázi se stanovením směru cesty uloženu místně. Jsou dvě možnosti, dvě stroje pracující bez připojení k internetu.&lt;/p&gt;&lt;h3&gt;Routino&lt;/h3&gt;&lt;p&gt;Pro Routino musíte vytvořit databázi se  v ze souborů databáze Open Street Map. QMapShack má vestavěného tvůrce databáze Routino (&lt;a href=&apos;CreateRoutino&apos;&gt;Nástroj → Vytvořit databázi Routino&lt;/a&gt;).&lt;/p&gt;&lt;h3&gt;BRouter&lt;/h3&gt;&lt;p&gt;Druhou možností je použití místní instalace BRouter s místní databázi se stanovením směru cesty. Použijte &lt;a href=&apos;BRouterSetup&apos;&gt;Nastavení BRouter&lt;/a&gt; ke stažení a nainstalování všech nezbytných dat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../canvas/CCanvas.cpp" line="967"/>
+        <location filename="../canvas/CCanvas.cpp" line="973"/>
         <source>Setup Map Background</source>
         <translation>Nastavit pozadí mapy</translation>
     </message>
@@ -2825,8 +2816,8 @@ You can modify both parameters to customize the behavior of the filter. For the 
         <translation>Převést na stopu</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="973"/>
-        <location filename="../gis/CGisListWks.cpp" line="1061"/>
+        <location filename="../gis/CGisListWks.cpp" line="976"/>
+        <location filename="../gis/CGisListWks.cpp" line="1064"/>
         <source>Set Track Color</source>
         <translation>Nastavit barvu stopy</translation>
     </message>
@@ -2836,18 +2827,18 @@ You can modify both parameters to customize the behavior of the filter. For the 
         <translation>Zahodit prvky...</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1836"/>
-        <location filename="../gis/CGisListWks.cpp" line="1898"/>
+        <location filename="../gis/CGisListWks.cpp" line="1839"/>
+        <location filename="../gis/CGisListWks.cpp" line="1901"/>
         <source>&lt;b&gt;Update devices&lt;/b&gt;&lt;p&gt;Update %1&lt;br/&gt;Please wait...&lt;/p&gt;</source>
         <translation>&lt;b&gt;Aktualizovat zařízení&lt;/b&gt;&lt;p&gt;Aktualizovat %1&lt;br/&gt;Počkejte, prosím...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1352"/>
+        <location filename="../gis/CGisListWks.cpp" line="1355"/>
         <source>Delete project...</source>
         <translation>Smazat projekt...</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1353"/>
+        <location filename="../gis/CGisListWks.cpp" line="1356"/>
         <source>Do you really want to delete %1?</source>
         <translation>Opravdu chcete smazat %1?</translation>
     </message>
@@ -2974,7 +2965,7 @@ You can modify both parameters to customize the behavior of the filter. For the 
         <translation>Smazat</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1053"/>
+        <location filename="../gis/CGisListWks.cpp" line="1056"/>
         <source>Change Icon</source>
         <translation type="vanished">Změnit ikonu</translation>
     </message>
@@ -2994,32 +2985,32 @@ You can modify both parameters to customize the behavior of the filter. For the 
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="807"/>
+        <location filename="../gis/CGisListWks.cpp" line="783"/>
         <source>Loading workspace. Please wait.</source>
         <translation>Nahrává se pracovní prostor. Počkejte, prosím.</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1050"/>
+        <location filename="../gis/CGisListWks.cpp" line="1053"/>
         <source>Waypoints</source>
         <translation>Cestovní body</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1055"/>
+        <location filename="../gis/CGisListWks.cpp" line="1058"/>
         <source>Wayp. &amp; Tracks</source>
         <translation>Cestovní body a stopy</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1057"/>
+        <location filename="../gis/CGisListWks.cpp" line="1060"/>
         <source>Tracks</source>
         <translation>Stopy</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1329"/>
+        <location filename="../gis/CGisListWks.cpp" line="1332"/>
         <source>Close all projects...</source>
         <translation>Zavřít všechny projekty...</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1329"/>
+        <location filename="../gis/CGisListWks.cpp" line="1332"/>
         <source>This will remove all projects from the workspace.</source>
         <translation>Tímto budou všechny projekty odstraněny z pracovního prostoru.</translation>
     </message>

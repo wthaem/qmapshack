@@ -165,22 +165,12 @@
         <translation>&lt;h2&gt;&amp;nbsp;&lt;/h2&gt;&lt;p&gt;Dossier de base actuel:&lt;br/&gt;%1&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../canvas/CCanvas.cpp" line="317"/>
-        <source>&lt;h2&gt;&amp;nbsp;&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&apos;https://github.com/Maproom/qmapshack/wiki/DocMapDemSources&apos;&gt;Sources for DEM&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../canvas/CCanvas.cpp" line="324"/>
-        <source>&lt;h2&gt;Elevation Data&lt;/h2&gt;&lt;p&gt;Elevation data (Digital Elevation Model - DEM) is used in various functions of QMapShack and is completely independent from the maps. However the same principles as for maps apply. DEM data must always be defined by a single file that is recognized by QMapShack. This file has to be placed into one of the registered DEM folders (&lt;a href=&apos;DemFolders&apos;&gt;File-&gt;Setup DEM Paths&lt;/a&gt;). QMapShack will find it and list it. You can reload the list of DEM files by doing a right click on the DEM list and select &apos;Reload DEM&apos; from the menu.&lt;/p&gt;&lt;p&gt;Similar to raster maps DEM files have to be wrapped by a *.vrt file to be recognized. A *.vrt file can reference one or several other files. Again, you can use QMapShack&apos;s built-in VRT Builder (&lt;a href=&apos;VrtBuilder&apos;&gt;Tool-&gt;VRT Builder&lt;/a&gt;) to create such a file.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../canvas/CCanvas.cpp" line="1016"/>
+        <location filename="../canvas/CCanvas.cpp" line="1022"/>
         <source>Map Projection...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../canvas/CCanvas.cpp" line="1017"/>
+        <location filename="../canvas/CCanvas.cpp" line="1023"/>
         <source>Failed to setup map projection. Please configure a valid projection.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -223,7 +213,7 @@
         <translation>&lt;h2&gt;Routage&lt;/h2&gt;&lt;p&gt;QMapShack peut utiliser des services de calcul d&apos;itinéraire en ligne. En revanche, si vous voulez tirer parties de toutes les fonctionnalités de routage, il vous faudra une base de donnée de routage locale. Il existe deux moteurs de calcul d&apos;itinéraire.&lt;/p&gt;&lt;h3&gt;Routino&lt;/h3&gt;&lt;p&gt;Pour Routino il faut créer une base de donnée de routage à partir de fichiers de donnée OpenStreetMap. QMapShack dispose d&apos;un outil de création de base de données Routino (&lt;a href=&apos;CreateRoutino&apos;&gt;Outils-&gt;Créer une base de données Routino&lt;/a&gt;).&lt;/p&gt;&lt;h3&gt;BRouter&lt;/h3&gt;&lt;p&gt;Alternativement, il est possible d&apos;utiliser une installation locale de BRouter. Cliquez sur &lt;a href=&apos;BRouterSetup&apos;&gt;Installation de BRouter&lt;/a&gt; pour télécharger et installer les données nécessaires.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../canvas/CCanvas.cpp" line="967"/>
+        <location filename="../canvas/CCanvas.cpp" line="973"/>
         <source>Setup Map Background</source>
         <translation>Réglage de l&apos;arrière-plan de la carte</translation>
     </message>
@@ -2932,17 +2922,17 @@ Il est possible de personnaliser ces deux paramètres. Il est conseillé de choi
         <translation>Changer le rayon de proximité...</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1050"/>
+        <location filename="../gis/CGisListWks.cpp" line="1053"/>
         <source>Waypoints</source>
         <translation>Points isolés</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1055"/>
+        <location filename="../gis/CGisListWks.cpp" line="1058"/>
         <source>Wayp. &amp; Tracks</source>
         <translation>Points &amp; traces</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1057"/>
+        <location filename="../gis/CGisListWks.cpp" line="1060"/>
         <source>Tracks</source>
         <translation>Traces</translation>
     </message>
@@ -2992,8 +2982,8 @@ Il est possible de personnaliser ces deux paramètres. Il est conseillé de choi
         <translation>Éditer les points de la surface</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="973"/>
-        <location filename="../gis/CGisListWks.cpp" line="1061"/>
+        <location filename="../gis/CGisListWks.cpp" line="976"/>
+        <location filename="../gis/CGisListWks.cpp" line="1064"/>
         <source>Set Track Color</source>
         <translation>Choisir la couleur de la trace</translation>
     </message>
@@ -3003,7 +2993,7 @@ Il est possible de personnaliser ces deux paramètres. Il est conseillé de choi
         <translation></translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1053"/>
+        <location filename="../gis/CGisListWks.cpp" line="1056"/>
         <source>Change Icon</source>
         <translation type="vanished">Choisir l&apos;icône</translation>
     </message>
@@ -3013,33 +3003,33 @@ Il est possible de personnaliser ces deux paramètres. Il est conseillé de choi
         <translation>Sauvegarde de l&apos;espace de travail. Patientez.</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="807"/>
+        <location filename="../gis/CGisListWks.cpp" line="783"/>
         <source>Loading workspace. Please wait.</source>
         <translation>Chargement de l&apos;espace de travail. Patientez.</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1329"/>
+        <location filename="../gis/CGisListWks.cpp" line="1332"/>
         <source>Close all projects...</source>
         <translation>Fermer tous les projets...</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1329"/>
+        <location filename="../gis/CGisListWks.cpp" line="1332"/>
         <source>This will remove all projects from the workspace.</source>
         <translation>Ceci enlevera tous les projets de l&apos;espace de travail.</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1352"/>
+        <location filename="../gis/CGisListWks.cpp" line="1355"/>
         <source>Delete project...</source>
         <translation>Supprimer le projet...</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1353"/>
+        <location filename="../gis/CGisListWks.cpp" line="1356"/>
         <source>Do you really want to delete %1?</source>
         <translation>Êtes-vous sûr de vouloir supprimer %1?</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1836"/>
-        <location filename="../gis/CGisListWks.cpp" line="1898"/>
+        <location filename="../gis/CGisListWks.cpp" line="1839"/>
+        <location filename="../gis/CGisListWks.cpp" line="1901"/>
         <source>&lt;b&gt;Update devices&lt;/b&gt;&lt;p&gt;Update %1&lt;br/&gt;Please wait...&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mise à jour des appareils&lt;/b&gt;&lt;p&gt;Mise à jour de %1&lt;br/&gt;Patientez...&lt;/p&gt;</translation>
     </message>

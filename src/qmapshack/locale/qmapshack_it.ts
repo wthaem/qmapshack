@@ -167,22 +167,12 @@
         <translation>&lt;h2&gt;&amp;nbsp;&lt;/h2&gt;&lt;p&gt;Home attuale:&lt;br/&gt;%1&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../canvas/CCanvas.cpp" line="317"/>
-        <source>&lt;h2&gt;&amp;nbsp;&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&apos;https://github.com/Maproom/qmapshack/wiki/DocMapDemSources&apos;&gt;Sources for DEM&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../canvas/CCanvas.cpp" line="324"/>
-        <source>&lt;h2&gt;Elevation Data&lt;/h2&gt;&lt;p&gt;Elevation data (Digital Elevation Model - DEM) is used in various functions of QMapShack and is completely independent from the maps. However the same principles as for maps apply. DEM data must always be defined by a single file that is recognized by QMapShack. This file has to be placed into one of the registered DEM folders (&lt;a href=&apos;DemFolders&apos;&gt;File-&gt;Setup DEM Paths&lt;/a&gt;). QMapShack will find it and list it. You can reload the list of DEM files by doing a right click on the DEM list and select &apos;Reload DEM&apos; from the menu.&lt;/p&gt;&lt;p&gt;Similar to raster maps DEM files have to be wrapped by a *.vrt file to be recognized. A *.vrt file can reference one or several other files. Again, you can use QMapShack&apos;s built-in VRT Builder (&lt;a href=&apos;VrtBuilder&apos;&gt;Tool-&gt;VRT Builder&lt;/a&gt;) to create such a file.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../canvas/CCanvas.cpp" line="1016"/>
+        <location filename="../canvas/CCanvas.cpp" line="1022"/>
         <source>Map Projection...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../canvas/CCanvas.cpp" line="1017"/>
+        <location filename="../canvas/CCanvas.cpp" line="1023"/>
         <source>Failed to setup map projection. Please configure a valid projection.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -225,7 +215,7 @@
         <translation>&lt;h2&gt;Routing&lt;/h2&gt;&lt;p&gt;QMapShack supporta i servizi di routing online. Ma se si desidera veramente sfruttare le possibilità di routing, è necessario che il database di routing sia archiviato localmente. Sono disponibili due motori di routing offline.&lt;/p&gt;&lt;h3&gt;Routino&lt;/h3&gt;&lt;p&gt;Per Routino devi creare i dati di routing dai file del database Open Street Map. QMapShack ha un creatore di database Routino integrato (&lt;a href=&apos;CreateRoutino&apos;&gt;Strumenti-&gt;Crea un database Routino&lt;/a&gt;).&lt;/p&gt;&lt;h3&gt;BRouter&lt;/h3&gt;&lt;p&gt;Una seconda opzione è quella di utilizzare un&apos;installazione locale di BRouter con un database di routing locale. Usa il &lt;a href=&apos;BRouterSetup&apos;&gt;BRouter setup&lt;/a&gt; per scaricare e installare tutti i dati necessari.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../canvas/CCanvas.cpp" line="967"/>
+        <location filename="../canvas/CCanvas.cpp" line="973"/>
         <source>Setup Map Background</source>
         <translation>Impostazione sfondo mappa</translation>
     </message>
@@ -2938,17 +2928,17 @@ Questo filtro è progettato per rilevare e nascondere i nodi che soddisfano ques
         <translation>Cambia prossimità...</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1050"/>
+        <location filename="../gis/CGisListWks.cpp" line="1053"/>
         <source>Waypoints</source>
         <translation>Waypoints</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1055"/>
+        <location filename="../gis/CGisListWks.cpp" line="1058"/>
         <source>Wayp. &amp; Tracks</source>
         <translation>Wayp. &amp; tracce</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1057"/>
+        <location filename="../gis/CGisListWks.cpp" line="1060"/>
         <source>Tracks</source>
         <translation>Tracce</translation>
     </message>
@@ -2998,8 +2988,8 @@ Questo filtro è progettato per rilevare e nascondere i nodi che soddisfano ques
         <translation>Modifica punti dell&apos;area</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="973"/>
-        <location filename="../gis/CGisListWks.cpp" line="1061"/>
+        <location filename="../gis/CGisListWks.cpp" line="976"/>
+        <location filename="../gis/CGisListWks.cpp" line="1064"/>
         <source>Set Track Color</source>
         <translation>Imposta il colore della traccia</translation>
     </message>
@@ -3009,13 +2999,13 @@ Questo filtro è progettato per rilevare e nascondere i nodi che soddisfano ques
         <translation>Elimina voci...</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1053"/>
+        <location filename="../gis/CGisListWks.cpp" line="1056"/>
         <source>Change Icon</source>
         <translation type="vanished">Cambia icona</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1836"/>
-        <location filename="../gis/CGisListWks.cpp" line="1898"/>
+        <location filename="../gis/CGisListWks.cpp" line="1839"/>
+        <location filename="../gis/CGisListWks.cpp" line="1901"/>
         <source>&lt;b&gt;Update devices&lt;/b&gt;&lt;p&gt;Update %1&lt;br/&gt;Please wait...&lt;/p&gt;</source>
         <translation>&lt;b&gt;Aggiornamento dispositivi&lt;/b&gt;&lt;p&gt;Aggiornamento di %1&lt;br/&gt;Attendere prego...&lt;/p&gt;</translation>
     </message>
@@ -3025,27 +3015,27 @@ Questo filtro è progettato per rilevare e nascondere i nodi che soddisfano ques
         <translation>Spazio di lavoro in salvataggio. Attendere prego.</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="807"/>
+        <location filename="../gis/CGisListWks.cpp" line="783"/>
         <source>Loading workspace. Please wait.</source>
         <translation>Spazio di lavoro in apertura. Attendere prego.</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1329"/>
+        <location filename="../gis/CGisListWks.cpp" line="1332"/>
         <source>Close all projects...</source>
         <translation>Chiudi tutti i progetti...</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1329"/>
+        <location filename="../gis/CGisListWks.cpp" line="1332"/>
         <source>This will remove all projects from the workspace.</source>
         <translation>Tutti i progetti nello spazio di lavoro saranno rimossi.</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1352"/>
+        <location filename="../gis/CGisListWks.cpp" line="1355"/>
         <source>Delete project...</source>
         <translation>Elimina progetto...</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1353"/>
+        <location filename="../gis/CGisListWks.cpp" line="1356"/>
         <source>Do you really want to delete %1?</source>
         <translation>Vuoi veramente eliminare %1?</translation>
     </message>
