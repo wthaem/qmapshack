@@ -14104,49 +14104,49 @@ It is either a new item or it has been deleted in the database by someone else.<
         <translation>Alleen lezen modus...</translation>
     </message>
     <message>
-        <location filename="../gis/IGisItem.cpp" line="710"/>
-        <location filename="../gis/IGisItem.cpp" line="743"/>
+        <location filename="../gis/IGisItem.cpp" line="707"/>
+        <location filename="../gis/IGisItem.cpp" line="740"/>
         <source>&lt;h4&gt;Description:&lt;/h4&gt;</source>
         <translation>&lt;h4&gt;Beschrijving:&lt;/h4&gt;</translation>
     </message>
     <message>
-        <location filename="../gis/IGisItem.cpp" line="745"/>
+        <location filename="../gis/IGisItem.cpp" line="742"/>
         <source>&lt;p&gt;--- no description ---&lt;/p&gt;</source>
         <translation>&lt;p&gt;--- geen beschrijving ---&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../gis/IGisItem.cpp" line="926"/>
+        <location filename="../gis/IGisItem.cpp" line="923"/>
         <source>Rating: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gis/IGisItem.cpp" line="930"/>
+        <location filename="../gis/IGisItem.cpp" line="927"/>
         <source>Keywords: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gis/IGisItem.cpp" line="718"/>
+        <location filename="../gis/IGisItem.cpp" line="715"/>
         <source>&lt;h4&gt;Comment:&lt;/h4&gt;</source>
         <translation>&lt;h4&gt;Notitie:&lt;/h4&gt;</translation>
     </message>
     <message>
-        <location filename="../gis/IGisItem.cpp" line="726"/>
-        <location filename="../gis/IGisItem.cpp" line="753"/>
+        <location filename="../gis/IGisItem.cpp" line="723"/>
+        <location filename="../gis/IGisItem.cpp" line="750"/>
         <source>&lt;h4&gt;Links:&lt;/h4&gt;</source>
         <translation>&lt;h4&gt;Links:&lt;/h4&gt;</translation>
     </message>
     <message>
-        <location filename="../gis/IGisItem.cpp" line="755"/>
+        <location filename="../gis/IGisItem.cpp" line="752"/>
         <source>&lt;p&gt;--- no links ---&lt;/p&gt;</source>
         <translation>&lt;p&gt;--- geen links ---&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../gis/IGisItem.cpp" line="860"/>
+        <location filename="../gis/IGisItem.cpp" line="857"/>
         <source>Edit name...</source>
         <translation type="unfinished">Bewerk naam...</translation>
     </message>
     <message>
-        <location filename="../gis/IGisItem.cpp" line="861"/>
+        <location filename="../gis/IGisItem.cpp" line="858"/>
         <source>Enter new %1 name.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -14175,70 +14175,70 @@ It is either a new item or it has been deleted in the database by someone else.<
 <context>
     <name>IGisProject</name>
     <message>
-        <location filename="../gis/prj/IGisProject.cpp" line="155"/>
+        <location filename="../gis/prj/IGisProject.cpp" line="153"/>
         <source>Save project?</source>
         <translation>Project opslaan?</translation>
     </message>
     <message>
-        <location filename="../gis/prj/IGisProject.cpp" line="156"/>
+        <location filename="../gis/prj/IGisProject.cpp" line="154"/>
         <source>&lt;h3&gt;%1&lt;/h3&gt;The project was changed. Save before closing it?</source>
         <translation>&lt;h3&gt;%1&lt;/h3&gt;Het project is veranderd. Voor het sluiten opslaan?</translation>
     </message>
     <message>
-        <location filename="../gis/prj/IGisProject.cpp" line="321"/>
+        <location filename="../gis/prj/IGisProject.cpp" line="319"/>
         <source>%1: Correlate tracks and waypoints.</source>
         <translation>%1: Correlatie van tracks en waypointen.</translation>
     </message>
     <message>
-        <location filename="../gis/prj/IGisProject.cpp" line="329"/>
+        <location filename="../gis/prj/IGisProject.cpp" line="327"/>
         <source>&lt;h3&gt;%1&lt;/h3&gt;Did that take too long for you? Do you want to skip correlation of tracks and waypoints for this project in the future?</source>
         <translation>&lt;h3&gt;%1&lt;/h3&gt;Duurde dit te lang? Moet de correlatie van tracks en waypointen in dit project in de toekomst overgeslagen worden?</translation>
     </message>
     <message>
-        <location filename="../gis/prj/IGisProject.cpp" line="332"/>
+        <location filename="../gis/prj/IGisProject.cpp" line="330"/>
         <source>Canceled correlation...</source>
         <translation>Correlatie geanuleerd...</translation>
     </message>
     <message>
-        <location filename="../gis/prj/IGisProject.cpp" line="371"/>
-        <location filename="../gis/prj/IGisProject.cpp" line="418"/>
+        <location filename="../gis/prj/IGisProject.cpp" line="369"/>
+        <location filename="../gis/prj/IGisProject.cpp" line="416"/>
         <source>Save &quot;%1&quot; to...</source>
         <translation>Opslaan &quot;%1&quot; als...</translation>
     </message>
     <message>
-        <location filename="../gis/prj/IGisProject.cpp" line="482"/>
+        <location filename="../gis/prj/IGisProject.cpp" line="480"/>
         <source>&lt;br/&gt;
 Filename: %1</source>
         <translation>&lt;br/&gt;
 Bestandsnaam: %1</translation>
     </message>
     <message>
-        <location filename="../gis/prj/IGisProject.cpp" line="486"/>
+        <location filename="../gis/prj/IGisProject.cpp" line="484"/>
         <source>Waypoints: %1</source>
         <translation>Waypoints: %1</translation>
     </message>
     <message>
-        <location filename="../gis/prj/IGisProject.cpp" line="489"/>
+        <location filename="../gis/prj/IGisProject.cpp" line="487"/>
         <source>Tracks: %1</source>
         <translation>Tracks: %1</translation>
     </message>
     <message>
-        <location filename="../gis/prj/IGisProject.cpp" line="492"/>
+        <location filename="../gis/prj/IGisProject.cpp" line="490"/>
         <source>Routes: %1</source>
         <translation>Routes: %1</translation>
     </message>
     <message>
-        <location filename="../gis/prj/IGisProject.cpp" line="495"/>
+        <location filename="../gis/prj/IGisProject.cpp" line="493"/>
         <source>Areas: %1</source>
         <translation>Gebieden: %1</translation>
     </message>
     <message>
-        <location filename="../gis/prj/IGisProject.cpp" line="599"/>
+        <location filename="../gis/prj/IGisProject.cpp" line="597"/>
         <source>Are you sure you want to delete &apos;%1&apos; from project &apos;%2&apos;?</source>
         <translation>Moet &apos;%1&apos; werkelijk verwijderd worden uit project &apos;%2&apos;?</translation>
     </message>
     <message>
-        <location filename="../gis/prj/IGisProject.cpp" line="601"/>
+        <location filename="../gis/prj/IGisProject.cpp" line="599"/>
         <source>Delete...</source>
         <translation>Verwijderen...</translation>
     </message>

@@ -14250,49 +14250,49 @@ Es tracta d&apos;un element nou o bé algú l&apos;ha esborrat de la base de dad
         <translation>Mode de només lectura...</translation>
     </message>
     <message>
-        <location filename="../gis/IGisItem.cpp" line="710"/>
-        <location filename="../gis/IGisItem.cpp" line="743"/>
+        <location filename="../gis/IGisItem.cpp" line="707"/>
+        <location filename="../gis/IGisItem.cpp" line="740"/>
         <source>&lt;h4&gt;Description:&lt;/h4&gt;</source>
         <translation>&lt;h4&gt;Descripció:&lt;/h4&gt;</translation>
     </message>
     <message>
-        <location filename="../gis/IGisItem.cpp" line="745"/>
+        <location filename="../gis/IGisItem.cpp" line="742"/>
         <source>&lt;p&gt;--- no description ---&lt;/p&gt;</source>
         <translation>&lt;p&gt;--- sense descripció ---&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../gis/IGisItem.cpp" line="926"/>
+        <location filename="../gis/IGisItem.cpp" line="923"/>
         <source>Rating: </source>
         <translation>Valoració:</translation>
     </message>
     <message>
-        <location filename="../gis/IGisItem.cpp" line="930"/>
+        <location filename="../gis/IGisItem.cpp" line="927"/>
         <source>Keywords: </source>
         <translation>Paraules clau:</translation>
     </message>
     <message>
-        <location filename="../gis/IGisItem.cpp" line="718"/>
+        <location filename="../gis/IGisItem.cpp" line="715"/>
         <source>&lt;h4&gt;Comment:&lt;/h4&gt;</source>
         <translation>&lt;h4&gt;Comentari:&lt;/h4&gt;</translation>
     </message>
     <message>
-        <location filename="../gis/IGisItem.cpp" line="726"/>
-        <location filename="../gis/IGisItem.cpp" line="753"/>
+        <location filename="../gis/IGisItem.cpp" line="723"/>
+        <location filename="../gis/IGisItem.cpp" line="750"/>
         <source>&lt;h4&gt;Links:&lt;/h4&gt;</source>
         <translation>&lt;h4&gt;Enllaços:&lt;/h4&gt;</translation>
     </message>
     <message>
-        <location filename="../gis/IGisItem.cpp" line="755"/>
+        <location filename="../gis/IGisItem.cpp" line="752"/>
         <source>&lt;p&gt;--- no links ---&lt;/p&gt;</source>
         <translation>&lt;p&gt;--- sense enllaços ---&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../gis/IGisItem.cpp" line="860"/>
+        <location filename="../gis/IGisItem.cpp" line="857"/>
         <source>Edit name...</source>
         <translation>Edita el nom...</translation>
     </message>
     <message>
-        <location filename="../gis/IGisItem.cpp" line="861"/>
+        <location filename="../gis/IGisItem.cpp" line="858"/>
         <source>Enter new %1 name.</source>
         <translation>Introduir el Nou nom per a %1.</translation>
     </message>
@@ -14321,70 +14321,70 @@ Es tracta d&apos;un element nou o bé algú l&apos;ha esborrat de la base de dad
 <context>
     <name>IGisProject</name>
     <message>
-        <location filename="../gis/prj/IGisProject.cpp" line="155"/>
+        <location filename="../gis/prj/IGisProject.cpp" line="153"/>
         <source>Save project?</source>
         <translation>Desar el projecte?</translation>
     </message>
     <message>
-        <location filename="../gis/prj/IGisProject.cpp" line="156"/>
+        <location filename="../gis/prj/IGisProject.cpp" line="154"/>
         <source>&lt;h3&gt;%1&lt;/h3&gt;The project was changed. Save before closing it?</source>
         <translation>&lt;h3&gt;%1&lt;/h3&gt;El projecte ha canviat. El voleu desar abans de tancar-lo?</translation>
     </message>
     <message>
-        <location filename="../gis/prj/IGisProject.cpp" line="321"/>
+        <location filename="../gis/prj/IGisProject.cpp" line="319"/>
         <source>%1: Correlate tracks and waypoints.</source>
         <translation>%1: Correlacionar tracks i fites.</translation>
     </message>
     <message>
-        <location filename="../gis/prj/IGisProject.cpp" line="329"/>
+        <location filename="../gis/prj/IGisProject.cpp" line="327"/>
         <source>&lt;h3&gt;%1&lt;/h3&gt;Did that take too long for you? Do you want to skip correlation of tracks and waypoints for this project in the future?</source>
         <translation>&lt;h3&gt;%1&lt;/h3&gt;Va ser massa llarg per a tu? Per a d&apos;altres cops, vols ometre en aquest projecte la correlació dels tracks i les fites?</translation>
     </message>
     <message>
-        <location filename="../gis/prj/IGisProject.cpp" line="332"/>
+        <location filename="../gis/prj/IGisProject.cpp" line="330"/>
         <source>Canceled correlation...</source>
         <translation>Correlació cancel·lada...</translation>
     </message>
     <message>
-        <location filename="../gis/prj/IGisProject.cpp" line="371"/>
-        <location filename="../gis/prj/IGisProject.cpp" line="418"/>
+        <location filename="../gis/prj/IGisProject.cpp" line="369"/>
+        <location filename="../gis/prj/IGisProject.cpp" line="416"/>
         <source>Save &quot;%1&quot; to...</source>
         <translation>Desa &quot;%1&quot; a...</translation>
     </message>
     <message>
-        <location filename="../gis/prj/IGisProject.cpp" line="482"/>
+        <location filename="../gis/prj/IGisProject.cpp" line="480"/>
         <source>&lt;br/&gt;
 Filename: %1</source>
         <translation>&lt;br/&gt;
 Nom del fitxer: %1</translation>
     </message>
     <message>
-        <location filename="../gis/prj/IGisProject.cpp" line="486"/>
+        <location filename="../gis/prj/IGisProject.cpp" line="484"/>
         <source>Waypoints: %1</source>
         <translation>Fites: %1</translation>
     </message>
     <message>
-        <location filename="../gis/prj/IGisProject.cpp" line="489"/>
+        <location filename="../gis/prj/IGisProject.cpp" line="487"/>
         <source>Tracks: %1</source>
         <translation>Tracks: %1</translation>
     </message>
     <message>
-        <location filename="../gis/prj/IGisProject.cpp" line="492"/>
+        <location filename="../gis/prj/IGisProject.cpp" line="490"/>
         <source>Routes: %1</source>
         <translation>Itineraris: %1</translation>
     </message>
     <message>
-        <location filename="../gis/prj/IGisProject.cpp" line="495"/>
+        <location filename="../gis/prj/IGisProject.cpp" line="493"/>
         <source>Areas: %1</source>
         <translation>Àrees: %1</translation>
     </message>
     <message>
-        <location filename="../gis/prj/IGisProject.cpp" line="599"/>
+        <location filename="../gis/prj/IGisProject.cpp" line="597"/>
         <source>Are you sure you want to delete &apos;%1&apos; from project &apos;%2&apos;?</source>
         <translation>Esteu segur que voleu suprimir &apos;%1&apos; del projecte &apos;%2&apos;?</translation>
     </message>
     <message>
-        <location filename="../gis/prj/IGisProject.cpp" line="601"/>
+        <location filename="../gis/prj/IGisProject.cpp" line="599"/>
         <source>Delete...</source>
         <translation>Suprimir...</translation>
     </message>
