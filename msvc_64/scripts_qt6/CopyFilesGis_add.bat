@@ -2,12 +2,11 @@
 rem Environment variable replacements created with CopyFilesGis.cfg using QMSUser.cfg
 
 set QMSI_QMS_PATH=d:\QtProjects\QMS
-set QMSI_GIS_PATH=d:\QtProjects\QMS\gisinternals\1930_260118\release-1930-x64
-set QMSI_QT_PATH="c:\Qt\6.10.0\msvc2022_64"
-set QMSI_VCREDIST_PATH="C:\Program Files\Microsoft Visual Studio\18\Community\VC\Redist\MSVC\14.50.35710\"
+set QMSI_GIS_PATH=d:\QtProjects\QMS\gisinternals\1930_250418\release-1930-x64
+set QMSI_QT_PATH="d:\Qt\5.12.3\6.9.0\msvc2022_64"
+set QMSI_VCREDIST_PATH="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Redist\MSVC\14.42.34433\"
 set QMSI_ROUT_PATH="d:\QtProjects\QMS\routino\routino-3.4.3\install"
-set QMSI_MYSQL_PATH="d:\QtProjects\QMS\mysql\6.10.0"
-set QMSI_MGW6_PATH="c:\msys64\ucrt64\bin"
+set QMSI_MGW6_PATH="D:\msys64\ucrt64\bin"
 set QMSI_QUAZIP_PATH="d:\QtProjects\QMS\quazip\quazip-1.5\install"
 set QMSI_BUILD_PATH="d:\QtProjects\QMS\QMS4Qt6\build"
 set QMSI_SRC_PATH="d:\QtProjects\QMS\QMS4Qt6\src"
