@@ -1,8 +1,6 @@
 
 rem QuaZIP Build configuration created with CopyFilesGis.cfg using QMSUser.cfg
 
-rem intentionally used "built" to avoid conflict with ".gitignore"
-
 rem quazip
 set scriptsdir="d:/QtProjects/QMS\QMS4Qt6\msvc_64\scripts"
 set usrscriptsdir="d:/QtProjects/QMS\QMS4Qt6\msvc_64\scripts_qt6"
