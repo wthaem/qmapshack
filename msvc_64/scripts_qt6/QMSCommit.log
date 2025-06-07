@@ -1,11 +1,11 @@
-Logfile created:     2025-04-20 11:03:03 with QMSCommit.py
+Logfile created:     2025-06-07 11:13:31 with QMSCommit.py
 
 QMS directory:       d:\QtProjects\QMS\QMS4Qt6
 QMS basis version:   1.17.1
-Used local branch:   porting_qt6_cache
-Last commit hash:    020f123cc052e6563005c328dadbaf5802a48b70
-Last commit message: IMapOnline.cpp: add reply->error()
+Used local branch:   dev_build
+Last commit hash:    1d6f35bf41d2b240b688c3948fd5dda5ca704940
+Last commit message: Update Routino version
 Last commit author:  wthaem
-Last commit date:    2025-02-06 16:14:32+01:00
-Remote QMS repos:    ['wthaem/porting_qt6_cache']
+Last commit date:    2025-06-07 10:43:10+02:00
+Remote QMS repos:    ['dev_cache', 'wthaem/dev_build', 'wthaem/dev_cache']
 Remote repo URLs:    {'wthaem': 'https://github.com/wthaem/qmapshack.git'}
