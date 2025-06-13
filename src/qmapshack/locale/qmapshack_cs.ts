@@ -1674,14 +1674,14 @@ You can modify both parameters to customize the behavior of the filter. For the 
         <translation>Změněny body stop. Obětována veškerá předchozí data.</translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="340"/>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="1726"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="338"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="1724"/>
         <source>min.</source>
         <translation>min.</translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="340"/>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="1726"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="338"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="1724"/>
         <source>max.</source>
         <translation>max.</translation>
     </message>
@@ -1785,63 +1785,63 @@ You can modify both parameters to customize the behavior of the filter. For the 
         <translation type="vanished">, Klesání: %1%2 (%3%)</translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="661"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="659"/>
         <source>, Moving: %1%2 (%3%)</source>
         <translation>, Pohyb: %1%2 (%3%)</translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="698"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="696"/>
         <source>, Descent: %1%2</source>
         <translation>, Klesání: %1%2</translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="1260"/>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="1271"/>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="1351"/>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="1390"/>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="1549"/>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="2782"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="1258"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="1269"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="1349"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="1388"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="1547"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="2780"/>
         <source>track</source>
         <translation>Stopa</translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="1318"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="1316"/>
         <source>Track Point Info...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="1319"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="1317"/>
         <source>Enter some text to be attached to this track point:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="1326"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="1324"/>
         <source>Add track point desc.: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="1334"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="1332"/>
         <source>Changed track point desc.: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="1342"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="1340"/>
         <source>Removed track point desc.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="1473"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="1471"/>
         <source>Hide point %1.</source>
         <translation>Skrýt bod %1.</translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="1475"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="1473"/>
         <source>Hide points %1..%2.</source>
         <translation>Skrýt body %1  %2.</translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="692"/>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="702"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="690"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="700"/>
         <source>, %1%2</source>
         <translation>, %1%2</translation>
     </message>
@@ -1891,97 +1891,97 @@ You can modify both parameters to customize the behavior of the filter. For the 
         <translation>Klesání: - (-)</translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="645"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="643"/>
         <source>Ascent: %1%2 (%3%)</source>
         <translation>Stoupání: %1%2 (%3%)</translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="651"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="649"/>
         <source>Descent: %1%2 (%3%)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="656"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="654"/>
         <source>Distance: %1%2 (%3%)</source>
         <translation>Vzdálenost: %1%2 (%3%)</translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="683"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="681"/>
         <source>Ascent: -</source>
         <translation>Stoupání: -</translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="684"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="682"/>
         <source>Descent: -</source>
         <translation>Klesání: -</translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="688"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="686"/>
         <source>Ascent: %1%2</source>
         <translation>Stoupání: %1%2</translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="707"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="705"/>
         <source>Distance: %1%2</source>
         <translation>Vzdálenost: %1%2</translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="711"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="709"/>
         <source>, Time: %1%2</source>
         <translation>, Čas: %1%2</translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="1307"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="1305"/>
         <source>Permanently removed points %1..%2</source>
         <translation>Trvale odstraněné body %1 ... %2</translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="1511"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="1509"/>
         <source>Delete point %1.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="1513"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="1511"/>
         <source>Delete points %1..%2.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="1536"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="1534"/>
         <source>Show points.</source>
         <translation>Ukázat body.</translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="2161"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="2159"/>
         <source>Changed name</source>
         <translation>Změněný název</translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="2166"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="2164"/>
         <source>Changed comment</source>
         <translation>Změněná poznámka</translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="2171"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="2169"/>
         <source>Changed description</source>
         <translation>Změněný popis</translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="2176"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="2174"/>
         <source>Changed links</source>
         <translation>Změněné odkazy</translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="2184"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="2182"/>
         <source>Changed elevation of point %1 to %2 %3</source>
         <translation>Výška bodu %1 byla změněna na %2 %3</translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="2207"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="2205"/>
         <source>Changed activity to &apos;%1&apos; for complete track.</source>
         <translation>Činnost byla pro celou stopu změněna na &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../gis/trk/CGisItemTrk.cpp" line="2233"/>
+        <location filename="../gis/trk/CGisItemTrk.cpp" line="2231"/>
         <source>Changed activity to &apos;%1&apos; for range(%2..%3).</source>
         <translation>Činnost byla změněna pro oblast (%2...%3) na &apos;%1&apos;.</translation>
     </message>
@@ -11240,14 +11240,14 @@ line %2, column %3:
 <context>
     <name>IAbout</name>
     <message>
-        <location filename="../IAbout.ui" line="6"/>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="209"/>
+        <location filename="../IAbout.ui" line="14"/>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="205"/>
         <source>About....</source>
         <translation>O programu...</translation>
     </message>
     <message>
         <location filename="../IAbout.ui" line="30"/>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="341"/>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="206"/>
         <source>&lt;b&gt;QMapShack&lt;/b&gt;, Version</source>
         <translation>&lt;b&gt;QMapShack&lt;/b&gt;, verze</translation>
     </message>
@@ -11257,134 +11257,111 @@ line %2, column %3:
         <location filename="../IAbout.ui" line="102"/>
         <location filename="../IAbout.ui" line="116"/>
         <location filename="../IAbout.ui" line="130"/>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="342"/>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="346"/>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="348"/>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="350"/>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="352"/>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="207"/>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="211"/>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="213"/>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="215"/>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="217"/>
         <source>TextLabel</source>
         <translation>Textový štítek</translation>
     </message>
     <message>
         <location filename="../IAbout.ui" line="81"/>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="345"/>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="210"/>
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
         <location filename="../IAbout.ui" line="95"/>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="347"/>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="212"/>
         <source>GDAL</source>
         <translation>GDAL</translation>
     </message>
     <message>
         <location filename="../IAbout.ui" line="109"/>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="349"/>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="214"/>
         <source>Proj4</source>
         <translation>Proj4</translation>
     </message>
     <message>
         <location filename="../IAbout.ui" line="123"/>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="351"/>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="216"/>
         <source>Routino</source>
         <translation>Routino</translation>
     </message>
     <message>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="353"/>
         <source>Czech:</source>
         <translation type="vanished">Čeština:</translation>
     </message>
     <message>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="357"/>
         <source>German:</source>
         <translation type="vanished">Němčina:</translation>
     </message>
     <message>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="358"/>
         <source>Oliver Eichler</source>
         <translation type="vanished">Oliver Eichler</translation>
     </message>
     <message>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="354"/>
         <source>Dutch:</source>
         <translation type="vanished">Nizozemština:</translation>
     </message>
     <message>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="359"/>
         <source>French:</source>
         <translation type="vanished">Francouzština:</translation>
     </message>
     <message>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="360"/>
         <source>Rainer Unseld </source>
         <translation type="vanished">Rainer Unseld</translation>
     </message>
     <message>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="364"/>
         <source>Russian:</source>
         <translation type="vanished">Ruština:</translation>
     </message>
     <message>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="365"/>
         <source>Wolfgang Thämelt</source>
         <translation type="vanished">Wolfgang Thämelt</translation>
     </message>
     <message>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="366"/>
-        <source>Italian:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="367"/>
-        <source>Ivo Reano</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../IAbout.ui" line="146"/>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="368"/>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="218"/>
         <source>&lt;b&gt;Contributors to the code:&lt;/b&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../IAbout.ui" line="153"/>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="369"/>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="219"/>
         <source>-</source>
         <translation type="unfinished">-</translation>
     </message>
     <message>
         <location filename="../IAbout.ui" line="177"/>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="371"/>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="221"/>
         <source>© 2017 Oliver Eichler (oliver.eichler@gmx.de)</source>
         <translation>© 2017 Oliver Eichler (oliver.eichler@gmx.de)</translation>
     </message>
     <message>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="356"/>
         <source>Pavel Fric</source>
         <translation type="vanished">Pavel Fric</translation>
     </message>
     <message>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="363"/>
         <source>&lt;b&gt;Translation:&lt;/b&gt;</source>
         <translation type="vanished">&lt;b&gt;Překlad&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="355"/>
         <source>Harrie Klomp</source>
         <translation type="vanished">Harrie Klomp</translation>
     </message>
     <message>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="362"/>
         <source>Spanish:</source>
         <translation type="vanished">Španělština:</translation>
     </message>
     <message>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="361"/>
         <source>Jose Luis Domingo Lopez</source>
         <translation type="vanished">Jose Luis Domingo Lopez</translation>
     </message>
     <message>
         <location filename="../IAbout.ui" line="170"/>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="370"/>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="220"/>
         <source>This software is licensed under GPL3 or any later version</source>
         <translation>Tento program je licencován pod GPL3 nebo kteroukoli pozdější verzí</translation>
     </message>
