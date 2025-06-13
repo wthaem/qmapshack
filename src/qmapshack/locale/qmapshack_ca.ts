@@ -11286,130 +11286,145 @@ línia %2, columna %3:
         <translation>Quant a....</translation>
     </message>
     <message>
-        <location filename="../IAbout.ui" line="22"/>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="210"/>
+        <location filename="../IAbout.ui" line="30"/>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="341"/>
         <source>&lt;b&gt;QMapShack&lt;/b&gt;, Version</source>
         <translation>&lt;b&gt;QMapShack&lt;/b&gt;, Versió</translation>
     </message>
     <message>
-        <location filename="../IAbout.ui" line="29"/>
-        <location filename="../IAbout.ui" line="80"/>
-        <location filename="../IAbout.ui" line="94"/>
-        <location filename="../IAbout.ui" line="108"/>
-        <location filename="../IAbout.ui" line="122"/>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="211"/>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="215"/>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="217"/>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="219"/>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="221"/>
+        <location filename="../IAbout.ui" line="37"/>
+        <location filename="../IAbout.ui" line="88"/>
+        <location filename="../IAbout.ui" line="102"/>
+        <location filename="../IAbout.ui" line="116"/>
+        <location filename="../IAbout.ui" line="130"/>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="342"/>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="346"/>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="348"/>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="350"/>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="352"/>
         <source>TextLabel</source>
         <translation>EtiquetaDeText</translation>
     </message>
     <message>
-        <location filename="../IAbout.ui" line="73"/>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="214"/>
+        <location filename="../IAbout.ui" line="81"/>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="345"/>
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location filename="../IAbout.ui" line="87"/>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="216"/>
+        <location filename="../IAbout.ui" line="95"/>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="347"/>
         <source>GDAL</source>
         <translation>GDAL</translation>
     </message>
     <message>
-        <location filename="../IAbout.ui" line="101"/>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="218"/>
+        <location filename="../IAbout.ui" line="109"/>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="349"/>
         <source>Proj4</source>
         <translation>Proj4</translation>
     </message>
     <message>
-        <location filename="../IAbout.ui" line="115"/>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="220"/>
+        <location filename="../IAbout.ui" line="123"/>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="351"/>
         <source>Routino</source>
         <translation>Routino</translation>
     </message>
     <message>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="353"/>
         <source>Czech:</source>
         <translation type="vanished">Txec:</translation>
     </message>
     <message>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="356"/>
         <source>Pavel Fric</source>
         <translation type="vanished">Pavel Fric</translation>
     </message>
     <message>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="357"/>
         <source>German:</source>
         <translation type="vanished">Alemany:</translation>
     </message>
     <message>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="358"/>
         <source>Oliver Eichler</source>
         <translation type="vanished">Oliver Eichler</translation>
     </message>
     <message>
-        <location filename="../IAbout.ui" line="138"/>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="222"/>
+        <location filename="../IAbout.ui" line="146"/>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="368"/>
         <source>&lt;b&gt;Contributors to the code:&lt;/b&gt;</source>
         <translation>&lt;b&gt;Col·laboradors en la codificació:&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../IAbout.ui" line="151"/>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="223"/>
+        <location filename="../IAbout.ui" line="153"/>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="369"/>
         <source>-</source>
         <translation>-</translation>
     </message>
     <message>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="354"/>
         <source>Dutch:</source>
         <translation type="vanished">Holandes:</translation>
     </message>
     <message>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="355"/>
         <source>Harrie Klomp</source>
         <translation type="vanished">Harrie Klomp</translation>
     </message>
     <message>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="359"/>
         <source>French:</source>
         <translation type="vanished">Francès:</translation>
     </message>
     <message>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="360"/>
         <source>Rainer Unseld </source>
         <translation type="vanished">Rainer Unseld </translation>
     </message>
     <message>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="361"/>
         <source>Jose Luis Domingo Lopez</source>
         <translation type="vanished">Jose Luis Domingo Lopez</translation>
     </message>
     <message>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="362"/>
         <source>Spanish:</source>
         <translation type="vanished">Espanyol:</translation>
     </message>
     <message>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="363"/>
         <source>&lt;b&gt;Translation:&lt;/b&gt;</source>
         <translation type="vanished">&lt;b&gt;Traducció:&lt;/b&gt;</translation>
     </message>
     <message>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="364"/>
         <source>Russian:</source>
         <translation type="vanished">Rus:</translation>
     </message>
     <message>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="365"/>
         <source>Wolfgang Thämelt</source>
         <translation type="vanished">Wolfgang Thämelt</translation>
     </message>
     <message>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="366"/>
         <source>Italian:</source>
         <translation type="vanished">Italià</translation>
     </message>
     <message>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="367"/>
         <source>Ivo Reano</source>
         <translation type="vanished">Ivo Reano</translation>
     </message>
     <message>
-        <location filename="../IAbout.ui" line="168"/>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="224"/>
+        <location filename="../IAbout.ui" line="170"/>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="370"/>
         <source>This software is licensed under GPL3 or any later version</source>
         <translation>Aquest programari es distribueix sota llicència GPL3 o qualsevol altre versió posterior</translation>
     </message>
     <message>
-        <location filename="../IAbout.ui" line="175"/>
-        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="225"/>
+        <location filename="../IAbout.ui" line="177"/>
+        <location filename="../../../build/src/qmapshack/ui_IAbout.h" line="371"/>
         <source>© 2017 Oliver Eichler (oliver.eichler@gmx.de)</source>
         <translation>© 2017 Oliver Eichler (oliver.eichler@gmx.de)</translation>
     </message>
