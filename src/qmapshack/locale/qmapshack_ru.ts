@@ -2857,17 +2857,17 @@ You can modify both parameters to customize the behavior of the filter. For the 
         <translation>Изменить радиус близости...</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1053"/>
+        <location filename="../gis/CGisListWks.cpp" line="1065"/>
         <source>Waypoints</source>
         <translation>Маршрутные точки</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1058"/>
+        <location filename="../gis/CGisListWks.cpp" line="1070"/>
         <source>Wayp. &amp; Tracks</source>
         <translation>Маршр. точки и треки</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1060"/>
+        <location filename="../gis/CGisListWks.cpp" line="1072"/>
         <source>Tracks</source>
         <translation>Треки</translation>
     </message>
@@ -2990,8 +2990,8 @@ You can modify both parameters to customize the behavior of the filter. For the 
         <translation>Изменить точки области</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="976"/>
-        <location filename="../gis/CGisListWks.cpp" line="1064"/>
+        <location filename="../gis/CGisListWks.cpp" line="988"/>
+        <location filename="../gis/CGisListWks.cpp" line="1076"/>
         <source>Set Track Color</source>
         <translation>Установить цвет трека</translation>
     </message>
@@ -3001,13 +3001,13 @@ You can modify both parameters to customize the behavior of the filter. For the 
         <translation>Удалить элементы...</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1056"/>
+        <location filename="../gis/CGisListWks.cpp" line="1068"/>
         <source>Change Icon</source>
         <translation type="vanished">Изменить пиктограмма</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1839"/>
-        <location filename="../gis/CGisListWks.cpp" line="1901"/>
+        <location filename="../gis/CGisListWks.cpp" line="1851"/>
+        <location filename="../gis/CGisListWks.cpp" line="1913"/>
         <source>&lt;b&gt;Update devices&lt;/b&gt;&lt;p&gt;Update %1&lt;br/&gt;Please wait...&lt;/p&gt;</source>
         <translation>&lt;b&gt;Обновить устройства&lt;/b&gt;&lt;p&gt;Обновить %1&lt;br/&gt;Подождите...&lt;/p&gt;</translation>
     </message>
@@ -3017,27 +3017,27 @@ You can modify both parameters to customize the behavior of the filter. For the 
         <translation>Сохранение рабочей области. Подождите.</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="783"/>
+        <location filename="../gis/CGisListWks.cpp" line="794"/>
         <source>Loading workspace. Please wait.</source>
         <translation>Загрузка рабочей области. Подождите.</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1332"/>
+        <location filename="../gis/CGisListWks.cpp" line="1344"/>
         <source>Close all projects...</source>
         <translation>Закрыть все проекты...</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1332"/>
+        <location filename="../gis/CGisListWks.cpp" line="1344"/>
         <source>This will remove all projects from the workspace.</source>
         <translation>Это удалит все проекты из рабочей области.</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1355"/>
+        <location filename="../gis/CGisListWks.cpp" line="1367"/>
         <source>Delete project...</source>
         <translation>Удалить проект...</translation>
     </message>
     <message>
-        <location filename="../gis/CGisListWks.cpp" line="1356"/>
+        <location filename="../gis/CGisListWks.cpp" line="1368"/>
         <source>Do you really want to delete %1?</source>
         <translation>Вы действительно хотите удалить %1?</translation>
     </message>
@@ -3099,17 +3099,17 @@ You can modify both parameters to customize the behavior of the filter. For the 
         <translation>Копировать элементы ...</translation>
     </message>
     <message>
-        <location filename="../gis/CGisWorkspace.cpp" line="605"/>
+        <location filename="../gis/CGisWorkspace.cpp" line="606"/>
         <source>Change waypoint symbols.</source>
         <translation>Изменить символы путевых точек.</translation>
     </message>
     <message>
-        <location filename="../gis/CGisWorkspace.cpp" line="795"/>
+        <location filename="../gis/CGisWorkspace.cpp" line="796"/>
         <source>Undefined Waypoint Symbol</source>
         <translation>Неопределенный символ путевой точки</translation>
     </message>
     <message>
-        <location filename="../gis/CGisWorkspace.cpp" line="796"/>
+        <location filename="../gis/CGisWorkspace.cpp" line="797"/>
         <source>QMapShack couldn&apos;t automatically assign a waypoint icon to one of the POIs you want to convert to a waypoint.
 
 Do you want to choose an icon for each new waypoint for which no icon could be found?
@@ -3120,22 +3120,22 @@ If you choose &apos;No&apos; the respective last used waypoint icon is applied.<
 Если вы выберете &quot;Нет&quot;, то будет применена пиктограмма последней использованной путевой точки.</translation>
     </message>
     <message>
-        <location filename="../gis/CGisWorkspace.cpp" line="869"/>
+        <location filename="../gis/CGisWorkspace.cpp" line="860"/>
         <source>Cut Track...</source>
         <translation>Вырезать трек...</translation>
     </message>
     <message>
-        <location filename="../gis/CGisWorkspace.cpp" line="869"/>
+        <location filename="../gis/CGisWorkspace.cpp" line="860"/>
         <source>Do you want to delete the original track?</source>
         <translation>Желаете удалить изначальный трек?</translation>
     </message>
     <message>
-        <location filename="../gis/CGisWorkspace.cpp" line="1091"/>
+        <location filename="../gis/CGisWorkspace.cpp" line="1082"/>
         <source>Enter new proximity range.</source>
         <translation>Ввести новый радиус близости.</translation>
     </message>
     <message>
-        <location filename="../gis/CGisWorkspace.cpp" line="1092"/>
+        <location filename="../gis/CGisWorkspace.cpp" line="1083"/>
         <source>Is no-go area</source>
         <translation>Использовать как запретную зону</translation>
     </message>
@@ -19786,18 +19786,18 @@ simply type the new time/date.</source>
 <context>
     <name>IUnit</name>
     <message>
-        <location filename="../units/IUnit.cpp" line="822"/>
-        <location filename="../units/IUnit.cpp" line="829"/>
+        <location filename="../units/IUnit.cpp" line="881"/>
+        <location filename="../units/IUnit.cpp" line="888"/>
         <source>Error</source>
         <translation>Ошибка</translation>
     </message>
     <message>
-        <location filename="../units/IUnit.cpp" line="823"/>
+        <location filename="../units/IUnit.cpp" line="882"/>
         <source>Bad position format. Must be: &quot;[N|S] ddd mm.sss [W|E] ddd mm.sss&quot; or &quot;[N|S] ddd.ddd [W|E] ddd.ddd&quot;</source>
         <translation>Неверный формат позиции. Должен быть: &quot;[С|Ю] ddd mm.sss [З|В] ddd mm.sss&quot; или &quot;[С|Ю] ddd.ddd [З|В] ddd.ddd&quot;</translation>
     </message>
     <message>
-        <location filename="../units/IUnit.cpp" line="829"/>
+        <location filename="../units/IUnit.cpp" line="888"/>
         <source>Position values out of bounds. </source>
         <translation>Значения позиции вне допустимого интервала.</translation>
     </message>
