@@ -18246,7 +18246,7 @@ Això és coneix com la solució al Problema del Viatjant de Comerç, però aqu�
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="40"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="243"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="232"/>
         <source>View details and edit properties of track.</source>
         <translation>Veure detalls del track I editar les propietats.</translation>
     </message>
@@ -18262,61 +18262,59 @@ Això és coneix com la solució al Problema del Viatjant de Comerç, però aqu�
         <location filename="../gis/trk/IScrOptTrk.ui" line="178"/>
         <location filename="../gis/trk/IScrOptTrk.ui" line="197"/>
         <location filename="../gis/trk/IScrOptTrk.ui" line="211"/>
-        <location filename="../gis/trk/IScrOptTrk.ui" line="228"/>
-        <location filename="../gis/trk/IScrOptTrk.ui" line="242"/>
-        <location filename="../gis/trk/IScrOptTrk.ui" line="256"/>
-        <location filename="../gis/trk/IScrOptTrk.ui" line="270"/>
-        <location filename="../gis/trk/IScrOptTrk.ui" line="284"/>
-        <location filename="../gis/trk/IScrOptTrk.ui" line="301"/>
-        <location filename="../gis/trk/IScrOptTrk.ui" line="318"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="245"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="249"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="253"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="257"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="261"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="273"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="282"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="286"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="290"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="299"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="303"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="310"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="314"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="318"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="322"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="326"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="330"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="334"/>
+        <location filename="../gis/trk/IScrOptTrk.ui" line="225"/>
+        <location filename="../gis/trk/IScrOptTrk.ui" line="239"/>
+        <location filename="../gis/trk/IScrOptTrk.ui" line="253"/>
+        <location filename="../gis/trk/IScrOptTrk.ui" line="267"/>
+        <location filename="../gis/trk/IScrOptTrk.ui" line="281"/>
+        <location filename="../gis/trk/IScrOptTrk.ui" line="298"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="234"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="238"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="242"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="246"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="250"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="262"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="271"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="275"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="279"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="288"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="292"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="296"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="300"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="304"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="308"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="312"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="316"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="54"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="247"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="236"/>
         <source>Set tags and rating.</source>
         <translation>Assigna etiquetes i valoració.</translation>
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="68"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="251"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="240"/>
         <source>Copy track into another project.</source>
         <translation>Còpia el track a un altre projecte.</translation>
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="82"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="255"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="244"/>
         <source>Delete track from project.</source>
         <translation>Suprimeix track del projecte.</translation>
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="103"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="259"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="248"/>
         <source>Show on-screen profile and detailed information about points.</source>
         <translation>Mostra a la pantalla el perfil i informació detallada sobre els punts.</translation>
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="120"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="263"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="252"/>
         <source>Select a range of points. You can use that tool to:
 
 * Hide or show points of a track. 
@@ -18339,7 +18337,7 @@ Nota: S&apos;ha d&apos;utilitzar aquesta eina si es volen arreglar punts incorre
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="142"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="275"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="264"/>
         <source>Edit the position of track points and use automatic routing 
 to create new track points. This is used to create new tracks 
 to plan a tour.
@@ -18356,19 +18354,19 @@ d&apos;un track gravat amb un GPS. Utilitzar l&apos;eina interval. </translation
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="161"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="284"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="273"/>
         <source>Reverse track.</source>
         <translation>Invertir track.</translation>
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="175"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="288"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="277"/>
         <source>Combine tracks.</source>
         <translation>Combinar tracks.</translation>
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="189"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="292"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="281"/>
         <source>Cut track at selected point. You can use this to:
 
 * remove bad points at the start or end of the track
@@ -18384,18 +18382,14 @@ d&apos;un track gravat amb un GPS. Utilitzar l&apos;eina interval. </translation
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="208"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="301"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="290"/>
         <source>Set an activity for the complete track.</source>
         <translation>Assigna una Activitat per a tot el Track</translation>
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="222"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="305"/>
-        <source>Add a description to the selected track point.
-The track point will be marked with an auto-numbered bullet.
-A table with all descriptions will be shown in the track details dialog
-and for highlighted tracks in the map view.</source>
-        <extracomment>use line breaks to keep a sensible tooltip width</extracomment>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="294"/>
+        <source>Add a description to the selected track point. The track point will be marked with an auto-numbered bullet. A table with all descriptions will be shown in the track details dialog and for highlighted tracks in the map view.</source>
         <translation>Afegir una descripció al punt del track seleccionat.
 Al punt del track s&apos;hi incorporarà un globus auto numerat.
 A la pantalla de detalls del track i a tots els tracks ressaltats 
@@ -18403,44 +18397,38 @@ en la vista de mapa es mostrarà una taula amb
 totes les descripcions.</translation>
     </message>
     <message>
-        <location filename="../gis/trk/IScrOptTrk.ui" line="239"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="312"/>
+        <location filename="../gis/trk/IScrOptTrk.ui" line="236"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="298"/>
         <source>Change the color of the track.</source>
         <translation>Canviar el color del track.</translation>
     </message>
     <message>
-        <location filename="../gis/trk/IScrOptTrk.ui" line="253"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="316"/>
+        <location filename="../gis/trk/IScrOptTrk.ui" line="250"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="302"/>
         <source>Replace elevation by the view&apos;s DEM data.</source>
         <translation>Substitueix l&apos;elevació amb les dades DEM de la vista.</translation>
     </message>
     <message>
-        <location filename="../gis/trk/IScrOptTrk.ui" line="267"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="320"/>
+        <location filename="../gis/trk/IScrOptTrk.ui" line="264"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="306"/>
         <source>Copy track together with all attached waypoints into another project.</source>
         <translation>Còpia el track i totes les fites adjuntes a un altre projecte.</translation>
     </message>
     <message>
-        <location filename="../gis/trk/IScrOptTrk.ui" line="281"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="324"/>
+        <location filename="../gis/trk/IScrOptTrk.ui" line="278"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="310"/>
         <source>Convert track to route.</source>
         <translation>Convertir el track a itinerari</translation>
     </message>
     <message>
-        <location filename="../gis/trk/IScrOptTrk.ui" line="298"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="328"/>
-        <source>Convert track to area.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../gis/trk/IScrOptTrk.ui" line="315"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="332"/>
+        <location filename="../gis/trk/IScrOptTrk.ui" line="295"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="314"/>
         <source>Toggle Nogo-Line</source>
         <translation>Commuta Nogo-Line</translation>
     </message>
     <message>
-        <location filename="../gis/trk/IScrOptTrk.ui" line="347"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="335"/>
+        <location filename="../gis/trk/IScrOptTrk.ui" line="327"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="317"/>
         <source>TextLabel</source>
         <translation>EtiquetaDeText</translation>
     </message>
