@@ -5611,50 +5611,50 @@ ist keine gültige Koordinatensystemdefinition:
         <translation>Profil: %1, Variante: %2</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/CRouterBRouter.cpp" line="333"/>
-        <location filename="../gis/rte/router/CRouterBRouter.cpp" line="459"/>
+        <location filename="../gis/rte/router/CRouterBRouter.cpp" line="332"/>
+        <location filename="../gis/rte/router/CRouterBRouter.cpp" line="458"/>
         <source>response is empty</source>
         <translation>Antwort ist leer</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/CRouterBRouter.cpp" line="385"/>
+        <location filename="../gis/rte/router/CRouterBRouter.cpp" line="384"/>
         <source>Bad response from server: %1</source>
         <translation>Fehlerhafte Serverantwort: %1</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/CRouterBRouter.cpp" line="431"/>
+        <location filename="../gis/rte/router/CRouterBRouter.cpp" line="430"/>
         <source>&lt;b&gt;BRouter&lt;/b&gt;&lt;br/&gt;Routing request sent to server. Please wait...</source>
         <translation>&lt;b&gt;BRouter&lt;/b&gt;&lt;br/&gt;Routen-Anfrage an den Server geschickt. Bitte warten...</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/CRouterBRouter.cpp" line="315"/>
-        <location filename="../gis/rte/router/CRouterBRouter.cpp" line="434"/>
+        <location filename="../gis/rte/router/CRouterBRouter.cpp" line="314"/>
+        <location filename="../gis/rte/router/CRouterBRouter.cpp" line="433"/>
         <source>Calculate route with %1</source>
         <translation>Berechne Route mit %1</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/CRouterBRouter.cpp" line="324"/>
-        <location filename="../gis/rte/router/CRouterBRouter.cpp" line="450"/>
+        <location filename="../gis/rte/router/CRouterBRouter.cpp" line="323"/>
+        <location filename="../gis/rte/router/CRouterBRouter.cpp" line="449"/>
         <source>this version of BRouter does not support more then 1 nogo-area</source>
         <translation>Diese Version von BRouter unterstützt nicht mehr als 1 Vermeidungsgebiet</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/CRouterBRouter.cpp" line="488"/>
+        <location filename="../gis/rte/router/CRouterBRouter.cpp" line="487"/>
         <source>&lt;b&gt;BRouter&lt;/b&gt;&lt;br/&gt;Bad response from server:&lt;br/&gt;%1</source>
         <translation>&lt;b&gt;BRouter&lt;/b&gt;&lt;br/&gt;Fehler-Antwort vom Server&lt;br/&gt;%1</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/CRouterBRouter.cpp" line="482"/>
+        <location filename="../gis/rte/router/CRouterBRouter.cpp" line="481"/>
         <source>&lt;br/&gt;Calculation time: %1s</source>
         <translation>&lt;br/&gt;Berechnungszeit: %1 s</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/CRouterBRouter.cpp" line="527"/>
+        <location filename="../gis/rte/router/CRouterBRouter.cpp" line="526"/>
         <source>BRouter (Version %1.%2.%3)</source>
         <translation>BRouter (Version %1.%2.%3)</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/CRouterBRouter.cpp" line="568"/>
+        <location filename="../gis/rte/router/CRouterBRouter.cpp" line="567"/>
         <source>online</source>
         <translation></translation>
     </message>
@@ -16438,69 +16438,74 @@ sein</translation>
         <location filename="../gis/rte/router/IRouterBRouter.ui" line="82"/>
         <location filename="../gis/rte/router/IRouterBRouter.ui" line="119"/>
         <location filename="../gis/rte/router/IRouterBRouter.ui" line="133"/>
-        <location filename="../../../build/src/qmapshack/ui_IRouterBRouter.h" line="241"/>
-        <location filename="../../../build/src/qmapshack/ui_IRouterBRouter.h" line="247"/>
-        <location filename="../../../build/src/qmapshack/ui_IRouterBRouter.h" line="251"/>
+        <location filename="../../../build/src/qmapshack/ui_IRouterBRouter.h" line="254"/>
+        <location filename="../../../build/src/qmapshack/ui_IRouterBRouter.h" line="261"/>
+        <location filename="../../../build/src/qmapshack/ui_IRouterBRouter.h" line="265"/>
         <source>...</source>
         <translation></translation>
     </message>
     <message>
+        <location filename="../../../build/src/qmapshack/ui_IRouterBRouter.h" line="255"/>
+        <source>on-the-fly routing</source>
+        <translation></translation>
+    </message>
+    <message>
         <location filename="../gis/rte/router/IRouterBRouter.ui" line="102"/>
-        <location filename="../../../build/src/qmapshack/ui_IRouterBRouter.h" line="242"/>
+        <location filename="../../../build/src/qmapshack/ui_IRouterBRouter.h" line="256"/>
         <source>BRouter: </source>
         <translation></translation>
     </message>
     <message>
         <location filename="../gis/rte/router/IRouterBRouter.ui" line="109"/>
-        <location filename="../../../build/src/qmapshack/ui_IRouterBRouter.h" line="243"/>
+        <location filename="../../../build/src/qmapshack/ui_IRouterBRouter.h" line="257"/>
         <source>not running</source>
         <translation>nicht gestartet</translation>
     </message>
     <message>
         <location filename="../gis/rte/router/IRouterBRouter.ui" line="116"/>
-        <location filename="../../../build/src/qmapshack/ui_IRouterBRouter.h" line="245"/>
+        <location filename="../../../build/src/qmapshack/ui_IRouterBRouter.h" line="259"/>
         <source>start/stop BRouter</source>
         <translation>BRouter starten/stoppen</translation>
     </message>
     <message>
         <location filename="../gis/rte/router/IRouterBRouter.ui" line="130"/>
-        <location filename="../../../build/src/qmapshack/ui_IRouterBRouter.h" line="249"/>
+        <location filename="../../../build/src/qmapshack/ui_IRouterBRouter.h" line="263"/>
         <source>show BRouter console</source>
         <translation>BRouter Logausgabe anzeigen</translation>
     </message>
     <message>
         <location filename="../gis/rte/router/IRouterBRouter.ui" line="163"/>
-        <location filename="../../../build/src/qmapshack/ui_IRouterBRouter.h" line="252"/>
+        <location filename="../../../build/src/qmapshack/ui_IRouterBRouter.h" line="266"/>
         <source>Setup</source>
         <translation>Einrichten</translation>
     </message>
     <message>
         <location filename="../gis/rte/router/IRouterBRouter.ui" line="172"/>
-        <location filename="../../../build/src/qmapshack/ui_IRouterBRouter.h" line="253"/>
+        <location filename="../../../build/src/qmapshack/ui_IRouterBRouter.h" line="267"/>
         <source>Caution! BRouter is listening on all ports for connections.</source>
         <translation>Vorsicht! BRouter horcht auf allen verfügbaren Schnittstellen.</translation>
     </message>
     <message>
         <location filename="../gis/rte/router/IRouterBRouter.ui" line="210"/>
-        <location filename="../../../build/src/qmapshack/ui_IRouterBRouter.h" line="254"/>
+        <location filename="../../../build/src/qmapshack/ui_IRouterBRouter.h" line="268"/>
         <source>Dismiss</source>
         <translation>Ausblenden</translation>
     </message>
     <message>
         <location filename="../gis/rte/router/IRouterBRouter.ui" line="232"/>
-        <location filename="../../../build/src/qmapshack/ui_IRouterBRouter.h" line="255"/>
+        <location filename="../../../build/src/qmapshack/ui_IRouterBRouter.h" line="269"/>
         <source>&lt;p&gt;&lt;a href=&quot;http://brouter.de/brouter/&quot; target=&quot;_blank&quot;&gt;BRouter&lt;/a&gt; © &lt;a href=&quot;https://github.com/abrensch/brouter/blob/master/LICENSE&quot; target=&quot;_blank&quot;&gt;ABrensch, License GPLv3&lt;/a&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;a href=&quot;http://brouter.de/brouter/&quot; target=&quot;_blank&quot;&gt;BRouter&lt;/a&gt; © &lt;a href=&quot;https://github.com/abrensch/brouter/blob/master/LICENSE&quot; target=&quot;_blank&quot;&gt;ABrensch, Lizenz GPLv3&lt;/a&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../gis/rte/router/IRouterBRouter.ui" line="245"/>
-        <location filename="../../../build/src/qmapshack/ui_IRouterBRouter.h" line="256"/>
+        <location filename="../../../build/src/qmapshack/ui_IRouterBRouter.h" line="270"/>
         <source>&lt;p&gt;Directions Courtesy of &lt;a href=&quot;http://brouter.de/brouter-web/&quot; target=&quot;_blank&quot;&gt;BRouter-web&lt;/a&gt; &lt;/p&gt;</source>
         <translation>&lt;p&gt;Mit freundlicher Genehmigung von &lt;a href=&quot;http://brouter.de/brouter-web/&quot; target=&quot;_blank&quot;&gt;BRouter-web&lt;/a&gt; &lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../gis/rte/router/IRouterBRouter.ui" line="258"/>
-        <location filename="../../../build/src/qmapshack/ui_IRouterBRouter.h" line="257"/>
+        <location filename="../../../build/src/qmapshack/ui_IRouterBRouter.h" line="271"/>
         <source>&lt;p&gt;Routing data &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot; target=&quot;_blank&quot;&gt;© OpenStreetMap&lt;/a&gt; contributors&lt;/p&gt;</source>
         <translation>&lt;p&gt;Routendaten &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot; target=&quot;_blank&quot;&gt;© OpenStreetMap&lt;/a&gt;&lt;/p&gt;</translation>
     </message>
@@ -17424,9 +17429,8 @@ sein</translation>
     </message>
     <message>
         <location filename="../mouse/line/IScrOptEditLine.ui" line="238"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptEditLine.h" line="284"/>
         <source>Use auto-routing in between points. (Key: A)</source>
-        <translation>Auto-Routing zwischen Punkten benutzen. (Taste: A)</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mouse/line/IScrOptEditLine.ui" line="284"/>
@@ -17501,6 +17505,11 @@ Das ist auch bekannt als &quot;Handlungsreisendenproblem&quot;. Allerdings werde
         <location filename="../../../build/src/qmapshack/ui_IScrOptEditLine.h" line="281"/>
         <source>O</source>
         <translation></translation>
+    </message>
+    <message>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptEditLine.h" line="284"/>
+        <source>Use auto-routing to between points. (Key: A)</source>
+        <translation>Auto-Routing zwischen Punkten benutzen. (Taste: A)</translation>
     </message>
     <message>
         <location filename="../mouse/line/IScrOptEditLine.ui" line="241"/>
@@ -18231,49 +18240,49 @@ Das ist auch bekannt als &quot;Handlungsreisendenproblem&quot;. Allerdings werde
     <name>IScrOptTrk</name>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="14"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="241"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="231"/>
         <source>Form</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="68"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="240"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="241"/>
         <source>Copy track into another project.</source>
         <translation>Track in ein anderes Projekt kopieren.</translation>
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="103"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="248"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="249"/>
         <source>Show on-screen profile and detailed information about points.</source>
         <translation>Zeigt das Profil und detaillierte Informationen der Punkte.</translation>
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="40"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="232"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="233"/>
         <source>View details and edit properties of track.</source>
         <translation>Details anzeigen und Trackeigenschaften bearbeiten.</translation>
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="82"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="244"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="245"/>
         <source>Delete track from project.</source>
         <translation>Track aus einem Projekt entfernen.</translation>
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="161"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="273"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="274"/>
         <source>Reverse track.</source>
         <translation>Track umkehren.</translation>
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="175"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="277"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="278"/>
         <source>Combine tracks.</source>
         <translation>Tracks verbinden.</translation>
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="189"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="281"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="282"/>
         <source>Cut track at selected point. You can use this to:
 
 * remove bad points at the start or end of the track
@@ -18288,7 +18297,7 @@ Das ist auch bekannt als &quot;Handlungsreisendenproblem&quot;. Allerdings werde
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="208"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="290"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="291"/>
         <source>Set an activity for the complete track.</source>
         <translation>Für den ganzen Track eine Aktivität festlegen.</translation>
     </message>
@@ -18310,35 +18319,35 @@ Das ist auch bekannt als &quot;Handlungsreisendenproblem&quot;. Allerdings werde
         <location filename="../gis/trk/IScrOptTrk.ui" line="267"/>
         <location filename="../gis/trk/IScrOptTrk.ui" line="281"/>
         <location filename="../gis/trk/IScrOptTrk.ui" line="298"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="234"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="238"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="242"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="246"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="250"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="262"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="271"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="275"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="279"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="288"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="292"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="296"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="300"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="304"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="308"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="312"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="316"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="235"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="239"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="243"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="247"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="251"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="263"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="272"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="276"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="280"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="289"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="293"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="297"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="301"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="305"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="309"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="313"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="317"/>
         <source>...</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="54"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="236"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="237"/>
         <source>Set tags and rating.</source>
         <translation>Schlagworte und Bewertung setzen.</translation>
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="120"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="252"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="253"/>
         <source>Select a range of points. You can use that tool to:
 
 * Hide or show points of a track. 
@@ -18363,7 +18372,7 @@ Wählen Sie einfach den Bereich mit den fehlerhaften Punkten aus
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="142"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="264"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="265"/>
         <source>Edit the position of track points and use automatic routing 
 to create new track points. This is used to create new tracks 
 to plan a tour.
@@ -18381,43 +18390,43 @@ Benützen Sie dazu die Werkzeuge der Bereichsauswahl.</translation>
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="222"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="294"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="295"/>
         <source>Add a description to the selected track point. The track point will be marked with an auto-numbered bullet. A table with all descriptions will be shown in the track details dialog and for highlighted tracks in the map view.</source>
         <translation>Fügt eine Beschreibung zum ausgewählten Trackpunkt hinzu. Der Trackpunkt wird mit einer automatischen Nummer versehen. Eine Tabelle mit allen Beschreibungen wird in den Trackdetails angezeigt, oder für einen hervorgehobenen Track in der Kartenansicht.</translation>
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="236"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="298"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="299"/>
         <source>Change the color of the track.</source>
         <translation>Die Farbe für diesen Track ändern.</translation>
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="250"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="302"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="303"/>
         <source>Replace elevation by the view&apos;s DEM data.</source>
         <translation>Ersetzt die Höhe durch die DEM Daten der Ansicht.</translation>
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="264"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="306"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="307"/>
         <source>Copy track together with all attached waypoints into another project.</source>
         <translation>Kopiert den Track mit allen verknüpften Wegpunkten in ein anderes Projekt.</translation>
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="278"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="310"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="311"/>
         <source>Convert track to route.</source>
         <translation>Den Track in eine Route umwandeln.</translation>
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="295"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="314"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="315"/>
         <source>Toggle Nogo-Line</source>
         <translation>Streckenvermeidung umschalten</translation>
     </message>
     <message>
         <location filename="../gis/trk/IScrOptTrk.ui" line="327"/>
-        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="317"/>
+        <location filename="../../../build/src/qmapshack/ui_IScrOptTrk.h" line="318"/>
         <source>TextLabel</source>
         <translation>Bezeichnung</translation>
     </message>
