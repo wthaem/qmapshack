@@ -1,11 +1,11 @@
-Logfile created:     2025-06-23 12:39:31 with QMSCommit.py
+Logfile created:     2025-07-09 17:08:07 with QMSCommit.py
 
 QMS directory:       d:\QtProjects\QMS\QMS4Qt6
-QMS basis version:   1.17.1
-Used local branch:   dev_cache
-Last commit hash:    b6f59b63026075293d89691c5cc366777ebd77b6
-Last commit message: Update script files
+QMS basis version:   1.18.0
+Used local branch:   master_scripts
+Last commit hash:    87256eea13a73965d80f2566bbba4b658d1de41d
+Last commit message: msvc_64/scripts_qt6/QMSUser_qt6.cfg: adjust to V1.18.0
 Last commit author:  wthaem
-Last commit date:    2025-06-23 07:39:57+02:00
-Remote QMS repos:    ['wthaem/dev_cache']
+Last commit date:    2025-07-09 17:00:29+02:00
+Remote QMS repos:    ['wthaem/master_scripts']
 Remote repo URLs:    {'wthaem': 'https://github.com/wthaem/qmapshack.git'}
