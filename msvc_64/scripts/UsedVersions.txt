@@ -27,14 +27,14 @@ Last installed tools and system software versions:
       _MSC_FULL_VER,  _MSC_VER: ('194435211', '1944')
                           MSVC: 17.14.7
                   MSVC edition: Visual Studio Community 2022
-                     MSYS2 gcc: 14.2.0-3
+                     MSYS2 gcc: 15.1.0-6
                     MSYS2 make: 4.4.1-2
-                          nsis: v3.10
+                          nsis: v3.11
                         Python: 3.13.5
                             Qt: 6.9.1
                 ResourceHacker: 5.2.7.427
                       sigcheck: 2.90
-                       Windows: 10.0.19045.6036
+                       Windows: 10.0.19045.6093
 
 
 System software used for QMS build:
