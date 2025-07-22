@@ -1,6 +1,6 @@
 Software versions used in QMS:
                        BRouter: 1.7.7
-                          GDAL: GDAL 3.11.0 "Eganville", released 2025/06/19
+                          GDAL: GDAL 3.11.3 "Eganville", released 2025/07/18
                libcrypto-3-x64: 3.4.0
                        libcurl: 8.11.0-DEV
                       libexpat: expat_2.4.4
@@ -21,20 +21,20 @@ Software versions used in QMS:
 
 Last installed tools and system software versions:
                          cmake: 3.31.6-msvc6
-                  Gisinternals: ('1930', '250621')
+                  Gisinternals: ('1930', '250720')
                            Git: 2.49.0.windows.1
                           Java: "24.0.1" 2025-04-15
-      _MSC_FULL_VER,  _MSC_VER: ('194435211', '1944')
-                          MSVC: 17.14.7
+      _MSC_FULL_VER,  _MSC_VER: ('194435213', '1944')
+                          MSVC: 17.14.9 (July 2025)
                   MSVC edition: Visual Studio Community 2022
-                     MSYS2 gcc: 14.2.0-3
+                     MSYS2 gcc: 15.1.0-6
                     MSYS2 make: 4.4.1-2
-                          nsis: v3.10
+                          nsis: v3.11
                         Python: 3.13.5
                             Qt: 6.9.1
                 ResourceHacker: 5.2.7.427
                       sigcheck: 2.90
-                       Windows: 10.0.19045.6036
+                       Windows: 10.0.19045.6093
 
 
 System software used for QMS build:
