@@ -174,76 +174,7 @@ Section "QMapShack/QMapTool" QMapShack
   
   ;BEGIN QMapShack Files    
   SetOutPath $INSTDIR
-    File ..\Files\*.*
-    File ..\LICENSE_Gisinternals.txt
-    File ..\${QMSUSERCFG}\QMSCommit.log
-
-  SetOutPath "$INSTDIR\translations"
-  
-    !ifndef NOQM
-        File /nonfatal ..\Files\translations\qmapshack_*.qm
-        File /nonfatal ..\Files\translations\qmaptool_*.qm
-        File /nonfatal ..\Files\translations\qmt_rgb2pct_*.qm
-    !endif
-
-  SetOutPath "$INSTDIR\doc\HTML"
-    File ..\Files\doc\HTML\QMSHelp.qch
-    File ..\Files\doc\HTML\QMSHelp.qhc
-    File ..\Files\doc\HTML\QMTHelp.qch
-    File ..\Files\doc\HTML\QMTHelp.qhc
-
-  SetOutPath "$INSTDIR\doc\HTML\.QMSHelp"
-        File ..\Files\doc\HTML\.QMSHelp\fts
-    
-  SetOutPath "$INSTDIR\doc\HTML\.QMTHelp"
-        File ..\Files\doc\HTML\.QMTHelp\fts
-
-     
-  SetOutPath "$INSTDIR\imageformats\"
-    File ..\Files\imageformats\qgif.dll
-    File ..\Files\imageformats\qjpeg.dll
-    File ..\Files\imageformats\qsvg.dll
-    File ..\Files\imageformats\qtiff.dll
-    File ..\Files\imageformats\qico.dll
-    File ..\Files\imageformats\qtga.dll
-
-  SetOutPath "$INSTDIR\sqldrivers\"
-    File ..\Files\sqldrivers\qsqlite.dll
-    File ..\Files\sqldrivers\qsqlmysql.dll
-    File ..\Files\sqldrivers\qsqlodbc.dll
-    File ..\Files\sqldrivers\qsqlpsql.dll
-
-  SetOutPath "$INSTDIR\platforms\"
-    File ..\Files\platforms\qwindows.dll
-
-  SetOutPath "$INSTDIR\printsupport\"
-    !ifdef QT5
-        File ..\Files\printsupport\windowsprintersupport.dll
-    !endif
-    
-  SetOutPath "$INSTDIR\translations"
-    File ..\Files\translations\qt*.qm
-
-  SetOutPath "$INSTDIR\translations\qtwebengine_locales"
-    File ..\Files\translations\qtwebengine_locales\*.pak
-
-  SetOutPath "$INSTDIR\resources"
-    File ..\Files\resources\*.*
- 
-  SetOutPath "$INSTDIR\data\"
-    File /r ..\Files\data\*.*
-
-  SetOutPath "$INSTDIR\gdalplugins"
-    File ..\Files\gdalplugins\*.dll    
-
-  SetOutPath "$INSTDIR\share\"
-    File /r ..\Files\share\*.*
-
-  SetOutPath "$INSTDIR\routino-xml\"
-    File /r ..\Files\routino-xml\*.*
-
-
-  SetOutPath $INSTDIR
+    File /r ..\Files\*.*
 
   FileOpen  $9 QMS_Start.bat w 
   FileWrite $9 'set QMS_ROOT=%~dp0$\r$\n'
