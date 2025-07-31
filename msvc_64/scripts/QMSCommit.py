@@ -112,17 +112,17 @@ class RepoStatus():
 
         if changed_files != []:
             print("*** There are changed files!")
-            return
+            #return
             
         staged_files = [item.a_path for item in repo.index.diff("HEAD")]  # Staged for commit
         if staged_files != []:
             print("*** There are staged not commited files!")
-            return
+            #return
 
         untracked_files = repo.untracked_files  # Untracked files
         if untracked_files != []:
             print("*** There are untracked files!")
-            return
+            #return
 
         # Get the current branch
         self.current_branch = repo.active_branch.name

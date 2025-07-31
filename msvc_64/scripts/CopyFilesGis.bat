@@ -1,10 +1,20 @@
 rem @echo off
+@echo on
 
-
-rem Script to copy all files necessary for QMS (GISInternals version) - run from scripts directory!
+rem Script to copy all files necessary for QMS (GISInternals version) - run from scripts directory and from x64 Native Tools Command Prompt!
 
 rem Delete all files --------------------------------------------
-del /s/q ..\Files
+del /s /q ..\Files
+
+IF ERRORLEVEL 1 (
+    echo [ERROR] DEL failed with error code %ERRORLEVEL%.
+    exit /b %ERRORLEVEL%
+) ELSE (
+    echo DEL successful.
+)
+
+pause
+
 mkdir ..\Files
 
 
@@ -18,20 +28,23 @@ pause
 call %%a\CopyFilesGis_add.bat
 )
 
+pause
+
 rem Copy QMapShack Files (removed bin subdir! 28.04.25 ------
 copy %QMSI_BUILD_PATH%\Release\qmapshack.exe
 copy %QMSI_BUILD_PATH%\Release\qmaptool.exe
 copy %QMSI_BUILD_PATH%\Release\qmt_map2jnx.exe
 copy %QMSI_BUILD_PATH%\Release\qmt_rgb2pct.exe
 
+copy %QMSI_QT_PATH%\bin\assistant.exe
 
 rem Copy Qt files -------------------------------------------------
 
 set PATH=%QMSI_QT_PATH%\bin;%PATH%
 
-windeployqt.exe  --force-openssl --no-translations .\qmapshack.exe .\qmt_map2jnx.exe
+windeployqt.exe  --force-openssl --no-translations .\qmapshack.exe .\qmaptool.exe .\qmt_map2jnx.exe .\qmt_rgb2pct.exe .\assistant.exe
 
-copy %QMSI_QT_PATH%\bin\assistant.exe
+pause
 
 mkdir translations
 
@@ -73,13 +86,21 @@ xcopy %QMSI_ROUT_PATH%\xml routino-xml /s /i
 rem Copy QuaZip --------------------------------------------------------
 copy %QMSI_QUAZIP_PATH%\bin\quazip1-Qt%QT%.dll
 
+rem Copy mysql 
+copy %QMSI_MYSQL_PATH\qsqlmysql.dll
+
 rem Copy MSVC Redistributables -------------------------------------
 copy %QMSI_VCREDIST_PATH%VC_redist.x64.exe
 
-rem Copy QMS translations
-xcopy %QMSI_BUILD_PATH%\src\qmapshack\*.qm translations /S 
-xcopy %QMSI_BUILD_PATH%\src\qmaptool\*.qm translations /S 
-xcopy %QMSI_BUILD_PATH%\src\qmt_rgb2pct\*.qm translations /S 
+REM Compile all .ts files to .qm
+for %%g in ("qmapshack", "qmaptool", "qmt_rgb2pct") do (
+
+    for %%f in ("%QMSI_SRC_PATH%\%%g\locale\*.ts") do (
+        %QMSI_QT_PATH%\bin\lrelease.exe "%%f" -qm translations\%%~nf.qm
+    )
+)
+
+pause
 
 copy ..\*.ico
 
@@ -95,10 +116,17 @@ rem Copy 3rd party software description and licence ----------------------------
 copy ..\3rdparty.txt
 copy ..\..\LICENSE 1LICENSE.txt
 
-copy %USERDIR%\QMSCommit.log
+copy %USERDIR%\UsedVersions.txt
 
 rem Copy qt.conf -----------------------------------------------------------
 copy ..\qt.conf
 
 cd ..\scripts
 pause
+
+echo Starting QMS and QMT - Press F1 to get FTS files!
+
+
+start /WAIT ..\Files\qmaptool.exe
+start /WAIT ..\Files\qmapshack.exe
+
