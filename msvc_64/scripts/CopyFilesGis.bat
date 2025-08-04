@@ -1,5 +1,5 @@
 rem @echo off
-@echo on
+echo on
 
 rem Script to copy all files necessary for QMS (GISInternals version) - run from scripts directory and from x64 Native Tools Command Prompt!
 
@@ -120,6 +120,9 @@ copy %USERDIR%\UsedVersions.txt
 
 rem Copy qt.conf -----------------------------------------------------------
 copy ..\qt.conf
+
+..\scripts\QMSRemoveObjects.py
+pause
 
 cd ..\scripts
 pause

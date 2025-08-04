@@ -1,0 +1,31 @@
+# https://github.com/Maproom/qmapshack/discussions/802
+
+# drop bat for starting qms
+
+[dirs]
+generic
+qmltooling
+qml
+networkinformation
+#position
+
+[files]
+d3dcompiler_47.dll
+dxcompiler.dll
+dxil.dll
+
+#Qt6Qml.dll      - required
+#Qt6QmlMeta.dll
+#Qt6QmlModels.dll
+#Qt6QmlWorkerScript.dll
+
+# some plugins for exotic database types
+sqldrivers\qsqloci.dll
+sqldrivers\qsqlpsql.dll
+sqldrivers\qsqlibase.dll
+sqldrivers\qsqlmimer.dll
+
+#Qt6Positioning.dll - required for realtime applications
+
+
+
