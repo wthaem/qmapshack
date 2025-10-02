@@ -12,19 +12,10 @@ BLOCK "StringFileInfo"
 	BLOCK "040904E4"
 	{
 		VALUE "CompanyName", ""
-		VALUE "FileDescription", QMS_UP+" (Compiled with GISInternals. Used commit: 544cbf4 of fork/branch: wthaem/dev_build.)"
-		VALUE "FileVersion", "1.18.0.1"
-		VALUE "InternalName", QMS
-		VALUE "LegalCopyright", "Copyright (c) 2023, Oliver Eichler <oliver.eichler@gmx.de>"
-		VALUE "OriginalFilename", QMS +".exe"
-		VALUE "ProductName", "QMapShack"
-		VALUE "ProductVersion", "1.18.0.1"
-		VALUE "Comments", "Compiled with GISInternals. Used commit: 544cbf4 of fork/branch: wthaem/dev_build"
-		VALUE "SpecialBuild", "Compiled with GISInternals. Used commit: 544cbf4 of fork/branch: wthaem/dev_build"
-	}
-}
-BLOCK "VarFileInfo"
-{
-	VALUE "Translation", 0x0409 0x04E4
-}
-}
+		VALUE "FileDescription", QMS_UP+" (Compiled with GISInternals. Used commit: 80b82b4 of fork/branch: ]
+Remote repo URLs:    {}
+.)";		VALUE "FileVersion", "1.18.0.1";		VALUE "InternalName", QMS;		VALUE "LegalCopyright", "Copyright (c) 2023, Oliver Eichler <oliver.eichler@gmx.de>";		VALUE "OriginalFilename", QMS +".exe";		VALUE "ProductName", "QMapShack";		VALUE "ProductVersion", "1.18.0.1";		VALUE "Comments", "Compiled with GISInternals. Used commit: 80b82b4 of fork/branch: ]
+Remote repo URLs:    {}
+";		VALUE "SpecialBuild", "Compiled with GISInternals. Used commit: 80b82b4 of fork/branch: ]
+Remote repo URLs:    {}
+";	};};BLOCK "VarFileInfo";{;	VALUE "Translation", 0x0409 0x04E4;};}

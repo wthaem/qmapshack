@@ -1,4 +1,9 @@
+
+; d:\uti\NSIS\makensis.exe /DQMSUSERCFG=scripts_qt6 /V4 /INPUTCHARSET UTF8 d:\QtProjects\QMS\QMS4Qt6\msvc_64\scripts\QMS_gisinternals.nsi
+
 ;NSIS Installer Script for GISInternals-based QMapShack package
+
+; 30.09.2025 Added optional uninstall of existing version
 
 ;NSIS References/Documentation 
 ;http://nsis.sourceforge.net/Docs/Modern%20UI%202/Readme.html
@@ -13,6 +18,13 @@
 ;Include Modern UI
 
   !include "MUI2.nsh"
+  !include "nsDialogs.nsh"
+  !include "LogicLib.nsh"
+  !include "x64.nsh"
+  !include "WinVer.nsh"
+  
+  ; include current version info
+  !include "..\${QMSUSERCFG}\QMS_gisinternals_add.nsi"
 
 ;--------------------------------
 ;General
@@ -27,28 +39,31 @@
   ;Name and file
   Name ${PACKAGE}
   
-  !include ..\${QMSUSERCFG}\QMS_gisinternals_add.nsi
   
   ; Installer executable info
   VIProductVersion "${SUBVERSION}"
   VIAddVersionKey  "ProductVersion" ${VERSION}
   VIAddVersionKey  "FileVersion" "${SUBVERSION}"
   VIAddVersionKey  "ProductName" ${PACKAGE}
-  VIAddVersionKey  "LegalCopyright" "Copyright (c) 2023, Oliver Eichler"
+  VIAddVersionKey  "LegalCopyright" "Copyright (©) 2025, Oliver Eichler"
   VIAddVersionKey  "FileDescription" "${PACKAGE} installer (x64)"
 
+  Icon "..\QMapShack.ico"
 
-  OutFile "${EXEFILE}_x64_setup.exe"
   OutFile "${PACKAGE}-${EXEFILE}_x64_setup.exe"
-
 
   ;Default installation folder
   InstallDir "$LOCALAPPDATA\${PACKAGE}"
   
-  ;Get installation folder from registry if available
-  InstallDirRegKey HKCU "Software\${PACKAGE}" ""
+  ;Get installation folder from registry if available and overwrite InstallDir with it
+  InstallDirRegKey HKCU "Software\${PACKAGE}" "Install_Dir"
 
-  ;Request application privileges for Windows Vista
+  Var OldUninstaller
+  Var hCtl_RadioYes
+  Var hCtl_RadioNo
+  Var StartMenuFolder
+  
+  ;Request application privileges for Windows UAC
   RequestExecutionLevel admin 
 
   ; Don't let the OS scale(blur) the installer GUI
@@ -98,11 +113,10 @@
 !define MUI_FINISHPAGE_LINK $(DESC_MUI_FINISHPAGE_LINK)
 !define MUI_FINISHPAGE_LINK_LOCATION "https://github.com/Maproom/qmapshack/wiki"
 
-!define MUI_FINISHPAGE_RUN "$INSTDIR\QMS_Start.bat"
+!define MUI_FINISHPAGE_RUN "$INSTDIR\qmapshack.exe"
 !define MUI_FINISHPAGE_NOREBOOTSUPPORT
 !define MUI_FINISHPAGE_NOAUTOCLOSE
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
-
 
 ;--------------------------------
 ;Pages
@@ -110,22 +124,24 @@
   !insertmacro MUI_PAGE_WELCOME  
   !insertmacro MUI_PAGE_LICENSE "..\..\LICENSE"
   !insertmacro MUI_PAGE_LICENSE "..\LICENSE_Gisinternals.txt"
+
+  Page custom OldVersionPageCreate OldVersionPageLeave
+
   !insertmacro MUI_PAGE_COMPONENTS
   !insertmacro MUI_PAGE_DIRECTORY
-  Var StartMenuFolder
   
   ; Start menu page configuration  
   !define MUI_STARTMENUPAGE_REGISTRY_ROOT "HKCU" 
   !define MUI_STARTMENUPAGE_REGISTRY_KEY "Software\${PACKAGE}" 
-  !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME "Start Menu Folder"
+  !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME "${PACKAGE}"
 
   !insertmacro MUI_PAGE_STARTMENU Application $StartMenuFolder
   !insertmacro MUI_PAGE_INSTFILES
   !insertmacro MUI_PAGE_FINISH
   
   !insertmacro MUI_UNPAGE_WELCOME
+  UninstPage   custom un.InfoPage 
   !insertmacro MUI_UNPAGE_CONFIRM
-  !insertmacro MUI_UNPAGE_COMPONENTS
   !insertmacro MUI_UNPAGE_INSTFILES
   !insertmacro MUI_UNPAGE_FINISH
 
@@ -153,14 +169,20 @@
 
 Section "MSVC++ 2022 Runtime" MSVC
 
-  SetOutPath $INSTDIR
+  DetailPrint "Running vc_redist.x64.exe ..."
+
+  SetOutPath $TEMP
   File ..\Files\VC_redist.x64.exe
-  ExecWait '"$INSTDIR\VC_redist.x64.exe"'
-  Delete "$INSTDIR\VC_redist.x64.exe"
-  
+  ExecWait '"$TEMP\VC_redist.x64.exe" /install /quiet /norestart'
+  Delete "$TEMP\VC_redist.x64.exe"
+  SetOutPath $INSTDIR
+ 
 SectionEnd
 
 Section "QMapShack/QMapTool" QMapShack
+
+  DetailPrint "Copying application files ..."
+
 
   ReadEnvStr $2 "USERPROFILE"
   
@@ -168,36 +190,30 @@ Section "QMapShack/QMapTool" QMapShack
       CopyFiles $2\.config\QLandkarte\workspace.db $2\.config\QLandkarte\workspace.db.bak
       
   LBL1:    
-  ;SetShellVarContext all
   SetShellVarContext current
   SetRegView 64
   
-  ;BEGIN QMapShack Files    
+  ;BEGIN QMapShack Files
   SetOutPath $INSTDIR
-    File /r ..\Files\*.*
-
-  FileOpen  $9 QMS_Start.bat w 
-  FileWrite $9 'set QMS_ROOT=%~dp0$\r$\n'
-  FileWrite $9 'set GDAL_DRIVER_PATH=%QMS_ROOT%gdalplugins$\r$\n'
-  FileWrite $9 'set GDAL_DATA=%QMS_ROOT%data$\r$\n'
-  FileWrite $9 'set PROJ_DATA=%QMS_ROOT%share\proj$\r$\n'  
-  FileWrite $9 'cd /d %~dp0$\r$\n'
-  FileWrite $9 'start "QMS" /B qmapshack.exe --style fusion %1$\r$\n'
-  FileClose $9 
+  File /r ..\Files\*.*
   
-  FileOpen  $9 QMT_Start.bat w 
+  FileOpen  $9 GDAL_shell.bat w 
+  FileWrite $9 '@echo off$\r$\n'
+  FileWrite $9 '@echo Setting environment for using the GDAL Utilities.$\r$\n'
   FileWrite $9 'set QMS_ROOT=%~dp0$\r$\n'
   FileWrite $9 'set GDAL_DRIVER_PATH=%QMS_ROOT%gdalplugins$\r$\n'
   FileWrite $9 'set GDAL_DATA=%QMS_ROOT%data$\r$\n'
   FileWrite $9 'set PROJ_DATA=%QMS_ROOT%share\proj$\r$\n' 
   FileWrite $9 'cd /d %~dp0$\r$\n'
-  FileWrite $9 'start "QMT" /B qmaptool.exe --style fusion$\r$\n'
+  FileWrite $9 'cmd /K$\r$\n'
   FileClose $9 
 
 SectionEnd
 
 
 Section "Start Menu" StartMenu
+
+  DetailPrint "Creating start menu ..."
 
   SetOutPath $INSTDIR
   
@@ -209,9 +225,12 @@ Section "Start Menu" StartMenu
         
     CreateDirectory "$SMPROGRAMS\$StartMenuFolder"
 
-    CreateShortCut "$SMPROGRAMS\$StartMenuFolder\QMapShack.lnk"     '"$INSTDIR\QMS_Start.bat"' "" "$INSTDIR\QMapShack.ico" 0 "SW_SHOWMINIMIZED" "" "Start QMapShack with correct environment"
-    CreateShortCut "$SMPROGRAMS\$StartMenuFolder\QMapTool.lnk"      '"$INSTDIR\QMT_Start.bat"'  "" "$INSTDIR\QMapTool.ico"  0 "SW_SHOWMINIMIZED" "" "Start QMapTool with correct environment"
-    
+    CreateShortCut "$SMPROGRAMS\$StartMenuFolder\QMapShack.lnk"     '"$INSTDIR\qmapshack.exe"' "--style fusion %1" "$INSTDIR\QMapShack.ico" 0 "SW_SHOWNORMAL" "" "Start QMapShack"
+
+    CreateShortCut "$SMPROGRAMS\$StartMenuFolder\QMapTool.lnk"     '"$INSTDIR\qmaptool.exe"' "--style fusion" "$INSTDIR\QMapTool.ico" 0 "SW_SHOWNORMAL" "" "Start QMapTool"
+
+    CreateShortCut "$SMPROGRAMS\$StartMenuFolder\GDAL_shell.lnk"    '"$INSTDIR\GDAL_shell.bat"' "" "$INSTDIR\QMapShack.ico" 0 "SW_SHOWNORMAL" "" "Start GDAL shell with correct environment"
+
     CreateShortCut "$SMPROGRAMS\$StartMenuFolder\QMapShack Help offline.lnk" '"$INSTDIR\assistant.exe"' '-collectionFile  "$INSTDIR\doc\HTML\QMSHelp.qhc" --style fusion' 
     CreateShortCut "$SMPROGRAMS\$StartMenuFolder\QMapShack Help online Wiki.lnk" "https://github.com/Maproom/qmapshack/wiki" "" "$INSTDIR\kfm_home.ico"
 
@@ -223,6 +242,8 @@ SectionEnd
 
 Section "Register software" Register
   
+  DetailPrint "Registering software ..."
+
   ; Set output path to the installation directory.
   SetOutPath $INSTDIR
   
@@ -243,15 +264,6 @@ Section "Register software" Register
 SectionEnd
 
 ;--------------------------------
-;Installer Functions
-
-Function .onInit
-  
-  !insertmacro MUI_LANGDLL_DISPLAY
-
-FunctionEnd
-
-;--------------------------------
 ;Descriptions
 
 LangString LanguageSelect ${LANG_ENGLISH} "Please select your language:"
@@ -265,6 +277,34 @@ LangString DESC_MUI_DIRECTORYPAGE_TEXT_TOP ${LANG_SPANISH} "Sugerencia: la ayuda
 ; LangString DESC_MUI_DIRECTORYPAGE_TEXT_TOP ${LANG_ENGLISH} "The user must have write permission for the selected folder!"
 ; LangString DESC_MUI_DIRECTORYPAGE_TEXT_TOP ${LANG_GERMAN}  "Der Nutzer muss Schreibberechtigung für das ausgewählte Verzeichnis haben!"
 ; LangString DESC_MUI_DIRECTORYPAGE_TEXT_TOP ${LANG_SPANISH} "El usuario debe tener permisos de escritura para la carpeta seleccionada!"
+
+;LangString DESC_EXISTS ${LANG_ENGLISH} "An existing version of ${PACKAGE} was found in:$\n$0.$\n$\nDo you want to uninstall it first?"
+;LangString DESC_EXISTS ${LANG_GERMAN} "${PACKAGE} wurde in:$\n$0 gefunden.$\n$\nSoll dies zunächst entfernt werden?"
+;LangString DESC_EXISTS ${LANG_SPANISH} "Se ha encontrado una versión existente de ${PACKAGE} en:$\n$0.$\n$\n¿Desea desinstalarla primero?"
+
+;LangString DESC_EXISTS_CANCEL ${LANG_ENGLISH} "Installation canceled."
+;LangString DESC_EXISTS_CANCEL ${LANG_GERMAN} "Installation abgebrochen."
+;LangString DESC_EXISTS_CANCEL ${LANG_SPANISH} "Instalación cancelada."
+
+LangString DESC_OLDVERSION0 ${LANG_ENGLISH} "Old version detected" 
+LangString DESC_OLDVERSION0 ${LANG_GERMAN} "Alte Version gefunden" 
+LangString DESC_OLDVERSION0 ${LANG_SPANISH} "Se ha detectado una versión antigua" 
+
+LangString DESC_OLDVERSION1 ${LANG_ENGLISH} "Choose whether to uninstall the previous version."
+LangString DESC_OLDVERSION1 ${LANG_GERMAN}  "Auswählen, ob vorherige Version entfernt wird."
+LangString DESC_OLDVERSION1 ${LANG_SPANISH} "Selecciona si deseas desinstalar la versión anterior."
+
+LangString DESC_OLDVERSION2 ${LANG_ENGLISH} "An older version of ${PACKAGE} is installed in$\r$\n$\r$\n    $OldUninstaller$\r$\n$\r$\nDo you want to uninstall it before continuing?"
+LangString DESC_OLDVERSION2 ${LANG_GERMAN}  "Eine ältere ${PACKAGE} Version ist bereits installiert in$\r$\n$\r$\n    $OldUninstaller$\r$\n$\r$\nSoll diese zunächst entfernt werden?"
+LangString DESC_OLDVERSION2 ${LANG_SPANISH} "Hay una versión anterior de ${PACKAGE} instalada en$\r$\n$\r$\n    $OldUninstaller$\r$\n$\r$\n¿Desea desinstalarla antes de continuar?"
+    
+LangString DESC_OLDVERSION3 ${LANG_ENGLISH} "Yes, uninstall old version"
+LangString DESC_OLDVERSION3 ${LANG_GERMAN}  "Ja, alte Version entfernen"
+LangString DESC_OLDVERSION3 ${LANG_SPANISH} "Sí, desinstalar la versión antigua"
+
+LangString DESC_OLDVERSION4 ${LANG_ENGLISH} "No, keep old version"    
+LangString DESC_OLDVERSION4 ${LANG_GERMAN}  "Nein, alte Version behalten"
+LangString DESC_OLDVERSION4 ${LANG_SPANISH} "No, mantén la versión antigua"
 
 LangString DESC_MUI_FINISHPAGE_LINK ${LANG_ENGLISH} "Visit the QMapShack site for the latest news, FAQs and support"
 LangString DESC_MUI_FINISHPAGE_LINK ${LANG_GERMAN}  "Besuchen Sie die QMapShack im Internet für Neuigkeiten, FAQ und support"
@@ -294,20 +334,97 @@ LangString DESC_Uninstall ${LANG_ENGLISH} "Uninstall QMapShack software package"
 LangString DESC_Uninstall ${LANG_GERMAN}  "QMapShack Softwarepaket deinstallieren"
 LangString DESC_Uninstall ${LANG_SPANISH} "Desinstalar el paquete de software QMapShack"
 
+LangString DESC_UninstallInfo ${LANG_ENGLISH} "The program will now be uninstalled.$\r$\n$\r$\nAll application files will be removed, but the following files and folders will remain intact:$\r$\n$\r$\n  * %USERPROFILE%\.config\QLandkarte\workspace.db (configuration settings)$\r$\n$\r$\n  * %USERPROFILE%\.QMapShacks (cached online map tiles)$\r$\n$\r$\n  * %LOCALAPPDATA%\Temp\org.qlandkarte.QMapShack.log (logfile)$\r$\n$\r$\nClick Next to continue."
+LangString DESC_UninstallInfo ${LANG_GERMAN}  "Das Programm wird nun deinstalliert.$\r$\n$\r$\nAlle Anwendungsdateien werden entfernt, aber die folgenden Dateien und Ordner bleiben erhalten:$\r$\n$\r$\n  * %USERPROFILE%\.config\QLandkarte\workspace.db (Konfigurationseinstellungen)$\r$\n$\r$\n  * %USERPROFILE%\. QMapShacks (zwischengespeicherte Online-Kartenkacheln)$\r$\n$\r$\n  * %LOCALAPPDATA%\Temp\org.qlandkarte.QMapShack.log (Protokolldatei)$\r$\n$\r$\nKlicken Sie auf Weiter, um fortzufahren."
+LangString DESC_UninstallInfo ${LANG_SPANISH} "El programa se desinstalará ahora.$\r$\n$\r$\nSe eliminarán todos los archivos de la aplicación, pero los siguientes archivos y carpetas permanecerán intactos:$\r$\n$\r$\n  * %USERPROFILE%\.config\QLandkarte\workspace.db (configuración)$\r$\n$\r$\n  * %USERPROFILE%\. QMapShacks (mosaicos de mapas en línea almacenados en caché)$\r$\n$\r$\n  * %LOCALAPPDATA%\Temp\org.qlandkarte.QMapShack.log (archivo de registro)$\r$\n$\r$\nHaga clic en Siguiente para continuar."
+
 
 ;Assign descriptions to sections
 !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
     !insertmacro MUI_DESCRIPTION_TEXT ${MSVC}      $(DESC_MSVC)
     !insertmacro MUI_DESCRIPTION_TEXT ${QMapShack} $(DESC_QMapShack)
     !insertmacro MUI_DESCRIPTION_TEXT ${StartMenu} $(DESC_StartMenu)
-    !insertmacro MUI_DESCRIPTION_TEXT ${Register} $(DESC_Register)
+    !insertmacro MUI_DESCRIPTION_TEXT ${Register}  $(DESC_Register)
 
 !insertmacro MUI_FUNCTION_DESCRIPTION_END
 
 ;--------------------------------
+;Installer Functions
+
+Function .onInit
+   
+  ClearErrors
+  
+  !insertmacro MUI_LANGDLL_DISPLAY
+
+  ; Check if previous install path exists in registry
+  ReadRegStr $OldUninstaller HKCU "Software\${PACKAGE}" "Install_Dir"
+
+  ${IfNot} ${AtLeastWin10}
+    MessageBox MB_OK "${PACKAGE} can only be installed on Windows 10 or later."
+    Abort
+  ${EndIf}
+
+  ${If} ${RunningX64}
+    SetRegView 64
+  ${Else}
+    MessageBox MB_OK "The 64b version of ${PACKAGE} can not be run on 32b systems."
+    Abort
+  ${EndIf}
+  
+FunctionEnd
+
+;--------------------------------
+; Custom page: Old version check
+;--------------------------------
+
+Function OldVersionPageCreate
+  ${If} $OldUninstaller == ""
+    Abort ; skip this page if no old version
+  ${EndIf}
+
+  !insertmacro MUI_HEADER_TEXT $(DESC_OLDVERSION0) $(DESC_OLDVERSION1)
+
+  nsDialogs::Create 1018
+  Pop $0
+  ${If} $0 == error
+    Abort
+  ${EndIf}
+
+  ; Info label
+  ${NSD_CreateLabel} 0 0 100% 60u $(DESC_OLDVERSION2)
+  Pop $1
+
+  ; Radio buttons
+  ${NSD_CreateRadioButton} 0 60u 100% 12u $(DESC_OLDVERSION3)
+  Pop $hCtl_RadioYes
+  SendMessage $hCtl_RadioYes ${BM_SETCHECK} ${BST_CHECKED} 0
+
+  ${NSD_CreateRadioButton} 0 80u 100% 12u $(DESC_OLDVERSION4)
+  Pop $hCtl_RadioNo
+
+  nsDialogs::Show
+FunctionEnd
+
+Function OldVersionPageLeave
+  ${NSD_GetState} $hCtl_RadioYes $0
+  ${If} $0 == ${BST_CHECKED}
+  
+    ; Run old uninstaller silently
+    IfFileExists "$OldUninstaller\Uninstall.exe" 0 +4
+        ExecWait '"$OldUninstaller\Uninstall.exe"  _?=$OldUninstaller'
+        Delete "$OldUninstaller\Uninstall.exe"
+        RMDir /r "$OldUninstaller"        
+        
+  ${EndIf}
+FunctionEnd
+
+;--------------------------------
 ;Uninstaller Section
 
-Section "Uninstall" Uninstall
+Section "Uninstall" un.Uninstall
+
+  DetailPrint "Uninstalling ..."
 
   SetRegView 64
   SetShellVarContext current
@@ -316,7 +433,6 @@ Section "Uninstall" Uninstall
   RMDir /r "$INSTDIR"
 
   !insertmacro MUI_STARTMENU_GETFOLDER Application $StartMenuFolder
-
 
   Delete "$SMPROGRAMS\$StartMenuFolder\*.*"
   RMDir /r "$SMPROGRAMS\$StartMenuFolder"
@@ -327,7 +443,7 @@ Section "Uninstall" Uninstall
 SectionEnd
 
 !insertmacro MUI_UNFUNCTION_DESCRIPTION_BEGIN 
-    !insertmacro MUI_DESCRIPTION_TEXT ${Uninstall} $(DESC_Uninstall)
+    !insertmacro MUI_DESCRIPTION_TEXT ${un.Uninstall} $(DESC_Uninstall)
 !insertmacro MUI_UNFUNCTION_DESCRIPTION_END 
 
 ;--------------------------------
@@ -337,4 +453,23 @@ Function un.onInit
 
   !insertmacro MUI_UNGETLANGUAGE
   
+FunctionEnd
+
+;---------------------------------
+
+# Custom info page for uninstaller
+Function un.InfoPage
+
+    nsDialogs::Create 1018
+       
+    Pop $0
+    ${If} $0 == error
+        Abort
+    ${EndIf}
+
+    ${NSD_CreateLabel} 0 0 100% 100% "$(DESC_UninstallInfo)"
+
+    Pop $1
+
+    nsDialogs::Show
 FunctionEnd

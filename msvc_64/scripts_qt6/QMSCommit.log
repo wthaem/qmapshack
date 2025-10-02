@@ -1,11 +1,11 @@
-Logfile created:     2025-09-28 09:57:10 with QMSCommit.py
+Logfile created:     2025-09-29 15:39:37 with QMSCommit.py
 
 QMS directory:       d:\QtProjects\QMS\QMS4Qt6
 QMS basis version:   1.18.0
 Used local branch:   dev_build
-Last commit hash:    544cbf44fa1ed1d7edf9af8062003faf3764e8e2
-Last commit message: Merge branch 'dev' of https://github.com/wthaem/qmapshack into dev_build
+Last commit hash:    80b82b4e313176a2f7b2eb1168d0079d9b182df8
+Last commit message: Remove UsedVersions.txt from scripts dir
 Last commit author:  wthaem
-Last commit date:    2025-09-28 09:55:19+02:00
-Remote QMS repos:    ['wthaem/dev_build']
-Remote repo URLs:    {'wthaem': 'https://github.com/wthaem/qmapshack.git'}
+Last commit date:    2025-09-29 12:03:05+02:00
+Remote QMS repos:    []
+Remote repo URLs:    {}

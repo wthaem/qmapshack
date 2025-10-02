@@ -1,16 +1,30 @@
-rem @echo off
-echo on
 
-rem Script to copy all files necessary for QMS (GISInternals version) - run from scripts directory and from x64 Native Tools Command Prompt!
+@echo off
+
+echo Script to copy all files necessary for QMS (GISInternals version)
+echo Scripts switches to x64 Native Tools Command Prompt and then to `%~dp0` directory!
+
+echo Preparing x64 Native tool ...
+
+for /f "usebackq tokens=*" %%i in (`"C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe" -latest -products * -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationPath`) do (set VSPATH=%%i)
+
+call "%VSPATH%\VC\Auxiliary\Build\vcvars64.bat"
+pause
+
+set QMSD0=%~dp0
+    
+cd /D %QMSD0%
+
+echo Switched Native tool to %cd%
 
 rem Delete all files --------------------------------------------
-del /s /q ..\Files
+rmdir /s /q ..\Files
 
 IF ERRORLEVEL 1 (
-    echo [ERROR] DEL failed with error code %ERRORLEVEL%.
+    echo [ERROR] RMDIR failed with error code %ERRORLEVEL%.
     exit /b %ERRORLEVEL%
 ) ELSE (
-    echo DEL successful.
+    echo RMDIR successful.
 )
 
 pause
@@ -23,12 +37,17 @@ for /f "tokens=2 delims=:" %%a in (QMSUserCfg.dir) do (
 echo Include dir: %%a
 set USERDIR=%%a
 
+echo Starting file copy  step 1 ...
+
 pause
 
 call %%a\CopyFilesGis_add.bat
 )
 
+echo Starting file copy step 2 ...
 pause
+
+
 
 rem Copy QMapShack Files (removed bin subdir! 28.04.25 ------
 copy %QMSI_BUILD_PATH%\Release\qmapshack.exe
@@ -87,16 +106,16 @@ rem Copy QuaZip --------------------------------------------------------
 copy %QMSI_QUAZIP_PATH%\bin\quazip1-Qt%QT%.dll
 
 rem Copy mysql 
-copy %QMSI_MYSQL_PATH\qsqlmysql.dll
+copy %QMSI_MYSQL_PATH%\qsqlmysql.dll
 
 rem Copy MSVC Redistributables -------------------------------------
 copy %QMSI_VCREDIST_PATH%VC_redist.x64.exe
 
-REM Compile all .ts files to .qm
+echo Compiling all .ts files to .qm ...
 for %%g in ("qmapshack", "qmaptool", "qmt_rgb2pct") do (
 
     for %%f in ("%QMSI_SRC_PATH%\%%g\locale\*.ts") do (
-        %QMSI_QT_PATH%\bin\lrelease.exe "%%f" -qm translations\%%~nf.qm
+        %QMSI_QT_PATH%\bin\lrelease.exe -silent "%%f" -qm translations\%%~nf.qm
     )
 )
 

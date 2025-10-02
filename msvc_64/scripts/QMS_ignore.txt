@@ -2,6 +2,9 @@
 
 # drop bat for starting qms
 
+# directories and files copied to Files directory but not used in QMS - will be deleted
+
+
 [dirs]
 generic
 qmltooling
@@ -25,7 +28,7 @@ sqldrivers\qsqlpsql.dll
 sqldrivers\qsqlibase.dll
 sqldrivers\qsqlmimer.dll
 
-#Qt6Positioning.dll - required for realtime applications
+#Qt6Positioning.dll - required for realtime applications and for Qt6Positioning required by Qt6WebEngine
 
 
 

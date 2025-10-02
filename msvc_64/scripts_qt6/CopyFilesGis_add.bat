@@ -32,6 +32,6 @@ copy %QMSI_GIS_PATH%\bin\curl.exe
 copy %QMSI_GIS_PATH%\bin\openssl.exe
 copy %QMSI_GIS_PATH%\bin\sqlite3.exe
 copy %QMSI_GIS_PATH%\..\license.txt GisInternals_license.txt
-xcopy %QMSI_QMS_PATH%\mysql\6.9.2\sqldrivers\qsqlmysql.dll sqldrivers /i
+xcopy %QMSI_QMS_PATH%\mysql\6.9.2\sqldrivers\qsqlmysql.dll .\sqldrivers\ /i
 mkdir share\proj
 xcopy %QMSI_GIS_PATH%\bin\proj9\share share\proj /s /i
