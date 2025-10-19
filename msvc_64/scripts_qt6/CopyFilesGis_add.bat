@@ -3,10 +3,10 @@ rem Environment variable replacements created with CopyFilesGis.cfg using QMSUse
 
 set QMSI_QMS_PATH=d:\QtProjects\QMS
 set QMSI_GIS_PATH=d:\QtProjects\QMS\gisinternals\1930_250720\release-1930-x64
-set QMSI_QT_PATH="d:\Qt\5.12.3\6.9.2\msvc2022_64"
+set QMSI_QT_PATH="d:\Qt\5.12.3\6.10.0\msvc2022_64"
 set QMSI_VCREDIST_PATH="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Redist\MSVC\14.44.35112\"
 set QMSI_ROUT_PATH="d:\QtProjects\QMS\routino\routino-3.4.3\install"
-set QMSI_MYSQL_PATH="d:\QtProjects\QMS\mysql\6.9.2\sqldrivers"
+set QMSI_MYSQL_PATH="d:\QtProjects\QMS\mysql\6.10.0\sqldrivers"
 set QMSI_MGW6_PATH="D:\msys64\ucrt64\bin"
 set QMSI_QUAZIP_PATH="d:\QtProjects\QMS\quazip\quazip-1.5\install"
 set QMSI_BUILD_PATH="d:\QtProjects\QMS\QMS4Qt6\build"
@@ -32,6 +32,6 @@ copy %QMSI_GIS_PATH%\bin\curl.exe
 copy %QMSI_GIS_PATH%\bin\openssl.exe
 copy %QMSI_GIS_PATH%\bin\sqlite3.exe
 copy %QMSI_GIS_PATH%\..\license.txt GisInternals_license.txt
-xcopy %QMSI_QMS_PATH%\mysql\6.9.2\sqldrivers\qsqlmysql.dll .\sqldrivers\ /i
+xcopy %QMSI_QMS_PATH%\mysql\6.10.0\sqldrivers\qsqlmysql.dll .\sqldrivers\ /i
 mkdir share\proj
 xcopy %QMSI_GIS_PATH%\bin\proj9\share share\proj /s /i
