@@ -1,11 +1,14 @@
-Logfile created:     2025-10-19 16:32:56 with QMSCommit.py
+Logfile created:             2025-10-26 16:37:30 with QMSCommit.py
 
-QMS directory:       d:\QtProjects\QMS\QMS4Qt6
-QMS basis version:   1.18.1
-Used local branch:   dev_build
-Last commit hash:    0e2a3d574ec38837b2329924d4ef33c82607795d
-Last commit message: Merge branch 'dev' of https://github.com/wthaem/qmapshack into dev_build
-Last commit author:  wthaem
-Last commit date:    2025-10-19 16:26:10+02:00
-Remote QMS repos:    ['wthaem/dev_build']
-Remote repo URLs:    {'wthaem': 'https://github.com/wthaem/qmapshack.git'}
+QMS directory:               D:\QtProjects\QMS\QMS4Qt6
+QMS basis version:           1.18.1
+Current local branch:        dev_build
+Branch used for compilation: dev
+
+Info about last commit on compilation branch:
+  Hash:                      f2d10eca8012662e9c86ba4182545d696ae09370
+  Message:                   [QMS-859] Update changelog.
+  Author:                    Bas Couwenberg
+  Date:                      2025-10-24 10:31:35+02:00
+  Branches with same commit: ['maproom/dev', 'wthaem/dev', 'wthaem/dev_build', 'wthaem/dev_cache']
+  Remote repo URLs:          {'maproom': 'https://github.com/Maproom/qmapshack.git', 'wthaem': 'https://github.com/wthaem/qmapshack.git'}
