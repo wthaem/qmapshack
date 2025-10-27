@@ -1,4 +1,4 @@
-Logfile created:             2025-10-27 15:30:51 with QMSCommit.py
+Logfile created:             2025-10-27 15:59:52 with QMSCommit.py
 
 QMS directory:               d:\QtProjects\QMS\QMS4Qt6
 QMS basis version:           1.18.1
@@ -10,5 +10,5 @@ Info about last commit on compilation branch:
   Message:                   [QMS-850] Add custom icons from external icons folder and subfolders
   Author:                    JFritzle
   Date:                      2025-10-27 11:00:26+01:00
-  Branches with same commit: ['maproom/dev', 'wthaem/dev']
+  Branches with same commit: ['maproom/dev', 'wthaem/dev', 'wthaem/dev_build', 'wthaem/dev_cache']
   Remote repo URLs:          {'maproom': 'https://github.com/Maproom/qmapshack.git', 'wthaem': 'https://github.com/wthaem/qmapshack.git'}
