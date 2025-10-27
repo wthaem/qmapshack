@@ -123,7 +123,7 @@
 
   !insertmacro MUI_PAGE_WELCOME  
   !insertmacro MUI_PAGE_LICENSE "..\..\LICENSE"
-  !insertmacro MUI_PAGE_LICENSE "..\LICENSE_Gisinternals.txt"
+  !insertmacro MUI_PAGE_LICENSE "LICENSE_Gisinternals.txt"
 
   Page custom OldVersionPageCreate OldVersionPageLeave
 
