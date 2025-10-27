@@ -1,11 +1,14 @@
-Logfile created:     2025-09-28 09:59:37 with QMSCommit.py
+Logfile created:             2025-10-27 15:34:48 with QMSCommit.py
 
-QMS directory:       d:\QtProjects\QMS\QMS4Qt6
-QMS basis version:   1.18.0
-Used local branch:   dev_cache
-Last commit hash:    83185e292c2ab754d52a7af57f6befdee8cdc6bb
-Last commit message: Merge branch 'dev_build' of https://github.com/wthaem/qmapshack into dev_cache
-Last commit author:  wthaem
-Last commit date:    2025-09-28 09:58:50+02:00
-Remote QMS repos:    ['wthaem/dev_cache']
-Remote repo URLs:    {'wthaem': 'https://github.com/wthaem/qmapshack.git'}
+QMS directory:               d:\QtProjects\QMS\QMS4Qt6
+QMS basis version:           1.18.1
+Current local branch:        dev_cache
+Branch used for compilation: dev
+
+Info about last commit on compilation branch:
+  Hash:                      97d5242f59499791fccb1297ed36d8291580b32c
+  Message:                   [QMS-850] Add custom icons from external icons folder and subfolders
+  Author:                    JFritzle
+  Date:                      2025-10-27 11:00:26+01:00
+  Branches with same commit: ['maproom/dev', 'wthaem/dev', 'wthaem/dev_build', 'wthaem/dev_cache']
+  Remote repo URLs:          {'maproom': 'https://github.com/Maproom/qmapshack.git', 'wthaem': 'https://github.com/wthaem/qmapshack.git'}
