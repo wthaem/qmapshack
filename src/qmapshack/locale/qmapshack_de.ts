@@ -887,46 +887,6 @@ Um den Konflikt zu lösen, erstellen und speichern Sie einen Klon, erzwingen Ihr
     </message>
 </context>
 <context>
-    <name>CDialogRefPoint</name>
-    <message>
-        <location filename="../../qmaptool/overlay/refmap/CDialogRefPoint.cpp" line="35"/>
-        <source>bad coordinate</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../qmaptool/overlay/refmap/CDialogRefPoint.cpp" line="51"/>
-        <location filename="../../qmaptool/overlay/refmap/CDialogRefPoint.cpp" line="56"/>
-        <source>Error</source>
-        <translation type="unfinished">Fehler</translation>
-    </message>
-    <message>
-        <location filename="../../qmaptool/overlay/refmap/CDialogRefPoint.cpp" line="51"/>
-        <source>Bad value for X pixel.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../qmaptool/overlay/refmap/CDialogRefPoint.cpp" line="56"/>
-        <source>Bad value for Y pixel.</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>CDrawContextPixel</name>
-    <message>
-        <location filename="../../qmaptool/canvas/CDrawContextPixel.cpp" line="63"/>
-        <source>Failed to load</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>CDrawContextProj</name>
-    <message>
-        <location filename="../../qmaptool/canvas/CDrawContextProj.cpp" line="59"/>
-        <source>Failed to load</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>CElevationDialog</name>
     <message>
         <location filename="../helpers/CElevationDialog.cpp" line="73"/>
