@@ -1,4 +1,4 @@
-Logfile created:             2025-10-27 15:59:52 with QMSCommit.py
+Logfile created:             2025-10-28 11:20:51 with QMSCommit.py
 
 QMS directory:               d:\QtProjects\QMS\QMS4Qt6
 QMS basis version:           1.18.1
@@ -6,9 +6,9 @@ Current local branch:        dev_build
 Branch used for compilation: dev
 
 Info about last commit on compilation branch:
-  Hash:                      97d5242f59499791fccb1297ed36d8291580b32c
-  Message:                   [QMS-850] Add custom icons from external icons folder and subfolders
-  Author:                    JFritzle
-  Date:                      2025-10-27 11:00:26+01:00
-  Branches with same commit: ['maproom/dev', 'wthaem/dev', 'wthaem/dev_build', 'wthaem/dev_cache']
+  Hash:                      5436e42b791a254be4194f27eecdb106c22f8449
+  Message:                   [QMS-861] Add action to clear the waypoint icon history
+  Author:                    Oliver Eichler
+  Date:                      2025-10-28 09:49:24+01:00
+  Branches with same commit: ['maproom/dev', 'wthaem/dev']
   Remote repo URLs:          {'maproom': 'https://github.com/Maproom/qmapshack.git', 'wthaem': 'https://github.com/wthaem/qmapshack.git'}
