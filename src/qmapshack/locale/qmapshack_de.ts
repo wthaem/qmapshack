@@ -752,7 +752,7 @@ Um den Konflikt zu lösen, erstellen und speichern Sie einen Klon, erzwingen Ihr
     </message>
     <message>
         <source>Delete from Devices...</source>
-        <translation type="vanished">om Gerät löschen...</translation>
+        <translation type="vanished">Vom Gerät löschen...</translation>
     </message>
     <message>
         <source>Failed to delete file &quot;%1&quot; from device. Reason: %2</source>
@@ -800,9 +800,8 @@ Um den Konflikt zu lösen, erstellen und speichern Sie einen Klon, erzwingen Ihr
 <context>
     <name>CDeviceGenericMtp</name>
     <message>
-        <location filename="../device/CDeviceGenericMtp.cpp" line="48"/>
         <source>Unknown MTP</source>
-        <translation>Unbekanntes MTP</translation>
+        <translation type="vanished">Unbekanntes MTP</translation>
     </message>
 </context>
 <context>

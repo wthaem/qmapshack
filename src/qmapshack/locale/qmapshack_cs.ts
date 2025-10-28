@@ -783,14 +783,6 @@ K vyřešení tohoto střetu můžete vytvořit a uložit klona, vynutit svoji v
     </message>
 </context>
 <context>
-    <name>CDeviceGenericMtp</name>
-    <message>
-        <location filename="../device/CDeviceGenericMtp.cpp" line="48"/>
-        <source>Unknown MTP</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>CElevationDialog</name>
     <message>
         <location filename="../helpers/CElevationDialog.cpp" line="73"/>
