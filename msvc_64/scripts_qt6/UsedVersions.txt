@@ -34,7 +34,7 @@ Last installed tools and system software versions:
                             Qt: 6.9.2
                 ResourceHacker: 5.2.7.427
                       sigcheck: 2.90
-                       Windows: 10.0.19045.6456
+                       Windows: 10.0.26200.7019
 
 
 System software used for QMS build:
