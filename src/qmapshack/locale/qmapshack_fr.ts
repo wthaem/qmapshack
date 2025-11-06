@@ -745,6 +745,52 @@ Pour résoudre ce conflit vous pouvez créer et sauvegarder un clone, forcer vot
     </message>
 </context>
 <context>
+    <name>CDeviceAccessGvfsMtp</name>
+    <message>
+        <location filename="../device/CDeviceAccessGvfsMtp.cpp" line="96"/>
+        <source>Send to Devices...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../device/CDeviceAccessGvfsMtp.cpp" line="97"/>
+        <source>Failed to send file &quot;%1&quot; to device. Reason: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../device/CDeviceAccessGvfsMtp.cpp" line="110"/>
+        <source>Delete from Devices...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../device/CDeviceAccessGvfsMtp.cpp" line="111"/>
+        <source>Failed to delete file &quot;%1&quot; from device. Reason: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>CDeviceAccessKMtp</name>
+    <message>
+        <location filename="../device/CDeviceAccessKMtp.cpp" line="89"/>
+        <source>Send to Devices...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../device/CDeviceAccessKMtp.cpp" line="90"/>
+        <source>Failed to send file &quot;%1&quot; to device.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../device/CDeviceAccessKMtp.cpp" line="103"/>
+        <source>Delete from Devices...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../device/CDeviceAccessKMtp.cpp" line="104"/>
+        <source>Failed to delete file &quot;%1&quot; from device. Reason: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>CDeviceGarmin</name>
     <message>
         <location filename="../device/CDeviceGarmin.cpp" line="283"/>
@@ -774,12 +820,23 @@ Pour résoudre ce conflit vous pouvez créer et sauvegarder un clone, forcer vot
 <context>
     <name>CDeviceGarminArchiveMtp</name>
     <message>
+        <location filename="../device/CDeviceGarminArchiveMtp.cpp" line="31"/>
+        <location filename="../device/CDeviceGarminArchiveMtp.cpp" line="75"/>
         <source>Archive - expand to load</source>
-        <translation type="obsolete">Archive - développer pour charger</translation>
+        <translation type="unfinished">Archive - développer pour charger</translation>
     </message>
     <message>
+        <location filename="../device/CDeviceGarminArchiveMtp.cpp" line="42"/>
         <source>Archive - loaded</source>
-        <translation type="obsolete">Archive - chargé</translation>
+        <translation type="unfinished">Archive - chargé</translation>
+    </message>
+</context>
+<context>
+    <name>CDeviceGenericMtp</name>
+    <message>
+        <location filename="../device/CDeviceGenericMtp.cpp" line="48"/>
+        <source>Unknown MTP</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3727,54 +3784,54 @@ ligne %2, colonne %3:
 <context>
     <name>CMainWindow</name>
     <message>
-        <location filename="../CMainWindow.cpp" line="610"/>
+        <location filename="../CMainWindow.cpp" line="604"/>
         <source>Select folder...</source>
         <translation>Choisir un dossier...</translation>
     </message>
     <message>
-        <location filename="../CMainWindow.cpp" line="884"/>
+        <location filename="../CMainWindow.cpp" line="880"/>
         <source> (Cloned)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../CMainWindow.cpp" line="910"/>
+        <location filename="../CMainWindow.cpp" line="908"/>
         <source>Use &lt;b&gt;Menu-&gt;View-&gt;Add Map View&lt;/b&gt; to open a new view. Or &lt;b&gt;Menu-&gt;File-&gt;Load Map View&lt;/b&gt; to restore a saved one. Or click &lt;a href=&apos;NewView&apos;&gt;here&lt;/a&gt;.</source>
         <translation>Utilisez &lt;b&gt;Menu-&gt;Vue-&gt;Ajouter une vue cartographique&lt;/b&gt; pour ouvrir une nouvelle vue; &lt;b&gt;Menu-&gt;Fichier-&gt;Charger une vue cartographique&lt;/b&gt; pour restaurer une vue enregistrée; ou bien cliquez &lt;a href=&apos;NewView&apos;&gt;ici&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location filename="../CMainWindow.cpp" line="1021"/>
+        <location filename="../CMainWindow.cpp" line="1019"/>
         <source>Ele.: %1%2</source>
         <translation>Altitude: %1%2</translation>
     </message>
     <message>
-        <location filename="../CMainWindow.cpp" line="1031"/>
+        <location filename="../CMainWindow.cpp" line="1029"/>
         <source>Slope: %1%2</source>
         <comment>terrain</comment>
         <translation>Pente du terrain : %1%2</translation>
     </message>
     <message>
-        <location filename="../CMainWindow.cpp" line="1043"/>
+        <location filename="../CMainWindow.cpp" line="1041"/>
         <source>[Grid: %1]</source>
         <translation>[Grille: %1]</translation>
     </message>
     <message>
-        <location filename="../CMainWindow.cpp" line="1173"/>
+        <location filename="../CMainWindow.cpp" line="1171"/>
         <source>Load GIS Data...</source>
         <translation>Charger des données SIG...</translation>
     </message>
     <message>
-        <location filename="../CMainWindow.cpp" line="1200"/>
+        <location filename="../CMainWindow.cpp" line="1198"/>
         <source>Select output file</source>
         <translation>Sélectionner le fichier de sortie</translation>
     </message>
     <message>
-        <location filename="../CMainWindow.cpp" line="1200"/>
-        <location filename="../CMainWindow.cpp" line="1224"/>
+        <location filename="../CMainWindow.cpp" line="1198"/>
+        <location filename="../CMainWindow.cpp" line="1222"/>
         <source>QMapShack View (*.view)</source>
         <translation>Vue QMapShack (*.view)</translation>
     </message>
     <message>
-        <location filename="../CMainWindow.cpp" line="1224"/>
+        <location filename="../CMainWindow.cpp" line="1222"/>
         <source>Select file to load</source>
         <translation>Sélectionner le fichier à charger</translation>
     </message>
@@ -4417,15 +4474,17 @@ Fall back to internal types.</source>
         <translation>Erreur de lecture de la structure du fichier : </translation>
     </message>
     <message>
+        <location filename="../map/CMapIMG.cpp" line="622"/>
         <source>Loading %1</source>
         <translation type="vanished">Chargement de %1</translation>
     </message>
     <message>
+        <location filename="../map/CMapIMG.cpp" line="627"/>
         <source>User abort: </source>
         <translation type="vanished">Interruption par l&apos;utilisateur : </translation>
     </message>
     <message>
-        <location filename="../map/CMapIMG.cpp" line="624"/>
+        <location filename="../map/CMapIMG.cpp" line="630"/>
         <source>File is NT format. QMapShack is unable to read map files with NT format: </source>
         <translation>Le fichier est au format NT. QMapShack ne peut pas lire des fichiers au format NT : </translation>
     </message>
@@ -5739,52 +5798,52 @@ n&apos;est pas une définition de système de coordonnées:
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterSetup.cpp" line="315"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterSetup.cpp" line="316"/>
         <source>brouter jar-file: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterSetup.cpp" line="319"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterSetup.cpp" line="320"/>
         <source>conflicting alternative jar-file %1, go back to previous page to select!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterSetup.cpp" line="336"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterSetup.cpp" line="338"/>
         <source>backup: %1 to %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterSetup.cpp" line="338"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterSetup.cpp" line="340"/>
         <source>error renaming file %1 to %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterSetup.cpp" line="344"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterSetup.cpp" line="346"/>
         <source>installed: %1 to %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterSetup.cpp" line="346"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterSetup.cpp" line="348"/>
         <source>error copying %1 to %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterSetup.cpp" line="625"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterSetup.cpp" line="616"/>
         <source>%1 not accessible</source>
         <translation>%1 n&apos;est pas accessible</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterSetup.cpp" line="649"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterSetup.cpp" line="640"/>
         <source>%1 invalid result</source>
         <translation>%1 résultat invalide</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterSetup.cpp" line="673"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterSetup.cpp" line="664"/>
         <source>Error parsing online-config:</source>
         <translation>Erreur de syntax dans la configuration du service en ligne :</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterSetup.cpp" line="676"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterSetup.cpp" line="667"/>
         <source>Network error:</source>
         <translation>Erreur réseau :</translation>
     </message>
@@ -5982,75 +6041,75 @@ Please check the logs if Brouter fails to start.</source>
         <translation>Télécharger</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="257"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="254"/>
         <source>Error creating segments directory %1</source>
         <translation>Impossible créer le dossier de segments %1</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="346"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="343"/>
         <source>cannot parse: %1 is not a date</source>
         <translation>Erreur de syntaxe: %1 n&apos;est pas une date</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="359"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="356"/>
         <source>cannot parse: %1 is not a valid size</source>
         <translation>Erreur de syntaxe: %1 n&apos;est pas une taille</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="629"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="621"/>
         <source>Error retrieving available routing data from %1: %2</source>
         <translation>Impossible de télécharger les données de routage de %1: %2</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="432"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="429"/>
         <source>segments directory does not exist: </source>
         <translation>Le dossier de segments n&apos;existe pas :</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="445"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="442"/>
         <source>error creating file %1: %2</source>
         <translation>Erreur lors de la création du fichier %1 : %2</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="479"/>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="512"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="476"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="509"/>
         <source>no valid request for filename %1</source>
         <translation>Pas de requête valide pour le fichier %1</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="483"/>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="517"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="480"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="514"/>
         <source>no open file assigned to request for %1</source>
         <translation>Pas de fichier ouvert assigné à la requête de %1</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="492"/>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="522"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="489"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="519"/>
         <source>error writing to file %1: %2</source>
         <translation>Erreur lors de l&apos;écriture dans le fichier %1 : %2</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="540"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="537"/>
         <source>error renaming file %1 to %2: %3</source>
         <translation>Erreur lors du renommage de %1 en %2 : %3</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="605"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="597"/>
         <source>up-to-date: %1 (%2), outdated: %3 (%4), to be downloaded: %5 (%6)</source>
         <translation>à jour : %1 (%2), obsolètes : %3 (%4), à télécharger : %5 (%6)</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="687"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="679"/>
         <source>being downloaded: %1 of %2</source>
         <translation>en cours de téléchargement: %1 or %2</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="697"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="689"/>
         <source>no local data, online available: %1 (%2)</source>
         <translation>pas de données locales, disponible en ligne : %1 (%2)</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="690"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="682"/>
         <source>local data outdated (%1, %2 - remote %3, %4)</source>
         <translation>données locales obsolètes (%1, %2 - dispo en ligne: %3, %4)</translation>
     </message>
@@ -6060,22 +6119,22 @@ Please check the logs if Brouter fails to start.</source>
         <translation>Impossible de supprimer %1: %2</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="288"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="285"/>
         <source>Network Error</source>
         <translation>Erreur réseau</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="323"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="320"/>
         <source>invalid result, no files found</source>
         <translation>Résultat incorrect, fichiers introuvables</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="694"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="686"/>
         <source>local data up to date (%1, %2)</source>
         <translation>données locales à jour (%1, %2)</translation>
     </message>
     <message>
-        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="700"/>
+        <location filename="../gis/rte/router/brouter/CRouterBRouterTilesSelect.cpp" line="692"/>
         <source>no routing-data available</source>
         <translation>aucune donnée de routage disponible</translation>
     </message>
