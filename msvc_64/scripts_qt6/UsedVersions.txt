@@ -11,7 +11,7 @@ Software versions used in QMS:
                        libxml2: 2.9.12
                        openjp2: 2.4.0
                           proj: 9.6.2
-                      QMS main: 1.17
+                      QMS main: 1.18.2
                        Qt6Core: 6.10.0.0
                         quazip: 1.5
                        Routino: 3.4.3
