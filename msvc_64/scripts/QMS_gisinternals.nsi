@@ -12,7 +12,16 @@
 ;http://nsis.sourceforge.net/Many_Icons_Many_shortcuts
 
 
+
+
+
+;Properly display all languages (Installer will not work on Windows 95, 98 or ME!)
+Unicode true
+
+
 !pragma warning error all
+
+
 
 ;--------------------------------
 ;Include Modern UI
@@ -28,9 +37,6 @@
 
 ;--------------------------------
 ;General
-
-  ;Properly display all languages (Installer will not work on Windows 95, 98 or ME!)
-  Unicode true
 
   Setcompressor LZMA
 
@@ -52,8 +58,8 @@
 
   OutFile "${PACKAGE}-${EXEFILE}_x64_setup.exe"
 
-  ;Default installation folder
-  InstallDir "$LOCALAPPDATA\${PACKAGE}"
+  ;Default installation folder - must be ASCII only name - otherwise QMS (Routino!)/QMT won't start properly
+  InstallDir "$PROGRAMFILES64\${PACKAGE}"
   
   ;Get installation folder from registry if available and overwrite InstallDir with it
   InstallDirRegKey HKCU "Software\${PACKAGE}" "Install_Dir"
@@ -175,12 +181,12 @@ Section "MSVC++ 2022 Runtime" MSVC
   File ..\Files\VC_redist.x64.exe
   ExecWait '"$TEMP\VC_redist.x64.exe" /install /quiet /norestart'
   Delete "$TEMP\VC_redist.x64.exe"
-  SetOutPath $INSTDIR
+  SetOutPath "$INSTDIR"
  
 SectionEnd
 
 Section "QMapShack/QMapTool" QMapShack
-
+  
   DetailPrint "Copying application files ..."
 
 
@@ -194,7 +200,7 @@ Section "QMapShack/QMapTool" QMapShack
   SetRegView 64
   
   ;BEGIN QMapShack Files
-  SetOutPath $INSTDIR
+  SetOutPath "$INSTDIR"
   File /r ..\Files\*.*
   
   FileOpen  $9 GDAL_shell.bat w 
@@ -215,7 +221,7 @@ Section "Start Menu" StartMenu
 
   DetailPrint "Creating start menu ..."
 
-  SetOutPath $INSTDIR
+  SetOutPath "$INSTDIR"
   
   !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
 
@@ -245,7 +251,7 @@ Section "Register software" Register
   DetailPrint "Registering software ..."
 
   ; Set output path to the installation directory.
-  SetOutPath $INSTDIR
+  SetOutPath "$INSTDIR"
   
   ; Write the installation path into the registry
   WriteRegStr HKCU SOFTWARE\${PACKAGE} "Install_Dir" "$INSTDIR"
@@ -259,7 +265,7 @@ Section "Register software" Register
   WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PACKAGE}" "NoModify" 1
   WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PACKAGE}" "NoRepair" 1
   
-  WriteUninstaller "$INSTDIR\uninstall.exe"
+  WriteUninstaller $INSTDIR\uninstall.exe
   
 SectionEnd
 
@@ -270,9 +276,9 @@ LangString LanguageSelect ${LANG_ENGLISH} "Please select your language:"
 LangString LanguageSelect ${LANG_GERMAN}  "Bitte wählen Sie Ihre Sprache:"
 LangString LanguageSelect ${LANG_SPANISH} "Seleccione el idioma:"
 
-LangString DESC_MUI_DIRECTORYPAGE_TEXT_TOP ${LANG_ENGLISH} "Hint: The offline help works best if selected folder has write permission!"
-LangString DESC_MUI_DIRECTORYPAGE_TEXT_TOP ${LANG_GERMAN} "Hinweis: Die Offline-Hilfe funktioniert am besten, wenn der ausgewählte Ordner Schreibrechte hat!"
-LangString DESC_MUI_DIRECTORYPAGE_TEXT_TOP ${LANG_SPANISH} "Sugerencia: la ayuda sin conexión funciona mejor si la carpeta seleccionada tiene permiso de escritura."
+LangString DESC_MUI_DIRECTORYPAGE_TEXT_TOP ${LANG_ENGLISH} "Hints:$\r$\n* The name of the selected folder must be ASCII only!$\r$\n* The offline help works best if selected folder has write permission!"
+LangString DESC_MUI_DIRECTORYPAGE_TEXT_TOP ${LANG_GERMAN} "Hinweise:$\r$\n* Der ausgewählte Ordnername darf nur ASCII-Zeichen enthalten!$\r$\n* Die Offline-Hilfe funktioniert am besten, wenn der ausgewählte Ordner Schreibrechte hat!"
+LangString DESC_MUI_DIRECTORYPAGE_TEXT_TOP ${LANG_SPANISH} "Sugerencia::$\r$\n* El nombre de la carpeta seleccionada debe estar compuesto únicamente por caracteres ASCII!:$\r$\n* La ayuda sin conexión funciona mejor si la carpeta seleccionada tiene permiso de escritura."
 
 ; LangString DESC_MUI_DIRECTORYPAGE_TEXT_TOP ${LANG_ENGLISH} "The user must have write permission for the selected folder!"
 ; LangString DESC_MUI_DIRECTORYPAGE_TEXT_TOP ${LANG_GERMAN}  "Der Nutzer muss Schreibberechtigung für das ausgewählte Verzeichnis haben!"
