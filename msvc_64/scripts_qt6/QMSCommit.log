@@ -1,4 +1,4 @@
-Logfile created:             2025-11-08 15:37:42 with QMSCommit.py
+Logfile created:             2025-11-21 14:43:43 with QMSCommit.py
 
 QMS directory:               d:\QtProjects\QMS\QMS4Qt6
 QMS basis version:           1.18.2
@@ -6,9 +6,9 @@ Current local branch:        dev_cache
 Branch used for compilation: dev
 
 Info about last commit on compilation branch:
-  Hash:                      7685adbf1b24026f57f39e1832d736739274f7a1
-  Message:                   [QMS-863] Fixing QFILE_MAYBE_NODISCARD warnings for Qt 6.10 and more recent
-  Author:                    Oliver Eichler
-  Date:                      2025-11-07 08:08:56+01:00
+  Hash:                      61f7b9003e8d64e3695547bd8e4f577dd22cc22f
+  Message:                   [QMS-878] BRouter: no route time, no turn points, no navigation instructions
+  Author:                    JFritzle
+  Date:                      2025-11-20 11:50:02+01:00
   Branches with same commit: ['maproom/dev', 'wthaem/dev', 'wthaem/dev_build', 'wthaem/dev_cache']
   Remote repo URLs:          {'maproom': 'https://github.com/Maproom/qmapshack.git', 'wthaem': 'https://github.com/wthaem/qmapshack.git'}
