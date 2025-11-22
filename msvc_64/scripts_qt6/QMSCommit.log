@@ -1,4 +1,4 @@
-Logfile created:             2025-11-21 16:12:48 with QMSCommit.py
+Logfile created:             2025-11-22 09:37:59 with QMSCommit.py
 
 QMS directory:               d:\QtProjects\QMS\QMS4Qt6
 QMS basis version:           1.18.2
@@ -6,9 +6,9 @@ Current local branch:        dev_build
 Branch used for compilation: dev
 
 Info about last commit on compilation branch:
-  Hash:                      61f7b9003e8d64e3695547bd8e4f577dd22cc22f
-  Message:                   [QMS-878] BRouter: no route time, no turn points, no navigation instructions
-  Author:                    JFritzle
-  Date:                      2025-11-20 11:50:02+01:00
-  Branches with same commit: ['maproom/dev', 'wthaem/dev', 'wthaem/dev_build', 'wthaem/dev_cache']
+  Hash:                      45dee3f181c8fad5e2942a098f941acdfc71a072
+  Message:                   -
+  Author:                    Oliver Eichler
+  Date:                      2025-11-22 08:31:36+01:00
+  Branches with same commit: ['maproom/dev', 'wthaem/dev']
   Remote repo URLs:          {'maproom': 'https://github.com/Maproom/qmapshack.git', 'wthaem': 'https://github.com/wthaem/qmapshack.git'}
