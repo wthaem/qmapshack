@@ -106,7 +106,13 @@ rem Copy QuaZip --------------------------------------------------------
 copy %QMSI_QUAZIP_PATH%\bin\quazip1-Qt%QT%.dll
 
 rem Copy mysql 
-copy %QMSI_MYSQL_PATH%\qsqlmysql.dll
+
+echo.
+echo.
+echo Copy mysql
+rem copy %QMSI_MYSQL_PATH%\qsqlmysql.dll
+robocopy %QMSI_MYSQL_PATH% "%cd%" /E
+pause
 
 rem Copy MSVC Redistributables -------------------------------------
 copy %QMSI_VCREDIST_PATH%VC_redist.x64.exe
