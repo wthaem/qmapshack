@@ -111,7 +111,7 @@ echo.
 echo.
 echo Copy mysql
 rem copy %QMSI_MYSQL_PATH%\qsqlmysql.dll
-robocopy %QMSI_MYSQL_PATH% "%cd%" /E
+robocopy %QMSI_MYSQL_PATH% "%cd%" /E /NJH /NJS /NFL /NDL     
 pause
 
 rem Copy MSVC Redistributables -------------------------------------
