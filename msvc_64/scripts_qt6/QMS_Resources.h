@@ -12,15 +12,15 @@ BLOCK "StringFileInfo"
 	BLOCK "040904E4"
 	{
 		VALUE "CompanyName", ""
-		VALUE "FileDescription", QMS_UP+" (Compiled with GISInternals. Used commit: 45dee3f of fork/branch: maproom/dev.)"
+		VALUE "FileDescription", QMS_UP+" (Compiled with GISInternals. Used commit: 9ea5b51 of fork/branch: kiozen/dev.)"
 		VALUE "FileVersion", "1.18.1.1"
 		VALUE "InternalName", QMS
 		VALUE "LegalCopyright", "Copyright (c) 2023, Oliver Eichler <oliver.eichler@gmx.de>"
 		VALUE "OriginalFilename", QMS +".exe"
 		VALUE "ProductName", "QMapShack"
 		VALUE "ProductVersion", "1.18.1.1"
-		VALUE "Comments", "Compiled with GISInternals. Used commit: 45dee3f of fork/branch: maproom/dev"
-		VALUE "SpecialBuild", "Compiled with GISInternals. Used commit: 45dee3f of fork/branch: maproom/dev"
+		VALUE "Comments", "Compiled with GISInternals. Used commit: 9ea5b51 of fork/branch: kiozen/dev"
+		VALUE "SpecialBuild", "Compiled with GISInternals. Used commit: 9ea5b51 of fork/branch: kiozen/dev"
 	}
 }
 BLOCK "VarFileInfo"

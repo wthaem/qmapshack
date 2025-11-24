@@ -1,4 +1,4 @@
-Logfile created:             2025-11-22 09:40:02 with QMSCommit.py
+Logfile created:             2025-11-24 08:51:31 with QMSCommit.py
 
 QMS directory:               d:\QtProjects\QMS\QMS4Qt6
 QMS basis version:           1.18.2
@@ -6,9 +6,9 @@ Current local branch:        dev_build
 Branch used for compilation: dev
 
 Info about last commit on compilation branch:
-  Hash:                      45dee3f181c8fad5e2942a098f941acdfc71a072
-  Message:                   -
+  Hash:                      9ea5b51b8cc8e6fd06e2708a8ff6e63abad8b6a9
+  Message:                   [QMS-873] review fixes
   Author:                    Oliver Eichler
-  Date:                      2025-11-22 08:31:36+01:00
-  Branches with same commit: ['maproom/dev', 'wthaem/dev', 'wthaem/dev_build', 'wthaem/dev_cache']
-  Remote repo URLs:          {'maproom': 'https://github.com/Maproom/qmapshack.git', 'wthaem': 'https://github.com/wthaem/qmapshack.git'}
+  Date:                      2025-11-23 17:29:29+01:00
+  Branches with same commit: ['kiozen/dev', 'maproom/dev', 'wthaem/dev']
+  Remote repo URLs:          {'maproom': 'https://github.com/Maproom/qmapshack.git', 'wthaem': 'https://github.com/wthaem/qmapshack.git', 'kiozen': 'https://github.com/kiozen/qmapshack.git'}
