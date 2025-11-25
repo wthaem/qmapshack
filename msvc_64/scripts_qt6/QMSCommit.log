@@ -1,4 +1,4 @@
-Logfile created:             2025-11-25 19:38:52 with QMSCommit.py
+Logfile created:             2025-11-25 19:40:07 with QMSCommit.py
 
 QMS directory:               d:\QtProjects\QMS\QMS4Qt6
 QMS basis version:           1.18.2
@@ -10,5 +10,5 @@ Info about last commit on compilation branch:
   Message:                   [QMS-884] Add command line option to query QMS version
   Author:                    JFritzle
   Date:                      2025-11-25 15:03:47+01:00
-  Branches with same commit: ['kiozen/QMS-XXX', 'kiozen/dev', 'maproom/dev', 'wthaem/dev']
+  Branches with same commit: ['kiozen/QMS-XXX', 'kiozen/dev', 'maproom/dev', 'wthaem/dev', 'wthaem/dev_build', 'wthaem/dev_cache']
   Remote repo URLs:          {'maproom': 'https://github.com/Maproom/qmapshack.git', 'wthaem': 'https://github.com/wthaem/qmapshack.git', 'kiozen': 'https://github.com/kiozen/qmapshack.git'}
