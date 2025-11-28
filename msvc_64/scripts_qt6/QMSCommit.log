@@ -1,4 +1,4 @@
-Logfile created:             2025-11-25 19:40:07 with QMSCommit.py
+Logfile created:             2025-11-28 16:06:16 with QMSCommit.py
 
 QMS directory:               d:\QtProjects\QMS\QMS4Qt6
 QMS basis version:           1.18.2
@@ -6,9 +6,9 @@ Current local branch:        dev_build
 Branch used for compilation: dev
 
 Info about last commit on compilation branch:
-  Hash:                      c1b6066d389d8b4a1b8cb9534b1ec7aa37a2b963
-  Message:                   [QMS-884] Add command line option to query QMS version
-  Author:                    JFritzle
-  Date:                      2025-11-25 15:03:47+01:00
-  Branches with same commit: ['kiozen/QMS-XXX', 'kiozen/dev', 'maproom/dev', 'wthaem/dev', 'wthaem/dev_build', 'wthaem/dev_cache']
+  Hash:                      c11b00df279c20a0ff74730942b18cfa1dd65179
+  Message:                   [QMS-887] Unify restoring item widgets
+  Author:                    Oliver Eichler
+  Date:                      2025-11-27 14:07:46+01:00
+  Branches with same commit: ['kiozen/QMS-889', 'kiozen/dev', 'maproom/dev', 'wthaem/dev']
   Remote repo URLs:          {'maproom': 'https://github.com/Maproom/qmapshack.git', 'wthaem': 'https://github.com/wthaem/qmapshack.git', 'kiozen': 'https://github.com/kiozen/qmapshack.git'}
