@@ -62,7 +62,7 @@ Unicode true
   InstallDir "$PROGRAMFILES64\${PACKAGE}"
   
   ;Get installation folder from registry if available and overwrite InstallDir with it
-  InstallDirRegKey HKCU "Software\${PACKAGE}" "Install_Dir"
+  InstallDirRegKey HKLM "Software\${PACKAGE}" "Install_Dir"
 
   Var OldUninstaller
   Var hCtl_RadioYes
@@ -89,7 +89,7 @@ Unicode true
 ;Language Selection Dialog Settings
 
   ;Remember the installer language
-  !define MUI_LANGDLL_REGISTRY_ROOT "HKCU" 
+  !define MUI_LANGDLL_REGISTRY_ROOT "HKLM" 
   !define MUI_LANGDLL_REGISTRY_KEY "Software\${PACKAGE}" 
   !define MUI_LANGDLL_REGISTRY_VALUENAME "Installer Language"
 
@@ -137,7 +137,7 @@ Unicode true
   !insertmacro MUI_PAGE_DIRECTORY
   
   ; Start menu page configuration  
-  !define MUI_STARTMENUPAGE_REGISTRY_ROOT "HKCU" 
+  !define MUI_STARTMENUPAGE_REGISTRY_ROOT "HKLM" 
   !define MUI_STARTMENUPAGE_REGISTRY_KEY "Software\${PACKAGE}" 
   !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME "${PACKAGE}"
 
@@ -196,12 +196,30 @@ Section "QMapShack/QMapTool" QMapShack
       CopyFiles $2\.config\QLandkarte\workspace.db $2\.config\QLandkarte\workspace.db.bak
       
   LBL1:    
-  SetShellVarContext current
+  SetShellVarContext all
   SetRegView 64
   
   ;BEGIN QMapShack Files
   SetOutPath "$INSTDIR"
   File /r ..\Files\*.*
+  
+  FileOpen  $9 QMS_Start.bat w 
+  FileWrite $9 'set QMS_ROOT=%~dp0$\r$\n'
+  FileWrite $9 'set GDAL_DRIVER_PATH=%QMS_ROOT%gdalplugins$\r$\n'
+  FileWrite $9 'set GDAL_DATA=%QMS_ROOT%data$\r$\n'
+  FileWrite $9 'set PROJ_DATA=%QMS_ROOT%share\proj$\r$\n'  
+  FileWrite $9 'cd /d %~dp0$\r$\n'
+  FileWrite $9 'start "QMS" /B qmapshack.exe --style fusion %1$\r$\n'
+  FileClose $9 
+  
+  FileOpen  $9 QMT_Start.bat w 
+  FileWrite $9 'set QMS_ROOT=%~dp0$\r$\n'
+  FileWrite $9 'set GDAL_DRIVER_PATH=%QMS_ROOT%gdalplugins$\r$\n'
+  FileWrite $9 'set GDAL_DATA=%QMS_ROOT%data$\r$\n'
+  FileWrite $9 'set PROJ_DATA=%QMS_ROOT%share\proj$\r$\n' 
+  FileWrite $9 'cd /d %~dp0$\r$\n'
+  FileWrite $9 'start "QMT" /B qmaptool.exe --style fusion$\r$\n'
+  FileClose $9   
   
   FileOpen  $9 GDAL_shell.bat w 
   FileWrite $9 '@echo off$\r$\n'
@@ -231,9 +249,9 @@ Section "Start Menu" StartMenu
         
     CreateDirectory "$SMPROGRAMS\$StartMenuFolder"
 
-    CreateShortCut "$SMPROGRAMS\$StartMenuFolder\QMapShack.lnk"     '"$INSTDIR\qmapshack.exe"' "--style fusion %1" "$INSTDIR\QMapShack.ico" 0 "SW_SHOWNORMAL" "" "Start QMapShack"
+    CreateShortCut "$SMPROGRAMS\$StartMenuFolder\QMapShack.lnk"     '"$INSTDIR\QMS_Start.bat"' "" "$INSTDIR\QMapShack.ico" 0 "SW_SHOWMINIMIZED" "" "Start QMapShack"
 
-    CreateShortCut "$SMPROGRAMS\$StartMenuFolder\QMapTool.lnk"     '"$INSTDIR\qmaptool.exe"' "--style fusion" "$INSTDIR\QMapTool.ico" 0 "SW_SHOWNORMAL" "" "Start QMapTool"
+    CreateShortCut "$SMPROGRAMS\$StartMenuFolder\QMapTool.lnk"     '"$INSTDIR\QMT_Start.bat"' "" "$INSTDIR\QMapTool.ico" 0 "SW_SHOWMINIMIZED" "" "Start QMapTool"
 
     CreateShortCut "$SMPROGRAMS\$StartMenuFolder\GDAL_shell.lnk"    '"$INSTDIR\GDAL_shell.bat"' "" "$INSTDIR\QMapShack.ico" 0 "SW_SHOWNORMAL" "" "Start GDAL shell with correct environment"
 
@@ -254,16 +272,16 @@ Section "Register software" Register
   SetOutPath "$INSTDIR"
   
   ; Write the installation path into the registry
-  WriteRegStr HKCU SOFTWARE\${PACKAGE} "Install_Dir" "$INSTDIR"
+  WriteRegStr HKLM SOFTWARE\${PACKAGE} "Install_Dir" "$INSTDIR"
   
   ; Write the uninstall keys for Windows
   
   ;Create registry entries
-  WriteRegStr   HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PACKAGE}" "DisplayName"     "QMapShack (remove only)"
-  WriteRegStr   HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PACKAGE}" "UninstallString" "$INSTDIR\Uninstall.exe"
+  WriteRegStr   HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PACKAGE}" "DisplayName"     "QMapShack (remove only)"
+  WriteRegStr   HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PACKAGE}" "UninstallString" "$INSTDIR\Uninstall.exe"
   
-  WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PACKAGE}" "NoModify" 1
-  WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PACKAGE}" "NoRepair" 1
+  WriteRegDWORD HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PACKAGE}" "NoModify" 1
+  WriteRegDWORD HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PACKAGE}" "NoRepair" 1
   
   WriteUninstaller $INSTDIR\uninstall.exe
   
@@ -363,9 +381,17 @@ Function .onInit
   
   !insertmacro MUI_LANGDLL_DISPLAY
 
-  ; Check if previous install path exists in registry
-  ReadRegStr $OldUninstaller HKCU "Software\${PACKAGE}" "Install_Dir"
+  ; Check if previous install path exists in registry for all users
+  ReadRegStr $OldUninstaller HKLM "Software\${PACKAGE}" "Install_Dir"
 
+  ${If} $OldUninstaller == ""
+      ; Check if previous install path exists in registry for current user
+      ReadRegStr $OldUninstaller HKCU "Software\${PACKAGE}" "Install_Dir"
+  ${EndIf}
+  
+  ; $OldUninstaller points to the existing old installer either for all users of for current user
+  
+  
   ${IfNot} ${AtLeastWin10}
     MessageBox MB_OK "${PACKAGE} can only be installed on Windows 10 or later."
     Abort
@@ -385,6 +411,13 @@ FunctionEnd
 ;--------------------------------
 
 Function OldVersionPageCreate
+
+  !insertmacro CloseAppViaPipe "\\.\pipe\QMapShack-$USERNAME" 10000 $R0
+
+  StrCmp $R0 1 0 +2
+    MessageBox MB_ICONSTOP "QMapShack is still running. Please close it manually or retry."
+
+
   ${If} $OldUninstaller == ""
     Abort ; skip this page if no old version
   ${EndIf}
@@ -433,7 +466,7 @@ Section "Uninstall" un.Uninstall
   DetailPrint "Uninstalling ..."
 
   SetRegView 64
-  SetShellVarContext current
+  SetShellVarContext all
 
   Delete "$INSTDIR\Uninstall.exe"
   RMDir /r "$INSTDIR"
@@ -443,8 +476,8 @@ Section "Uninstall" un.Uninstall
   Delete "$SMPROGRAMS\$StartMenuFolder\*.*"
   RMDir /r "$SMPROGRAMS\$StartMenuFolder"
 
-  DeleteRegKey HKCU "Software\${PACKAGE}"
-  DeleteRegKey HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PACKAGE}"
+  DeleteRegKey HKLM "Software\${PACKAGE}"
+  DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PACKAGE}"
 
 SectionEnd
 
@@ -479,3 +512,27 @@ Function un.InfoPage
 
     nsDialogs::Show
 FunctionEnd
+
+;-------------------------------------
+
+!macro CloseAppViaPipe PIPE_NAME TIMEOUT OUTVAR
+    StrCpy ${OUTVAR} 0  ; default = failed/not closed
+
+    ; Attempt to open pipe
+    System::Call 'kernel32::CreateFile(t "${PIPE_NAME}", i 0xC0000000, i 0, i 0, i 3, i 0, i 0) i .r0'
+    ; 0xC0000000 = GENERIC_READ | GENERIC_WRITE, 3 = OPEN_EXISTING
+    IntCmp $0 -1 no_pipe +2 0
+        ; Pipe exists → app is running
+        ; Send graceful shutdown message
+        StrCpy $1 "EXIT"  ; arbitrary shutdown command
+
+        ; Close pipe handle
+        System::Call 'kernel32::CloseHandle(i $0)'
+
+
+no_pipe:
+    ; Pipe does not exist → app not running
+    StrCpy ${OUTVAR} 1
+
+
+!macroend
