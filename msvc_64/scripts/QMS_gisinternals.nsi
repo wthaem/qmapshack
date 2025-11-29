@@ -1,5 +1,6 @@
 
-; d:\uti\NSIS\makensis.exe /DQMSUSERCFG=scripts_qt6 /V4 /INPUTCHARSET UTF8 d:\QtProjects\QMS\QMS4Qt6\msvc_64\scripts\QMS_gisinternals.nsi
+; "C:\Program Files (x86)\NSIS\makensis.exe" /DQMSUSERCFG=scripts_qt6 /V4 /INPUTCHARSET UTF8 d:\QtProjects\QMS\QMS4Qt6\msvc_64\scripts\QMS_gisinternals.nsi
+; start in scripts\..\..
 
 ;NSIS Installer Script for GISInternals-based QMapShack package
 
@@ -12,25 +13,20 @@
 ;http://nsis.sourceforge.net/Many_Icons_Many_shortcuts
 
 
-
-
-
 ;Properly display all languages (Installer will not work on Windows 95, 98 or ME!)
 Unicode true
 
-
 !pragma warning error all
-
-
 
 ;--------------------------------
 ;Include Modern UI
 
   !include "MUI2.nsh"
   !include "nsDialogs.nsh"
-  !include "LogicLib.nsh"
+  !include "LogicLib.nsh" ; not valid for nsis 3.0.1
   !include "x64.nsh"
   !include "WinVer.nsh"
+  !include "StrFunc.nsh"  ; not valid for nsis 3.0.1
   
   ; include current version info
   !include "..\${QMSUSERCFG}\QMS_gisinternals_add.nsi"
@@ -68,6 +64,7 @@ Unicode true
   Var hCtl_RadioYes
   Var hCtl_RadioNo
   Var StartMenuFolder
+  
   
   ;Request application privileges for Windows UAC
   RequestExecutionLevel admin 
@@ -119,7 +116,7 @@ Unicode true
 !define MUI_FINISHPAGE_LINK $(DESC_MUI_FINISHPAGE_LINK)
 !define MUI_FINISHPAGE_LINK_LOCATION "https://github.com/Maproom/qmapshack/wiki"
 
-!define MUI_FINISHPAGE_RUN "$INSTDIR\qmapshack.exe"
+!define MUI_FINISHPAGE_RUN "$INSTDIR\QMS_Start.bat"
 !define MUI_FINISHPAGE_NOREBOOTSUPPORT
 !define MUI_FINISHPAGE_NOAUTOCLOSE
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
@@ -266,7 +263,7 @@ SectionEnd
 
 Section "Register software" Register
   
-  DetailPrint "Registering software ..."
+  ;DetailPrint "Registering software ..."
 
   ; Set output path to the installation directory.
   SetOutPath "$INSTDIR"
@@ -372,6 +369,56 @@ LangString DESC_UninstallInfo ${LANG_SPANISH} "El programa se desinstalará ahor
 
 !insertmacro MUI_FUNCTION_DESCRIPTION_END
 
+;-------------------------------------
+
+!macro StrContains OUTVAR HAYSTACK NEEDLE
+
+StrLen $R0 "${NEEDLE}" ; length of needle
+StrLen $R1 "${HAYSTACK}" ; length of haystack
+StrCpy ${OUTVAR} "" ; default: not found
+StrCpy $R2 0 ; current index
+
+
+IntCmp $R2 $R1 StrContainsDone StrContainsLoopContinue StrContainsLoopContinue
+
+StrContainsLoopContinue:
+StrCpy $R3 "${HAYSTACK}" $R0 $R2
+StrCmp $R3 "${NEEDLE}" StrContainsFound
+IntOp $R2 $R2 + 1
+IntCmp $R2 $R1 StrContainsDone StrContainsLoopContinue StrContainsLoopContinue
+
+StrContainsFound:
+StrCpy ${OUTVAR} $R2
+Goto StrContainsDone
+
+StrContainsDone:
+!macroend
+
+;-------------------------------------
+
+!macro CloseAppViaPipe PIPE_NAME TIMEOUT OUTVAR
+    StrCpy ${OUTVAR} 0  ; default = failed/not closed
+
+    ; Attempt to open pipe
+    System::Call 'kernel32::CreateFile(t "${PIPE_NAME}", i 0xC0000000, i 0, i 0, i 3, i 0, i 0) i .r0'
+    ; 0xC0000000 = GENERIC_READ | GENERIC_WRITE, 3 = OPEN_EXISTING
+    IntCmp $0 -1 no_pipe +2 0
+        ; Pipe exists → app is running
+        ; Send graceful shutdown message
+        StrCpy $1 "EXIT"  ; arbitrary shutdown command
+        MessageBox MB_OK "Pipe found. ${PIPE_NAME}"
+
+        ; Close pipe handle
+        System::Call 'kernel32::CloseHandle(i $0)'
+
+no_pipe:
+    ; Pipe does not exist → app not running
+    StrCpy ${OUTVAR} 1
+    MessageBox MB_OK "No pipe found. ${PIPE_NAME}"
+
+!macroend
+
+
 ;--------------------------------
 ;Installer Functions
 
@@ -412,12 +459,23 @@ FunctionEnd
 
 Function OldVersionPageCreate
 
-  !insertmacro CloseAppViaPipe "\\.\pipe\QMapShack-$USERNAME" 10000 $R0
+   nsExec::ExecToStack 'tasklist /FO CSV /NH /FI "IMAGENAME eq qmapshack.exe"' ; other recommended methods fail!
+    Pop $0  ; exit code, should be 0
+    Pop $1  ; first line of output ; if failure: "INFORMATION: Es werden keine Aufgaben mit den angegebenen Kriterien ausgeführt."
+                                   ; if success: "qmapshack.exe","16580","Console","1","89.744 K"
+    
+    ;MessageBox MB_OK "Sub $0. string *$1*"
+    
+    !insertmacro StrContains $2 $1 "qmapshack.exe"  ; $2 variable gets result, $1 is string output of tasklist
+ 
+    StrCmp $2 "" notfound
 
-  StrCmp $R0 1 0 +2
-    MessageBox MB_ICONSTOP "QMapShack is still running. Please close it manually or retry."
-
-
+    MessageBox MB_OK 'QMapShack running. Close it and restart installer!'
+    Quit
+  
+    notfound:
+    MessageBox MB_OK 'Did not find running QMS'
+   
   ${If} $OldUninstaller == ""
     Abort ; skip this page if no old version
   ${EndIf}
@@ -513,26 +571,4 @@ Function un.InfoPage
     nsDialogs::Show
 FunctionEnd
 
-;-------------------------------------
 
-!macro CloseAppViaPipe PIPE_NAME TIMEOUT OUTVAR
-    StrCpy ${OUTVAR} 0  ; default = failed/not closed
-
-    ; Attempt to open pipe
-    System::Call 'kernel32::CreateFile(t "${PIPE_NAME}", i 0xC0000000, i 0, i 0, i 3, i 0, i 0) i .r0'
-    ; 0xC0000000 = GENERIC_READ | GENERIC_WRITE, 3 = OPEN_EXISTING
-    IntCmp $0 -1 no_pipe +2 0
-        ; Pipe exists → app is running
-        ; Send graceful shutdown message
-        StrCpy $1 "EXIT"  ; arbitrary shutdown command
-
-        ; Close pipe handle
-        System::Call 'kernel32::CloseHandle(i $0)'
-
-
-no_pipe:
-    ; Pipe does not exist → app not running
-    StrCpy ${OUTVAR} 1
-
-
-!macroend
