@@ -5,6 +5,7 @@
 ;NSIS Installer Script for GISInternals-based QMapShack package
 
 ; 30.09.2025 Added optional uninstall of existing version
+; 30.11.2025 Use HKCM instead of HKCU, check for running QMS
 
 ;NSIS References/Documentation 
 ;http://nsis.sourceforge.net/Docs/Modern%20UI%202/Readme.html
