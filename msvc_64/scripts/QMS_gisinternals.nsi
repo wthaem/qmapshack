@@ -291,6 +291,19 @@ LangString LanguageSelect ${LANG_ENGLISH} "Please select your language:"
 LangString LanguageSelect ${LANG_GERMAN}  "Bitte wählen Sie Ihre Sprache:"
 LangString LanguageSelect ${LANG_SPANISH} "Seleccione el idioma:"
 
+LangString MSG_W10 ${LANG_ENGLISH} "${PACKAGE} can only be installed on Windows 10 or later!"
+LangString MSG_W10 ${LANG_GERMAN}  "${PACKAGE} kann nur auf Windows 10 und später installiert werden!"
+LangString MSG_W10 ${LANG_SPANISH} "${PACKAGE} solo se puede instalar en Windows 10 o versiones posteriores!"
+
+LangString MSG_B32 ${LANG_ENGLISH} "The 64b version of ${PACKAGE} can not be run on 32b systems!"
+LangString MSG_B32 ${LANG_GERMAN}  "Die 64b Version von ${PACKAGE} kann nicht auf 32b Systemen benutzt werden!"
+LangString MSG_B32 ${LANG_SPANISH} "La versión de 64b de ${PACKAGE} no se puede ejecutar en sistemas de 32b!"
+
+LangString MSG_ISQMS ${LANG_ENGLISH} 'QMapShack running. Close it and restart installer!'
+LangString MSG_ISQMS ${LANG_GERMAN}  'QMapShack ist gestartet. Bitte schließen und Installer neu starten!'
+LangString MSG_ISQMS ${LANG_SPANISH} 'QMapShack en ejecución. Ciérrelo y reinicie el instalador!'
+
+
 LangString DESC_MUI_DIRECTORYPAGE_TEXT_TOP ${LANG_ENGLISH} "Hints:$\r$\n* The name of the selected folder must be ASCII only!$\r$\n* The offline help works best if selected folder has write permission!"
 LangString DESC_MUI_DIRECTORYPAGE_TEXT_TOP ${LANG_GERMAN} "Hinweise:$\r$\n* Der ausgewählte Ordnername darf nur ASCII-Zeichen enthalten!$\r$\n* Die Offline-Hilfe funktioniert am besten, wenn der ausgewählte Ordner Schreibrechte hat!"
 LangString DESC_MUI_DIRECTORYPAGE_TEXT_TOP ${LANG_SPANISH} "Sugerencia::$\r$\n* El nombre de la carpeta seleccionada debe estar compuesto únicamente por caracteres ASCII!:$\r$\n* La ayuda sin conexión funciona mejor si la carpeta seleccionada tiene permiso de escritura."
@@ -394,31 +407,6 @@ Goto StrContainsDone
 StrContainsDone:
 !macroend
 
-;-------------------------------------
-
-!macro CloseAppViaPipe PIPE_NAME TIMEOUT OUTVAR
-    StrCpy ${OUTVAR} 0  ; default = failed/not closed
-
-    ; Attempt to open pipe
-    System::Call 'kernel32::CreateFile(t "${PIPE_NAME}", i 0xC0000000, i 0, i 0, i 3, i 0, i 0) i .r0'
-    ; 0xC0000000 = GENERIC_READ | GENERIC_WRITE, 3 = OPEN_EXISTING
-    IntCmp $0 -1 no_pipe +2 0
-        ; Pipe exists → app is running
-        ; Send graceful shutdown message
-        StrCpy $1 "EXIT"  ; arbitrary shutdown command
-        MessageBox MB_OK "Pipe found. ${PIPE_NAME}"
-
-        ; Close pipe handle
-        System::Call 'kernel32::CloseHandle(i $0)'
-
-no_pipe:
-    ; Pipe does not exist → app not running
-    StrCpy ${OUTVAR} 1
-    MessageBox MB_OK "No pipe found. ${PIPE_NAME}"
-
-!macroend
-
-
 ;--------------------------------
 ;Installer Functions
 
@@ -428,9 +416,23 @@ Function .onInit
   
   !insertmacro MUI_LANGDLL_DISPLAY
 
-  ; Check if previous install path exists in registry for all users
-  ReadRegStr $OldUninstaller HKLM "Software\${PACKAGE}" "Install_Dir"
+ 
+  
+  ${IfNot} ${AtLeastWin10}
+    MessageBox MB_OK "$(MSG_W10)"
+    Quit
+  ${EndIf}
 
+  ${If} ${RunningX64}
+    SetRegView 64
+  ${Else}
+    MessageBox MB_OK "$(MSG_B32)"
+    Quit
+  ${EndIf}  
+  
+  ; Check if previous install path exists in registry for all users
+      ReadRegStr $OldUninstaller HKLM "Software\${PACKAGE}" "Install_Dir"
+;MessageBox MB_OK 'Old installer0: *$OldUninstaller* "Software\${PACKAGE}" "Install_Dir"'
   ${If} $OldUninstaller == ""
       ; Check if previous install path exists in registry for current user
       ReadRegStr $OldUninstaller HKCU "Software\${PACKAGE}" "Install_Dir"
@@ -438,18 +440,9 @@ Function .onInit
   
   ; $OldUninstaller points to the existing old installer either for all users of for current user
   
+;MessageBox MB_OK 'Old installer: *$OldUninstaller*'
   
-  ${IfNot} ${AtLeastWin10}
-    MessageBox MB_OK "${PACKAGE} can only be installed on Windows 10 or later."
-    Abort
-  ${EndIf}
 
-  ${If} ${RunningX64}
-    SetRegView 64
-  ${Else}
-    MessageBox MB_OK "The 64b version of ${PACKAGE} can not be run on 32b systems."
-    Abort
-  ${EndIf}
   
 FunctionEnd
 
@@ -470,11 +463,11 @@ Function OldVersionPageCreate
  
     StrCmp $2 "" notfound
 
-    MessageBox MB_OK 'QMapShack running. Close it and restart installer!'
+    MessageBox MB_OK "$(MSG_ISQMS)"
     Quit
   
     notfound:
-    MessageBox MB_OK 'Did not find running QMS'
+    ;MessageBox MB_OK 'Did not find running QMS'
    
   ${If} $OldUninstaller == ""
     Abort ; skip this page if no old version
