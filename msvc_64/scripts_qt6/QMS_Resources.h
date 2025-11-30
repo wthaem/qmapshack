@@ -2,8 +2,8 @@
 //QMS resource file created with CopyFilesGis.cfg using QMSUser.cfg
 
 1 VERSIONINFO
-FILEVERSION 1,18,1,1
-PRODUCTVERSION 1,18,1,0
+FILEVERSION 1,19,0,0
+PRODUCTVERSION 1,19,0,0
 FILEOS 0x4
 FILETYPE 0x1
 {
@@ -12,15 +12,15 @@ BLOCK "StringFileInfo"
 	BLOCK "040904E4"
 	{
 		VALUE "CompanyName", ""
-		VALUE "FileDescription", QMS_UP+" (Compiled with GISInternals. Used commit: f7329b3 of fork/branch: kiozen/dev.)"
-		VALUE "FileVersion", "1.18.1.1"
+		VALUE "FileDescription", QMS_UP+" (Compiled with GISInternals. Used commit: b477774 of fork/branch: kiozen/dev.)"
+		VALUE "FileVersion", "1.19.0.0"
 		VALUE "InternalName", QMS
 		VALUE "LegalCopyright", "Copyright (c) 2023, Oliver Eichler <oliver.eichler@gmx.de>"
 		VALUE "OriginalFilename", QMS +".exe"
 		VALUE "ProductName", "QMapShack"
-		VALUE "ProductVersion", "1.18.1.1"
-		VALUE "Comments", "Compiled with GISInternals. Used commit: f7329b3 of fork/branch: kiozen/dev"
-		VALUE "SpecialBuild", "Compiled with GISInternals. Used commit: f7329b3 of fork/branch: kiozen/dev"
+		VALUE "ProductVersion", "1.19.0.0"
+		VALUE "Comments", "Compiled with GISInternals. Used commit: b477774 of fork/branch: kiozen/dev"
+		VALUE "SpecialBuild", "Compiled with GISInternals. Used commit: b477774 of fork/branch: kiozen/dev"
 	}
 }
 BLOCK "VarFileInfo"

@@ -1,14 +1,14 @@
-Logfile created:             2025-11-30 09:58:43 with QMSCommit.py
+Logfile created:             2025-11-30 13:43:57 with QMSCommit.py
 
 QMS directory:               d:\QtProjects\QMS\QMS4Qt6
-QMS basis version:           1.18.2
+QMS basis version:           1.19.0
 Current local branch:        dev_build
 Branch used for compilation: dev
 
 Info about last commit on compilation branch:
-  Hash:                      f7329b321298439830a526c81a657943b8655505
-  Message:                   [QMS-891]Fix  BRouter tile selection map no longer available
+  Hash:                      b47777478ace0de0a5ee662c3839a512696732b4
+  Message:                   Update version to 1.19.0
   Author:                    Oliver Eichler
-  Date:                      2025-11-29 14:21:33+01:00
-  Branches with same commit: ['kiozen/dev', 'maproom/dev', 'wthaem/dev', 'wthaem/dev_build', 'wthaem/dev_cache']
+  Date:                      2025-11-30 11:03:33+01:00
+  Branches with same commit: ['kiozen/dev', 'maproom/dev', 'maproom/master', 'wthaem/dev', 'wthaem/dev_build']
   Remote repo URLs:          {'maproom': 'https://github.com/Maproom/qmapshack.git', 'wthaem': 'https://github.com/wthaem/qmapshack.git', 'kiozen': 'https://github.com/kiozen/qmapshack.git'}
