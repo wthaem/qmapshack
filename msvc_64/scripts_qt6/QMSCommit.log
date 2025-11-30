@@ -1,4 +1,4 @@
-Logfile created:             2025-11-28 16:07:38 with QMSCommit.py
+Logfile created:             2025-11-30 09:57:25 with QMSCommit.py
 
 QMS directory:               d:\QtProjects\QMS\QMS4Qt6
 QMS basis version:           1.18.2
@@ -6,9 +6,9 @@ Current local branch:        dev_build
 Branch used for compilation: dev
 
 Info about last commit on compilation branch:
-  Hash:                      c11b00df279c20a0ff74730942b18cfa1dd65179
-  Message:                   [QMS-887] Unify restoring item widgets
+  Hash:                      f7329b321298439830a526c81a657943b8655505
+  Message:                   [QMS-891]Fix  BRouter tile selection map no longer available
   Author:                    Oliver Eichler
-  Date:                      2025-11-27 14:07:46+01:00
-  Branches with same commit: ['kiozen/QMS-889', 'kiozen/dev', 'maproom/dev', 'wthaem/dev', 'wthaem/dev_build', 'wthaem/dev_cache']
+  Date:                      2025-11-29 14:21:33+01:00
+  Branches with same commit: ['kiozen/dev', 'maproom/dev', 'wthaem/dev']
   Remote repo URLs:          {'maproom': 'https://github.com/Maproom/qmapshack.git', 'wthaem': 'https://github.com/wthaem/qmapshack.git', 'kiozen': 'https://github.com/kiozen/qmapshack.git'}
