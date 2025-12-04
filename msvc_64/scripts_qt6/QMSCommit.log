@@ -1,4 +1,4 @@
-Logfile created:             2025-12-04 15:15:22 with QMSCommit.py
+Logfile created:             2025-12-04 20:17:15 with QMSCommit.py
 
 QMS directory:               d:\QtProjects\QMS\QMS4Qt6
 QMS basis version:           1.19.0
@@ -6,9 +6,9 @@ Current local branch:        dev_build
 Branch used for compilation: dev
 
 Info about last commit on compilation branch:
-  Hash:                      d089cf054a45286340d0c3055ec5d943d2aaaaed
-  Message:                   [QMS-896] BRouter setup & download counter issues
-  Author:                    JFritzle
-  Date:                      2025-12-02 16:52:42+01:00
-  Branches with same commit: ['kiozen/QMS-899', 'kiozen/dev', 'maproom/dev', 'wthaem/dev']
-  Remote repo URLs:          {'maproom': 'https://github.com/Maproom/qmapshack.git', 'wthaem': 'https://github.com/wthaem/qmapshack.git', 'kiozen': 'https://github.com/kiozen/qmapshack.git'}
+  Hash:                      173999445ea21a925b629ea14a7defeb1981c80a
+  Message:                   [QMS-899] Flash active indicator of map/dem items while rendered.
+  Author:                    Oliver Eichler
+  Date:                      2025-12-04 17:58:46+01:00
+  Branches with same commit: ['maproom/dev', 'wthaem/dev']
+  Remote repo URLs:          {'maproom': 'https://github.com/Maproom/qmapshack.git', 'wthaem': 'https://github.com/wthaem/qmapshack.git'}
