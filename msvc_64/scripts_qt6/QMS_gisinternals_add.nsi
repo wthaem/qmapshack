@@ -3,5 +3,5 @@
 
 # Program version
 !define VERSION "1.19.0"
-!define SUBVERSION "1.19.0.0"
-!define EXEFILE "1.19.0.0"
+!define SUBVERSION "1.19.0.1"
+!define EXEFILE "1.19.0.1"
