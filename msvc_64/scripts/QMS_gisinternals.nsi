@@ -171,7 +171,7 @@ Unicode true
 ;------------------------------------------------------------------------
 ;Components description
 
-Section "MSVC++ 2022 Runtime" MSVC
+Section "MSVC++ Runtime" MSVC
 
   DetailPrint "Running vc_redist.x64.exe ..."
 
@@ -349,9 +349,9 @@ LangString DESC_MUI_WELCOMEPAGE_TEXT ${LANG_ENGLISH} "QMapShack is a consumer gr
 LangString DESC_MUI_WELCOMEPAGE_TEXT ${LANG_GERMAN}  "QMapShack ist eine Software zur Verarbeitung der von GPS-Geräten erfassten Daten. Die Daten können auf einer Vielzahl von Karten angezeigt und in einer Datenbank gespeichert werden. Zusätzlich können neue Daten zur Planung von Touren erstellt werden.$\r$\nDas installierte Paket ist eine Vorab- und Testversion für einen Einzelnutzer. Bitte https://github.com/Maproom/qmapshack/issues benutzen, um über Probleme zu berichten.$\r$\nVor der Installation muss alle vorhandene QMapShack Software deinstalliert werden."
 LangString DESC_MUI_WELCOMEPAGE_TEXT ${LANG_SPANISH} "QMapShack es un software de consumo para trabajar con datos adquiridos por dispositivos GPS. Los datos pueden visualizarse en diversos mapas y almacenarse en una base de datos. Además, se pueden crear nuevos datos para planificar recorridos.$\r$\nEl paquete instalado es una versión preliminar de prueba para un solo usuario. Por favor, informe de cualquier problema a https://github.com/Maproom/qmapshack/issues.$\r$\nAntes de proceder con este instalador desinstalar completamente cualquier software QMapShack existente."
 
-LangString DESC_MSVC ${LANG_ENGLISH} "Microsoft Visual C++ 2022 Runtime Libraries. Typically already installed on your PC. You only need to install them if it doesn't work without."
-LangString DESC_MSVC ${LANG_GERMAN}  "Microsoft Visual C++ 2022 Laufzeitbibliotheken. Diese sind meist bereits auf dem Rechner installiert. Versuchen Sie die Installation zunächst einmal ohne dies."
-LangString DESC_MSVC ${LANG_SPANISH} "Bibliotecas de ejecución de Microsoft Visual C++ 2022. Normalmente ya están instaladas en el ordenador. Sólo es necesario instalarlas si no funciona sin."
+LangString DESC_MSVC ${LANG_ENGLISH} "Microsoft Visual C++ Runtime Libraries. Typically already installed on your PC. You only need to install them if it doesn't work without."
+LangString DESC_MSVC ${LANG_GERMAN}  "Microsoft Visual C++ Laufzeitbibliotheken. Diese sind meist bereits auf dem Rechner installiert. Versuchen Sie die Installation zunächst einmal ohne dies."
+LangString DESC_MSVC ${LANG_SPANISH} "Bibliotecas de ejecución de Microsoft Visual C++. Normalmente ya están instaladas en el ordenador. Sólo es necesario instalarlas si no funciona sin."
 
 LangString DESC_QMapShack ${LANG_ENGLISH} "Install QMapShack and QMapTool."
 LangString DESC_QMapShack ${LANG_GERMAN}  "QMapShack und QMapTool installieren."
