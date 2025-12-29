@@ -23,6 +23,11 @@ pushd %builddir%
 echo       
 echo Configuring with -DCMAKE_CXX_FLAGS="/EHsc" ...
 
+echo msvc_generator: x%msvc_generator%xcopy
+echo cmake: xcmake --fresh -G "%msvc_generator%" -A x64 -S .. -B . -LA -DPKG=%1 -DQMSUSERCFG=%usercfg% -DUPDATE_TRANSLATIONS=%3 -DCMAKE_CXX_FLAGS="/EHsc" -C  %scriptsdir%\CfgGisinternals.cfgx
+
+pause
+
 cmake --fresh -G "%msvc_generator%" -A x64 -S .. -B . -LA -DPKG=%1 -DQMSUSERCFG=%usercfg% -DUPDATE_TRANSLATIONS=%3 -DCMAKE_CXX_FLAGS="/EHsc" -C  %scriptsdir%\CfgGisinternals.cfg
 
 pause
