@@ -4,11 +4,11 @@
 echo Script to copy all files necessary for QMS (GISInternals version)
 echo Scripts switches to x64 Native Tools Command Prompt and then to `%~dp0` directory!
 
-echo Preparing x64 Native tool ...
+rem echo Preparing x64 Native tool ...
 
-for /f "usebackq tokens=*" %%i in (`"C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe" -latest -products * -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationPath`) do (set VSPATH=%%i)
+rem for /f "usebackq tokens=*" %%i in (`"C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe" -latest -products * -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationPath`) do (set VSPATH=%%i)
 
-call "%VSPATH%\VC\Auxiliary\Build\vcvars64.bat"
+rem call "%VSPATH%\VC\Auxiliary\Build\vcvars64.bat"
 pause
 
 set QMSD0=%~dp0
