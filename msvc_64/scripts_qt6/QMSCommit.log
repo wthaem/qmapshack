@@ -1,4 +1,4 @@
-Logfile created:             2025-12-29 13:27:49 with QMSCommit.py
+Logfile created:             2026-01-19 15:12:09 with QMSCommit.py
 
 QMS directory:               d:\QtProjects\QMS\QMS4Qt6
 QMS basis version:           1.19.0
@@ -6,9 +6,9 @@ Current local branch:        dev_build
 Branch used for compilation: dev
 
 Info about last commit on compilation branch:
-  Hash:                      badaffba96acecdbf3599a85b37f9d5a3e5f9988
-  Message:                   [QMS-906] Strange project's tree view items spacing behaviour
+  Hash:                      6ddf24084fdfb7e5c8fa6d16dc458493bd06167e
+  Message:                   [QMS-932] Invalid Qt basic translation files setup on Linux & macOS
   Author:                    JFritzle
-  Date:                      2025-12-23 07:24:13+01:00
-  Branches with same commit: ['kiozen/dev', 'kiozen/discussion_912', 'maproom/dev', 'wthaem/dev', 'wthaem/dev_build', 'wthaem/dev_cache']
-  Remote repo URLs:          {'maproom': 'https://github.com/Maproom/qmapshack.git', 'wthaem': 'https://github.com/wthaem/qmapshack.git', 'kiozen': 'https://github.com/kiozen/qmapshack.git'}
+  Date:                      2026-01-19 10:59:25+01:00
+  Branches with same commit: ['maproom/dev', 'wthaem/dev']
+  Remote repo URLs:          {'maproom': 'https://github.com/Maproom/qmapshack.git', 'wthaem': 'https://github.com/wthaem/qmapshack.git'}
