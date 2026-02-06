@@ -1,4 +1,4 @@
-Logfile created:             2026-01-19 15:12:09 with QMSCommit.py
+Logfile created:             2026-02-06 17:34:26 with QMSCommit.py
 
 QMS directory:               d:\QtProjects\QMS\QMS4Qt6
 QMS basis version:           1.19.0
@@ -6,9 +6,9 @@ Current local branch:        dev_build
 Branch used for compilation: dev
 
 Info about last commit on compilation branch:
-  Hash:                      6ddf24084fdfb7e5c8fa6d16dc458493bd06167e
-  Message:                   [QMS-932] Invalid Qt basic translation files setup on Linux & macOS
-  Author:                    JFritzle
-  Date:                      2026-01-19 10:59:25+01:00
-  Branches with same commit: ['maproom/dev', 'wthaem/dev']
-  Remote repo URLs:          {'maproom': 'https://github.com/Maproom/qmapshack.git', 'wthaem': 'https://github.com/wthaem/qmapshack.git'}
+  Hash:                      ebc372f7a4adbcaaa9ab36948d3d408e1b1a6633
+  Message:                   [QMS-627] Allow to move and rename "views" with mouse
+  Author:                    frankystone
+  Date:                      2026-02-06 13:36:21+01:00
+  Branches with same commit: ['kiozen/dev', 'kiozen/testing_stuff', 'maproom/dev', 'wthaem/dev']
+  Remote repo URLs:          {'maproom': 'https://github.com/Maproom/qmapshack.git', 'wthaem': 'https://github.com/wthaem/qmapshack.git', 'kiozen': 'https://github.com/kiozen/qmapshack.git'}
