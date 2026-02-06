@@ -1,4 +1,4 @@
-Logfile created:             2026-02-06 17:34:26 with QMSCommit.py
+Logfile created:             2026-02-06 17:35:50 with QMSCommit.py
 
 QMS directory:               d:\QtProjects\QMS\QMS4Qt6
 QMS basis version:           1.19.0
@@ -10,5 +10,5 @@ Info about last commit on compilation branch:
   Message:                   [QMS-627] Allow to move and rename "views" with mouse
   Author:                    frankystone
   Date:                      2026-02-06 13:36:21+01:00
-  Branches with same commit: ['kiozen/dev', 'kiozen/testing_stuff', 'maproom/dev', 'wthaem/dev']
+  Branches with same commit: ['kiozen/dev', 'kiozen/testing_stuff', 'maproom/dev', 'wthaem/dev', 'wthaem/dev_build', 'wthaem/dev_cache']
   Remote repo URLs:          {'maproom': 'https://github.com/Maproom/qmapshack.git', 'wthaem': 'https://github.com/wthaem/qmapshack.git', 'kiozen': 'https://github.com/kiozen/qmapshack.git'}
