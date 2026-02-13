@@ -1,4 +1,4 @@
-Logfile created:             2026-02-13 16:12:28 with QMSCommit.py
+Logfile created:             2026-02-13 17:15:55 with QMSCommit.py
 
 QMS directory:               d:\QtProjects\QMS\QMS4Qt6
 QMS basis version:           1.19.0
@@ -6,9 +6,9 @@ Current local branch:        dev_build
 Branch used for compilation: dev
 
 Info about last commit on compilation branch:
-  Hash:                      a656c19fa03996b0ed728d869439103d2438d087
-  Message:                   [QMS-953] Fix geo cache symbols on map
-  Author:                    Oliver Eichler
-  Date:                      2026-02-10 07:43:21+01:00
-  Branches with same commit: ['wthaem/dev', 'wthaem/dev_build', 'wthaem/dev_cache']
-  Remote repo URLs:          {'wthaem': 'https://github.com/wthaem/qmapshack.git'}
+  Hash:                      4abd6a1fa0a96f7fab93822fd547fc7182a11f58
+  Message:                   [QMS-955] GDAL plugin driven maps not working (Windows & macOS)
+  Author:                    JFritzle
+  Date:                      2026-02-13 13:46:19+01:00
+  Branches with same commit: ['kiozen/dev', 'kiozen/testing_stuff', 'maproom/dev', 'wthaem/dev']
+  Remote repo URLs:          {'maproom': 'https://github.com/Maproom/qmapshack.git', 'wthaem': 'https://github.com/wthaem/qmapshack.git', 'kiozen': 'https://github.com/kiozen/qmapshack.git'}

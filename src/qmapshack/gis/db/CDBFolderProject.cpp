@@ -18,11 +18,9 @@
 
 #include "gis/db/CDBFolderProject.h"
 
-#include "gis/CGisListDB.h"
-
 CDBFolderProject::CDBFolderProject(QSqlDatabase& db, quint64 key, QTreeWidgetItem* parent)
     : IDBFolder(true, db, eTypeProject, key, parent) {
-  setIcon(CGisListDB::eColumnCheckbox, QIcon("://icons/32x32/PathGreen.png"));
+  setIcon(QPixmap("://icons/32x32/PathGreen.png"));
   setupFromDB();
 }
 
