@@ -43,6 +43,7 @@ set( SRCS
     gis/CGisDatabase.cpp
     gis/CGisDraw.cpp
     gis/CWksItemDelegate.cpp
+    gis/CDBItemDelegate.cpp
     gis/CGisItemRate.cpp
     gis/CGisListDB.cpp
     gis/CGisListWks.cpp
@@ -51,6 +52,7 @@ set( SRCS
     gis/IGisItem.cpp
     gis/IGisLine.cpp
     gis/IWksItem.cpp
+    gis/IDBItem.cpp
     gis/db/CDBFolderGroup.cpp
     gis/db/CDBFolderLostFound.cpp
     gis/db/CDBFolderMysql.cpp
@@ -413,6 +415,7 @@ set( HDRS
     gis/CGisDatabase.h
     gis/CGisDraw.h
     gis/CWksItemDelegate.h
+    gis/CDBItemDelegate.h
     gis/CGisItemRate.h
     gis/CGisListDB.h
     gis/CGisListWks.h
@@ -421,6 +424,7 @@ set( HDRS
     gis/IGisItem.h
     gis/IGisLine.h
     gis/IWksItem.h
+    gis/IDBItem.h
     gis/db/CDBFolderGroup.h
     gis/db/CDBFolderLostFound.h
     gis/db/CDBFolderMysql.h
