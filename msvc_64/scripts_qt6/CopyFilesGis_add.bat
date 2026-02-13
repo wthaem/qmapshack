@@ -9,7 +9,7 @@ set QMSI_ROUT_PATH="d:\QtProjects\QMS\routino\routino-3.4.3\install"
 set QMSI_MYSQL_PATH="d:\QtProjects\QMS\mysql\6.10.0"
 set QMSI_MGW6_PATH="c:\msys64\ucrt64\bin"
 set QMSI_QUAZIP_PATH="d:\QtProjects\QMS\quazip\quazip-1.5\install"
-set QMSI_BUILD_PATH="d:\QtProjects\QMS\QMS4Qt6\build"
+set QMSI_BUILD_PATH=set QMSI_BUILD_PATH="d:\QtProjects\QMS\QMS4Qt6\build"
 set QMSI_SRC_PATH="d:\QtProjects\QMS\QMS4Qt6\src"
 set QT=6
  

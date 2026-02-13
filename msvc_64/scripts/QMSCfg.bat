@@ -15,7 +15,7 @@ rem echo %2\built_%1_add.bat
 
 call %2\built_%1_add.bat
 
-rem echo %builddir%
+echo %builddir%
 pause
 
 pushd %builddir%
@@ -23,12 +23,12 @@ pushd %builddir%
 echo       
 echo Configuring with -DCMAKE_CXX_FLAGS="/EHsc" ...
 
-echo msvc_generator: x%msvc_generator%xcopy
-echo cmake: xcmake --fresh -G %msvc_generator% -A x64 -S .. -B . -LA -DPKG=%1 -DQMSUSERCFG=%usercfg% -DUPDATE_TRANSLATIONS=%3 -DCMAKE_CXX_FLAGS="/EHsc" -C  %scriptsdir%\CfgGisinternals.cfgx
+echo msvc_generator: %msvc_generator%
+echo cmake: cmake --fresh  %msvc_generator% -S .. -B . -LA -DPKG=%1 -DQMSUSERCFG=%usercfg% -DUPDATE_TRANSLATIONS=%3 -DCMAKE_CXX_FLAGS="/EHsc" -C  %scriptsdir%\CfgGisinternals.cfg
 
 pause
 
-cmake --fresh -G %msvc_generator% -A x64 -S .. -B . -LA -DPKG=%1 -DQMSUSERCFG=%usercfg% -DUPDATE_TRANSLATIONS=%3 -DCMAKE_CXX_FLAGS="/EHsc" -C  %scriptsdir%\CfgGisinternals.cfg
+cmake --fresh %msvc_generator% -S .. -B . -LA -DPKG=%1 -DQMSUSERCFG=%usercfg% -DUPDATE_TRANSLATIONS=%3 -DCMAKE_CXX_FLAGS="/EHsc" -C  %scriptsdir%\CfgGisinternals.cfg
 
 pause
 

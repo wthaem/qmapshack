@@ -1,4 +1,4 @@
-Logfile created:             2026-02-06 17:35:50 with QMSCommit.py
+Logfile created:             2026-02-13 16:12:28 with QMSCommit.py
 
 QMS directory:               d:\QtProjects\QMS\QMS4Qt6
 QMS basis version:           1.19.0
@@ -6,9 +6,9 @@ Current local branch:        dev_build
 Branch used for compilation: dev
 
 Info about last commit on compilation branch:
-  Hash:                      ebc372f7a4adbcaaa9ab36948d3d408e1b1a6633
-  Message:                   [QMS-627] Allow to move and rename "views" with mouse
-  Author:                    frankystone
-  Date:                      2026-02-06 13:36:21+01:00
-  Branches with same commit: ['kiozen/dev', 'kiozen/testing_stuff', 'maproom/dev', 'wthaem/dev', 'wthaem/dev_build', 'wthaem/dev_cache']
-  Remote repo URLs:          {'maproom': 'https://github.com/Maproom/qmapshack.git', 'wthaem': 'https://github.com/wthaem/qmapshack.git', 'kiozen': 'https://github.com/kiozen/qmapshack.git'}
+  Hash:                      a656c19fa03996b0ed728d869439103d2438d087
+  Message:                   [QMS-953] Fix geo cache symbols on map
+  Author:                    Oliver Eichler
+  Date:                      2026-02-10 07:43:21+01:00
+  Branches with same commit: ['wthaem/dev', 'wthaem/dev_build', 'wthaem/dev_cache']
+  Remote repo URLs:          {'wthaem': 'https://github.com/wthaem/qmapshack.git'}
