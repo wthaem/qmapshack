@@ -1,4 +1,4 @@
-Logfile created:             2026-02-14 20:06:27 with QMSCommit.py
+Logfile created:             2026-02-14 20:11:48 with QMSCommit.py
 
 QMS directory:               d:\QtProjects\QMS\QMS4Qt6
 QMS basis version:           1.19.0
@@ -10,5 +10,5 @@ Info about last commit on compilation branch:
   Message:                   [QMS-962] Fix: Offline help's full text search index missing (Linux & macOS)
   Author:                    Oliver Eichler
   Date:                      2026-02-14 18:18:34+01:00
-  Branches with same commit: ['kiozen/dev', 'maproom/dev', 'wthaem/dev']
+  Branches with same commit: ['kiozen/dev', 'maproom/dev', 'wthaem/dev', 'wthaem/dev_build', 'wthaem/dev_cache']
   Remote repo URLs:          {'maproom': 'https://github.com/Maproom/qmapshack.git', 'wthaem': 'https://github.com/wthaem/qmapshack.git', 'kiozen': 'https://github.com/kiozen/qmapshack.git'}
