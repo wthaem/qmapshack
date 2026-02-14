@@ -1,4 +1,4 @@
-Logfile created:             2026-02-13 20:00:32 with QMSCommit.py
+Logfile created:             2026-02-14 20:06:27 with QMSCommit.py
 
 QMS directory:               d:\QtProjects\QMS\QMS4Qt6
 QMS basis version:           1.19.0
@@ -6,9 +6,9 @@ Current local branch:        dev_cache
 Branch used for compilation: dev
 
 Info about last commit on compilation branch:
-  Hash:                      4abd6a1fa0a96f7fab93822fd547fc7182a11f58
-  Message:                   [QMS-955] GDAL plugin driven maps not working (Windows & macOS)
-  Author:                    JFritzle
-  Date:                      2026-02-13 13:46:19+01:00
-  Branches with same commit: ['kiozen/dev', 'kiozen/testing_stuff', 'maproom/dev', 'wthaem/dev', 'wthaem/dev_build', 'wthaem/dev_cache']
+  Hash:                      cb91fe357bf51fc86ecda6e9f61013bd04a82985
+  Message:                   [QMS-962] Fix: Offline help's full text search index missing (Linux & macOS)
+  Author:                    Oliver Eichler
+  Date:                      2026-02-14 18:18:34+01:00
+  Branches with same commit: ['kiozen/dev', 'maproom/dev', 'wthaem/dev']
   Remote repo URLs:          {'maproom': 'https://github.com/Maproom/qmapshack.git', 'wthaem': 'https://github.com/wthaem/qmapshack.git', 'kiozen': 'https://github.com/kiozen/qmapshack.git'}

@@ -2,9 +2,9 @@
 rem Environment variable replacements created with CopyFilesGis.cfg using QMSUser.cfg
 
 set QMSI_QMS_PATH=d:\QtProjects\QMS
-set QMSI_GIS_PATH=d:\QtProjects\QMS\gisinternals\1930_250621\release-1930-x64
-set QMSI_QT_PATH="d:\Qt\5.12.3\6.9.1\msvc2022_64"
-set QMSI_VCREDIST_PATH="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Redist\MSVC\14.44.35112\"
+set QMSI_GIS_PATH=d:\QtProjects\QMS\gisinternals\1944_260214\release-1944-x64
+set QMSI_QT_PATH="c:\Qt\6.10.0\msvc2022_64"
+set QMSI_VCREDIST_PATH="C:\Program Files\Microsoft Visual Studio\18\Community\VC\Redist\MSVC\14.50.35710\"
 set QMSI_ROUT_PATH="d:\QtProjects\QMS\routino\routino-3.4.3\install"
 set QMSI_MGW6_PATH="D:\msys64\ucrt64\bin"
 set QMSI_QUAZIP_PATH="d:\QtProjects\QMS\quazip\quazip-1.5\install"
@@ -16,8 +16,8 @@ cd ..\Files
 mkdir data
 pause
 xcopy %QMSI_GIS_PATH%\bin\gdal-data data /s /i
-if '250621' LSS '241207' (
-    copy  %QMSI_GIS_PATH%\bin\proj_9_6.dll
+if '260214' LSS '241207' (
+    copy  %QMSI_GIS_PATH%\bin\proj_9_7.dll
 ) else (
     copy  %QMSI_GIS_PATH%\bin\proj_9.dll
 )
