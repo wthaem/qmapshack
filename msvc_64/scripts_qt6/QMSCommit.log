@@ -1,14 +1,14 @@
-Logfile created:             2026-02-16 13:46:49 with QMSCommit.py
+Logfile created:             2026-02-16 15:20:47 with QMSCommit.py
 
 QMS directory:               d:\QtProjects\QMS\QMS4Qt6
-QMS basis version:           1.19.0
+QMS basis version:           1.20.0
 Current local branch:        dev_build
 Branch used for compilation: dev
 
 Info about last commit on compilation branch:
-  Hash:                      cb91fe357bf51fc86ecda6e9f61013bd04a82985
-  Message:                   [QMS-962] Fix: Offline help's full text search index missing (Linux & macOS)
+  Hash:                      bed5c4093dd1a26c5a9efcbcf7ec74f625bfe14b
+  Message:                   Update version to 1.20.0
   Author:                    Oliver Eichler
-  Date:                      2026-02-14 18:18:34+01:00
-  Branches with same commit: ['kiozen/dev', 'maproom/dev', 'wthaem/dev', 'wthaem/dev_build', 'wthaem/dev_cache']
+  Date:                      2026-02-16 12:25:44+01:00
+  Branches with same commit: ['kiozen/dev', 'kiozen/testing_stuff', 'maproom/dev', 'maproom/master', 'wthaem/dev', 'wthaem/master']
   Remote repo URLs:          {'maproom': 'https://github.com/Maproom/qmapshack.git', 'wthaem': 'https://github.com/wthaem/qmapshack.git', 'kiozen': 'https://github.com/kiozen/qmapshack.git'}
