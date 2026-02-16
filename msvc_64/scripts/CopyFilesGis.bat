@@ -2,7 +2,7 @@
 @echo off
 
 echo Script to copy all files necessary for QMS (GISInternals version)
-echo Scripts switches to x64 Native Tools Command Prompt and then to `%~dp0` directory!
+rem echo Scripts switches to x64 Native Tools Command Prompt and then to `%~dp0` directory!
 
 rem echo Preparing x64 Native tool ...
 
@@ -15,7 +15,7 @@ set QMSD0=%~dp0
     
 cd /D %QMSD0%
 
-echo Switched Native tool to %cd%
+echo Switched to %cd%
 
 rem Delete all files --------------------------------------------
 rmdir /s /q ..\Files
@@ -44,16 +44,21 @@ pause
 call %%a\CopyFilesGis_add.bat
 )
 
+rem echo %QMSI_BUILD_PATH%\qmapshack.exe
+
 echo Starting file copy step 2 ...
 pause
 
 
 
 rem Copy QMapShack Files (removed bin subdir! 28.04.25 ------
-copy %QMSI_BUILD_PATH%\Release\qmapshack.exe
-copy %QMSI_BUILD_PATH%\Release\qmaptool.exe
-copy %QMSI_BUILD_PATH%\Release\qmt_map2jnx.exe
-copy %QMSI_BUILD_PATH%\Release\qmt_rgb2pct.exe
+
+echo
+
+copy "%QMSI_BUILD_PATH%\qmapshack.exe"
+copy "%QMSI_BUILD_PATH%\qmaptool.exe"
+copy "%QMSI_BUILD_PATH%\qmt_map2jnx.exe"
+copy "%QMSI_BUILD_PATH%\qmt_rgb2pct.exe"
 
 copy %QMSI_QT_PATH%\bin\assistant.exe
 
@@ -150,11 +155,5 @@ copy ..\qt.conf
 pause
 
 cd ..\scripts
-pause
 
-echo Starting QMS and QMT - Press F1 to get FTS files!
-
-
-start /WAIT ..\Files\qmaptool.exe
-start /WAIT ..\Files\qmapshack.exe
 
