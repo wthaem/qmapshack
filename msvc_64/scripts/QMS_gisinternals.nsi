@@ -201,24 +201,6 @@ Section "QMapShack/QMapTool" QMapShack
   SetOutPath "$INSTDIR"
   File /r ..\Files\*.*
   
-  FileOpen  $9 QMS_Start.bat w 
-  FileWrite $9 'set QMS_ROOT=%~dp0$\r$\n'
-  FileWrite $9 'set GDAL_DRIVER_PATH=%QMS_ROOT%gdalplugins$\r$\n'
-  FileWrite $9 'set GDAL_DATA=%QMS_ROOT%data$\r$\n'
-  FileWrite $9 'set PROJ_DATA=%QMS_ROOT%share\proj$\r$\n'  
-  FileWrite $9 'cd /d %~dp0$\r$\n'
-  FileWrite $9 'start "QMS" /B qmapshack.exe --style fusion %1$\r$\n'
-  FileClose $9 
-  
-  FileOpen  $9 QMT_Start.bat w 
-  FileWrite $9 'set QMS_ROOT=%~dp0$\r$\n'
-  FileWrite $9 'set GDAL_DRIVER_PATH=%QMS_ROOT%gdalplugins$\r$\n'
-  FileWrite $9 'set GDAL_DATA=%QMS_ROOT%data$\r$\n'
-  FileWrite $9 'set PROJ_DATA=%QMS_ROOT%share\proj$\r$\n' 
-  FileWrite $9 'cd /d %~dp0$\r$\n'
-  FileWrite $9 'start "QMT" /B qmaptool.exe --style fusion$\r$\n'
-  FileClose $9   
-  
   FileOpen  $9 GDAL_shell.bat w 
   FileWrite $9 '@echo off$\r$\n'
   FileWrite $9 '@echo Setting environment for using the GDAL Utilities.$\r$\n'
@@ -247,9 +229,9 @@ Section "Start Menu" StartMenu
         
     CreateDirectory "$SMPROGRAMS\$StartMenuFolder"
 
-    CreateShortCut "$SMPROGRAMS\$StartMenuFolder\QMapShack.lnk"     '"$INSTDIR\QMS_Start.bat"' "" "$INSTDIR\QMapShack.ico" 0 "SW_SHOWMINIMIZED" "" "Start QMapShack"
+    CreateShortCut "$SMPROGRAMS\$StartMenuFolder\QMapShack.lnk"     '"$INSTDIR\qmapshack.exe --style Fusion"' "" "$INSTDIR\QMapShack.ico" 0 "SW_SHOWMINIMIZED" "" "Start QMapShack"
 
-    CreateShortCut "$SMPROGRAMS\$StartMenuFolder\QMapTool.lnk"     '"$INSTDIR\QMT_Start.bat"' "" "$INSTDIR\QMapTool.ico" 0 "SW_SHOWMINIMIZED" "" "Start QMapTool"
+    CreateShortCut "$SMPROGRAMS\$StartMenuFolder\QMapTool.lnk"     '"$INSTDIR\qmaptool.exe --style Fusion"' "" "$INSTDIR\QMapTool.ico" 0 "SW_SHOWMINIMIZED" "" "Start QMapTool"
 
     CreateShortCut "$SMPROGRAMS\$StartMenuFolder\GDAL_shell.lnk"    '"$INSTDIR\GDAL_shell.bat"' "" "$INSTDIR\QMapShack.ico" 0 "SW_SHOWNORMAL" "" "Start GDAL shell with correct environment"
 
