@@ -117,7 +117,8 @@ Unicode true
 !define MUI_FINISHPAGE_LINK $(DESC_MUI_FINISHPAGE_LINK)
 !define MUI_FINISHPAGE_LINK_LOCATION "https://github.com/Maproom/qmapshack/wiki"
 
-!define MUI_FINISHPAGE_RUN "$INSTDIR\QMS_Start.bat"
+!define MUI_FINISHPAGE_RUN "$INSTDIR\qmapshack.exe"
+!define MUI_FINISHPAGE_RUN_PARAMETERS "--style fusion"
 !define MUI_FINISHPAGE_NOREBOOTSUPPORT
 !define MUI_FINISHPAGE_NOAUTOCLOSE
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
@@ -229,9 +230,9 @@ Section "Start Menu" StartMenu
         
     CreateDirectory "$SMPROGRAMS\$StartMenuFolder"
 
-    CreateShortCut "$SMPROGRAMS\$StartMenuFolder\QMapShack.lnk"     '"$INSTDIR\qmapshack.exe" --style Fusion' "" "$INSTDIR\QMapShack.ico" 0 "SW_SHOWMINIMIZED" "" "Start QMapShack"
+    CreateShortCut "$SMPROGRAMS\$StartMenuFolder\QMapShack.lnk"     "$INSTDIR\qmapshack.exe" "--style Fusion"  "$INSTDIR\QMapShack.ico" 0 "SW_SHOWMINIMIZED" "" "Start QMapShack"
 
-    CreateShortCut "$SMPROGRAMS\$StartMenuFolder\QMapTool.lnk"     '"$INSTDIR\qmaptool.exe" --style Fusion' "" "$INSTDIR\QMapTool.ico" 0 "SW_SHOWMINIMIZED" "" "Start QMapTool"
+    CreateShortCut "$SMPROGRAMS\$StartMenuFolder\QMapTool.lnk"      "$INSTDIR\qmaptool.exe" "--style Fusion"  "$INSTDIR\QMapTool.ico" 0 "SW_SHOWMINIMIZED" "" "Start QMapTool"
 
     CreateShortCut "$SMPROGRAMS\$StartMenuFolder\GDAL_shell.lnk"    '"$INSTDIR\GDAL_shell.bat"' "" "$INSTDIR\QMapShack.ico" 0 "SW_SHOWNORMAL" "" "Start GDAL shell with correct environment"
 
