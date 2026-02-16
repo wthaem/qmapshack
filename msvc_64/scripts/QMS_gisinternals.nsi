@@ -229,9 +229,9 @@ Section "Start Menu" StartMenu
         
     CreateDirectory "$SMPROGRAMS\$StartMenuFolder"
 
-    CreateShortCut "$SMPROGRAMS\$StartMenuFolder\QMapShack.lnk"     '"$INSTDIR\qmapshack.exe --style Fusion"' "" "$INSTDIR\QMapShack.ico" 0 "SW_SHOWMINIMIZED" "" "Start QMapShack"
+    CreateShortCut "$SMPROGRAMS\$StartMenuFolder\QMapShack.lnk"     '"$INSTDIR\qmapshack.exe" --style Fusion' "" "$INSTDIR\QMapShack.ico" 0 "SW_SHOWMINIMIZED" "" "Start QMapShack"
 
-    CreateShortCut "$SMPROGRAMS\$StartMenuFolder\QMapTool.lnk"     '"$INSTDIR\qmaptool.exe --style Fusion"' "" "$INSTDIR\QMapTool.ico" 0 "SW_SHOWMINIMIZED" "" "Start QMapTool"
+    CreateShortCut "$SMPROGRAMS\$StartMenuFolder\QMapTool.lnk"     '"$INSTDIR\qmaptool.exe" --style Fusion' "" "$INSTDIR\QMapTool.ico" 0 "SW_SHOWMINIMIZED" "" "Start QMapTool"
 
     CreateShortCut "$SMPROGRAMS\$StartMenuFolder\GDAL_shell.lnk"    '"$INSTDIR\GDAL_shell.bat"' "" "$INSTDIR\QMapShack.ico" 0 "SW_SHOWNORMAL" "" "Start GDAL shell with correct environment"
 
