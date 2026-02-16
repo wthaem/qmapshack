@@ -1,22 +1,22 @@
 Software versions used in QMS:
                        BRouter: 1.7.8
                           GDAL: GDAL 3.12.2 "Chicoutimi", released 2026/02/10
-               libcrypto-3-x64: 3.5.4
-                       libcurl: 8.11.0-DEV
-                      libexpat: expat_2.4.4
-                      libmysql: 8.4.6.0
+               libcrypto-3-x64: 3.6.0
+                       libcurl: 8.18.0
+                      libexpat: expat_2.7.3
+                      libmysql: 8.1.0.0
                       libpng16: 1.6.53
-                  libssl-3-x64: 3.5.4
-               libwinpthread-1: 1, 0, 0, 0
-                       libxml2: 2.9.12
+                  libssl-3-x64: 3.6.0
+               libwinpthread-1: No matching files were found.
+                       libxml2: 2.15.1
                        openjp2: 2.4.0
                           proj: 9.7.1
                       QMS main: 1.19.0
-                       Qt6Core: 6.10.0.0
+                       Qt6Core: No matching files were found.
                         quazip: 1.5
                        Routino: 3.4.3
-                       sqlite3: 3.47.1
-                          tiff: 4.7.0
+                       sqlite3: 3.51.2
+                          tiff: 4.7.1
                           zlib: 1.3.1
 
 Last installed tools and system software versions:
@@ -38,5 +38,5 @@ Last installed tools and system software versions:
 
 
 System software used for QMS build:
-                       GISDATE: 260118
-              GISINTERNALS_VER: 1930
+                       GISDATE: 260214
+              GISINTERNALS_VER: 1944
