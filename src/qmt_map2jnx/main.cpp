@@ -375,7 +375,7 @@ static char randChar() {
 #else
   int r = (int)((rand() * 16.0) / RAND_MAX);
 #endif
-  sprintf(buf, "%X", r & 0x0F);
+  snprintf(buf, sizeof(buf), "%X", r & 0x0F);
   return buf[0];
 }
 
@@ -667,7 +667,7 @@ int main(int argc, char** argv) {
     int success = 0;
     int idx = (int)pBand->GetNoDataValue(&success);
 
-    if (success) {
+    if (success && (idx >= 0) && (idx < 256)) {
       file.colortable[idx] &= 0x00FFFFFF;
     }
   }
@@ -798,7 +798,7 @@ int main(int argc, char** argv) {
   fwrite(&nLevels, sizeof(nLevels), 1, fid);
   for (int i = 1; i <= nLevels; i++) {
     char str[40];
-    sprintf(str, "Level %i", i);
+    snprintf(str, sizeof(str), "Level %i", i);
     fwrite(str, strlen(str) + 1, 1, fid);
     fwrite(str, strlen(str) + 1, 1, fid);
     fwrite(copyright, strlen(copyright) + 1, 1, fid);
