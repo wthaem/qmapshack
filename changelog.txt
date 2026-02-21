@@ -1,3 +1,11 @@
+V1.XX.X
+[QMS-945] Redesign icons for focus, autosave, sync, and DB buttons
+[QMS-949] Fix: List no geo search or database lost & found in project selection dialog
+[QMS-971] Fix: macOS: Wrong user data paths
+[QMS-974] Add vendor list to waypoint icons
+[QMS-978] Fix: Invalid gdal "nodata" handling (QMapShack/QMapTool/qmt_map2jnx)
+[QMS-980] Configure content and size of the items in the workspace list
+
 V1.20.0
 [QMS-627] Add possibility to move views & renaming views with double click
 [QMS-817] Mac OS X app crash on every quit
