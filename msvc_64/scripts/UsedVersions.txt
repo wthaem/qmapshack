@@ -22,7 +22,7 @@ Software versions used in QMS:
 Last installed tools and system software versions:
                          cmake: 4.1.2-msvc8
                   Gisinternals: ('1944', '260214')
-                           Git: 2.52.0.windows.1
+                           Git: 2.53.0.windows.1
                           Java: "25.0.1" 2025-10-21 LTS
       _MSC_FULL_VER,  _MSC_VER: (195035724, 1950)
                           MSVC: 18.3.0
@@ -32,7 +32,7 @@ Last installed tools and system software versions:
                           nsis: v3.11
                         Python: 3.14.3
                             Qt: 6.10.0
-                ResourceHacker: 5.2.7.427
+                ResourceHacker: 5.2.8.448
                       sigcheck: 2.90
                        Windows: 10.0.26200.7840
 

@@ -9,8 +9,8 @@
 -- Remote URL of fork:   https://github.com/wthaem/qmapshack.git
 -- Remote URL:           https://github.com/Maproom/qmapshack.git
 -- Common ancestor:      f38cfa94ebee363e1eff27a18abc0a4a5c1ce9e8
--- HEAD hash:            0a1c3856
--- Git describe:         V1.20.0-118-g0a1c3856-dirty
+-- HEAD hash:            e67651e5
+-- Git describe:         V1.20.0-122-ge67651e5-dirty
 -- Author:               Oliver Eichler
 -- Title:                [QMS-985] Add copy button to projects on a GPS device
 -- Date:                 2026-02-21T16:26:04+01:00
@@ -23,7 +23,7 @@
 --  
 -- Generating additional files in D:/QtProjects/QMS/QMS4Qt6/msvc_64/scripts.
 -- Redistribution directory: C:\Program Files\Microsoft Visual Studio\18\Community\VC\Redist\MSVC\14.50.35710\
--- Generator-dependent build path: d:/QtProjects/QMS/QMS4Qt6/build-ninja
+-- Generator-dependent build path: d:/QtProjects/QMS/QMS4Qt6/build/Release
 -- End of run.
 
 -- Cache values
@@ -43,7 +43,7 @@ GISInternals_DEV_PATH:PATH=d:/QtProjects/QMS/GISInternals/1944_260214/release-19
 GIT_EXECUTABLE:FILEPATH=C:/Program Files/Git/cmd/git.exe
 JPEG_DEV_PATH:PATH=d:/QtProjects/QMS/GISInternals/1944_260214/release-1944-x64
 LIBPROJ_LIBRARY:FILEPATH=d:/QtProjects/QMS/GISInternals/1944_260214/release-1944-x64/lib/proj9.lib
-MSVC_GENERATOR:STRING=-G Ninja  -DCMAKE_BUILD_TYPE=Release
+MSVC_GENERATOR:STRING=-G "Visual Studio 18 2026" -A x64
 MSVC_VER:STRING=14.50.35717
 MSYS2_DIR:PATH=c:/msys64
 PROJ_DEV_PATH:PATH=d:/QtProjects/QMS/GISInternals/1944_260214/release-1944-x64
