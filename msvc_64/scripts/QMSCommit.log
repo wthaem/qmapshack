@@ -1,0 +1,14 @@
+Commit log created with PrepareSetup.cfg
+
+Logfile created:             2026-02-22T07:50:18Z with PrepareSetup.cfg
+ 
+QMS script directory:        D:\QtProjects\QMS\QMS4Qt6\msvc_64\scripts
+QMS basis version:           1.20.0
+Current local branch:        dev_build
+ 
+Info about last commit on compilation branch:
+  Common ancestor:           76e43f2
+  Used original branch:      maproom/dev
+  Author:                    Oliver Eichler
+  Date:                      2026-02-21T15:04:50+01:00
+  Title:                     Update language file
