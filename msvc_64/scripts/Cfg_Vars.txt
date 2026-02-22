@@ -1,4 +1,4 @@
--- Found Git: C:/Program Files/Git/cmd/git.exe (found version "2.52.0.windows.1")
+-- Found Git: C:/Program Files/Git/cmd/git.exe (found version "2.53.0.windows.1")
 -- Source/scripts directory: D:/QtProjects/QMS/QMS4Qt6/msvc_64/scripts
 -- User directory          : D:/QtProjects/QMS/QMS4Qt6/msvc_64/scripts
 -- Loading user and general settings ...
@@ -8,26 +8,18 @@
 -- Remote branch:        wthaem/dev_build
 -- Remote URL of fork:   https://github.com/wthaem/qmapshack.git
 -- Remote URL:           https://github.com/Maproom/qmapshack.git
--- Common ancestor:      76e43f2db0b00081a6a33cd038647a2e6441d619
--- HEAD hash:            d2d99def
--- Git describe:         V1.20.0-114-gd2d99def-dirty
+-- Common ancestor:      f38cfa94ebee363e1eff27a18abc0a4a5c1ce9e8
+-- HEAD hash:            0a1c3856
+-- Git describe:         V1.20.0-118-g0a1c3856-dirty
 -- Author:               Oliver Eichler
--- Title:                Update language file
--- Date:                 2026-02-21T15:04:50+01:00
+-- Title:                [QMS-985] Add copy button to projects on a GPS device
+-- Date:                 2026-02-21T16:26:04+01:00
 --  
--- Untracked:            Cfg_Vars.txt
-QMSCommit.log
-QMS_Resources.hx
-QMS_Resources_260221.bat
+-- Untracked:            
 --  
 -- Staged:               
 --  
--- Unstaged&modified:    msvc_64/scripts/CopyFilesGis.bat
-msvc_64/scripts/PrepareSetup.cfg
-msvc_64/scripts/QMS_Resources.bat
-msvc_64/scripts/QMS_Resources.h
-msvc_64/scripts/QMS_tmp.rc
-msvc_64/scripts_qt6/UsedVersions.txt
+-- Unstaged&modified:    msvc_64/scripts/Cfg_Vars.txt
 --  
 -- Generating additional files in D:/QtProjects/QMS/QMS4Qt6/msvc_64/scripts.
 -- Redistribution directory: C:\Program Files\Microsoft Visual Studio\18\Community\VC\Redist\MSVC\14.50.35710\
