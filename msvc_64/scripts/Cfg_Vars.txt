@@ -9,8 +9,8 @@
 -- Remote URL of fork:   https://github.com/wthaem/qmapshack.git
 -- Remote URL:           https://github.com/Maproom/qmapshack.git
 -- Common ancestor:      f38cfa94ebee363e1eff27a18abc0a4a5c1ce9e8
--- HEAD hash:            e67651e5
--- Git describe:         V1.20.0-122-ge67651e5-dirty
+-- HEAD hash:            d2fbf5bb
+-- Git describe:         V1.20.0-123-gd2fbf5bb-dirty
 -- Author:               Oliver Eichler
 -- Title:                [QMS-985] Add copy button to projects on a GPS device
 -- Date:                 2026-02-21T16:26:04+01:00
