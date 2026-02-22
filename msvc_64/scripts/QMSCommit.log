@@ -1,0 +1,14 @@
+Commit log created with PrepareSetup.cfg
+
+Logfile created:             2026-02-22T11:37:40Z with PrepareSetup.cfg
+ 
+QMS script directory:        D:\QtProjects\QMS\QMS4Qt6\msvc_64\scripts
+QMS basis version:           1.20.0
+Current local branch:        dev_build
+ 
+Info about last commit on compilation branch:
+  Common ancestor:           f38cfa9
+  Used original branch:      maproom/dev
+  Author:                    Oliver Eichler
+  Date:                      2026-02-21T16:26:04+01:00
+  Title:                     [QMS-985] Add copy button to projects on a GPS device

@@ -40,3 +40,4 @@ Last installed tools and system software versions:
 System software used for QMS build:
                        GISDATE: 260214
               GISINTERNALS_VER: 1944
+         GISInternals_DEV_PATH: d:/QtProjects/QMS/GISInternals/1944_260214/release-1944-x64

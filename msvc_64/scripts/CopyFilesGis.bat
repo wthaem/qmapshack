@@ -33,16 +33,16 @@ mkdir ..\Files
 
 
 rem Include and run user settings
-for /f "tokens=2 delims=:" %%a in (QMSUserCfg.dir) do (
-echo Include dir: %%a
-set USERDIR=%%a
+rem for /f "tokens=2 delims=:" %%a in (QMSUserCfg.dir) do (
+rem echo Include dir: %%a
+set USERDIR=%cd%
 
 echo Starting file copy  step 1 ...
 
 pause
 
-call %%a\CopyFilesGis_add.bat
-)
+call %cd%\CopyFilesGis_add.bat
+rem )
 
 rem echo %QMSI_BUILD_PATH%\qmapshack.exe
 
