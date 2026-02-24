@@ -358,22 +358,22 @@
     <message>
         <location filename="../gis/CDBItemDelegate.cpp" line="221"/>
         <source>Load item into workspace.</source>
-        <translation>Element in den Arbeitsbereich laden.</translation>
+        <translation>Element in den Arbeitsplatz laden.</translation>
     </message>
     <message>
         <location filename="../gis/CDBItemDelegate.cpp" line="222"/>
         <source>Load project into workspace</source>
-        <translation>Projekt in den Arbeitsbereich laden.</translation>
+        <translation>Projekt in den Arbeitsplatz laden.</translation>
     </message>
     <message>
         <location filename="../gis/CDBItemDelegate.cpp" line="226"/>
         <source>Remove item from workspace.</source>
-        <translation>Element aus dem Arbeitsbereich entfernen.</translation>
+        <translation>Element aus dem Arbeitsplatz entfernen.</translation>
     </message>
     <message>
         <location filename="../gis/CDBItemDelegate.cpp" line="227"/>
         <source>Remove project from workspace</source>
-        <translation>Projekt aus dem Arbeitsbereich entfernen.</translation>
+        <translation>Projekt aus dem Arbeitsplatz entfernen.</translation>
     </message>
 </context>
 <context>
@@ -8541,69 +8541,74 @@ Zeile %2, Spalte %3:
 <context>
     <name>CWksItemDelegate</name>
     <message>
-        <location filename="../gis/CWksItemDelegate.cpp" line="687"/>
-        <location filename="../gis/CWksItemDelegate.cpp" line="966"/>
+        <location filename="../gis/CWksItemDelegate.cpp" line="698"/>
+        <location filename="../gis/CWksItemDelegate.cpp" line="986"/>
         <source>Enter address...</source>
         <translation>Adresse eingeben...</translation>
     </message>
     <message>
-        <location filename="../gis/CWksItemDelegate.cpp" line="854"/>
+        <location filename="../gis/CWksItemDelegate.cpp" line="869"/>
         <source>Hide project on map.</source>
         <translation>Projekt auf der Karte ausblenden.</translation>
     </message>
     <message>
-        <location filename="../gis/CWksItemDelegate.cpp" line="856"/>
+        <location filename="../gis/CWksItemDelegate.cpp" line="871"/>
         <source>Show project on map.</source>
         <translation>Projekt auf der Karte anzeigen.</translation>
     </message>
     <message>
-        <location filename="../gis/CWksItemDelegate.cpp" line="861"/>
+        <location filename="../gis/CWksItemDelegate.cpp" line="877"/>
         <source>Save project.</source>
         <translation>Projekt speichern.</translation>
     </message>
     <message>
-        <location filename="../gis/CWksItemDelegate.cpp" line="864"/>
+        <location filename="../gis/CWksItemDelegate.cpp" line="880"/>
         <source>Disable auto save.</source>
         <translation>Autoatisches. Speichern ausschalten.</translation>
     </message>
     <message>
-        <location filename="../gis/CWksItemDelegate.cpp" line="866"/>
+        <location filename="../gis/CWksItemDelegate.cpp" line="882"/>
         <source>Enable auto save.</source>
         <translation>Autoatisches. Speichern anschalten.</translation>
     </message>
     <message>
-        <location filename="../gis/CWksItemDelegate.cpp" line="872"/>
+        <location filename="../gis/CWksItemDelegate.cpp" line="886"/>
+        <source>Copy content of project into a project in the workspace.</source>
+        <translation>Kopiert den Inhalt des Projektes in ein Projekt auf dem Arbeitsplatz.</translation>
+    </message>
+    <message>
+        <location filename="../gis/CWksItemDelegate.cpp" line="892"/>
         <source>Disable automatic synchonization with GPS device.</source>
         <translation>Automatische Synchronization mit dem GPS Gerät ausschalten.</translation>
     </message>
     <message>
-        <location filename="../gis/CWksItemDelegate.cpp" line="875"/>
+        <location filename="../gis/CWksItemDelegate.cpp" line="895"/>
         <source>Enable automatic synchonization with GPS device.</source>
         <translation>Automatische Synchronization mit dem GPS Gerät anschalten.</translation>
     </message>
     <message>
-        <location filename="../gis/CWksItemDelegate.cpp" line="882"/>
+        <location filename="../gis/CWksItemDelegate.cpp" line="902"/>
         <source>This is the active project. All new items will be attached to this project automatically.</source>
         <translation>Das ist das aktive Projekt. Alle neuen Elemente werden automatisch diesem Projekt zugeordnet.</translation>
     </message>
     <message>
-        <location filename="../gis/CWksItemDelegate.cpp" line="888"/>
+        <location filename="../gis/CWksItemDelegate.cpp" line="908"/>
         <source>Make this project the active one. All new items will be attached to this project automatically.</source>
         <translation>Diese Projekt zum Aktiven machen. Alle neuen Elemente werden automatisch diesem Projekt zugeordnet.</translation>
     </message>
     <message>
-        <location filename="../gis/CWksItemDelegate.cpp" line="900"/>
-        <location filename="../gis/CWksItemDelegate.cpp" line="923"/>
+        <location filename="../gis/CWksItemDelegate.cpp" line="920"/>
+        <location filename="../gis/CWksItemDelegate.cpp" line="943"/>
         <source>This is the status line. You can select additional information to be displayed in the workspace setup. See menu-&gt;Workspace-&gt;Setup Workspace</source>
-        <translation>Dies ist die Statuszeile. Sie können zusätzliche Informationen auswählen, die in den Arbeitsbereichseinstellungen angezeigt werden sollen. Siehe Menü-&gt;Arbeitsbereich-&gt;Arbeitsbereich einrichten</translation>
+        <translation>Dies ist die Statuszeile. Sie können zusätzliche Informationen, die angezeigt werden sollen, in den Arbeitsplatzeinstellungen auswählen. Siehe Menü-&gt;Arbeitsplatz-&gt;Arbeitsplatz einrichten</translation>
     </message>
     <message>
-        <location filename="../gis/CWksItemDelegate.cpp" line="932"/>
+        <location filename="../gis/CWksItemDelegate.cpp" line="952"/>
         <source>Item is changed and needs to be saved.</source>
         <translation>Das Element wurde geändert und muss gespeichert werden.</translation>
     </message>
     <message>
-        <location filename="../gis/CWksItemDelegate.cpp" line="944"/>
+        <location filename="../gis/CWksItemDelegate.cpp" line="964"/>
         <source>Setup Search</source>
         <translation>Suche einstellen</translation>
     </message>
@@ -19176,7 +19181,7 @@ Wenn Sie das Wort &apos;wort&apos; eingeben, wird exakt nach dem Wort gesucht. W
         <location filename="../gis/ISetupWorkspace.ui" line="180"/>
         <location filename="../../../build/src/qmapshack/ui_ISetupWorkspace.h" line="441"/>
         <source>Select additional information displayed in the workspace item tree. Changes take effect immediately. Look at the items to fine tune your choice.</source>
-        <translation>Wählen Sie zusätzliche Informationen aus, die in der Elementstruktur des Arbeitsbereichs angezeigt werden. Änderungen werden sofort wirksam. Sehen Sie sich die Elemente an, um Ihre Auswahl zu optimieren.</translation>
+        <translation>Wählen Sie zusätzliche Informationen aus, die in der Elementstruktur des Arbeitsplatzes angezeigt werden. Änderungen werden sofort wirksam. Sehen Sie sich die Elemente an, um Ihre Auswahl zu optimieren.</translation>
     </message>
     <message>
         <location filename="../gis/ISetupWorkspace.ui" line="192"/>
