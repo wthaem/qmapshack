@@ -3,17 +3,17 @@
 -- User directory          : D:/QtProjects/QMS/QMS4Qt6/msvc_64/scripts
 -- Loading user and general settings ...
 
--- Used QMS version nr.: 1.20.0.2
+-- Used QMS version nr.: 1.20.1.0
 -- Local branch:         dev_build
 -- Remote branch:        wthaem/dev_build
 -- Remote URL of fork:   https://github.com/wthaem/qmapshack.git
 -- Remote URL:           https://github.com/Maproom/qmapshack.git
--- Common ancestor:      f38cfa94ebee363e1eff27a18abc0a4a5c1ce9e8
--- HEAD hash:            e67651e5
--- Git describe:         V1.20.0-122-ge67651e5-dirty
+-- Common ancestor:      489e0165a51808df0cbf7b94239a786096bbdb0f
+-- HEAD hash:            e8cdf185
+-- Git describe:         V_1.20.1-115-ge8cdf185-dirty
 -- Author:               Oliver Eichler
--- Title:                [QMS-985] Add copy button to projects on a GPS device
--- Date:                 2026-02-21T16:26:04+01:00
+-- Title:                Update version to 1.20.1
+-- Date:                 2026-02-24T07:41:36+01:00
 --  
 -- Untracked:            
 --  
@@ -23,7 +23,7 @@
 --  
 -- Generating additional files in D:/QtProjects/QMS/QMS4Qt6/msvc_64/scripts.
 -- Redistribution directory: C:\Program Files\Microsoft Visual Studio\18\Community\VC\Redist\MSVC\14.50.35710\
--- Generator-dependent build path: d:/QtProjects/QMS/QMS4Qt6/build/Release
+-- Generator-dependent build path: d:/QtProjects/QMS/QMS4Qt6/build-ninja
 -- End of run.
 
 -- Cache values
@@ -33,7 +33,7 @@ BUILD_QMAPTOOL:BOOL=ON
 CMAKE_BUILD_TYPE:STRING=Release
 CMAKE_CXX_FLAGS:STRING=/wd4996 /wd4101 /wd4005 /wd4003 /EHsc
 CMAKE_INSTALL_PREFIX:PATH=d:/QtProjects/QMS/install
-EXEFILE:STRING=1.20.0.2
+EXEFILE:STRING=1.20.1.0
 GDAL_DEV_PATH:PATH=d:/QtProjects/QMS/GISInternals/1944_260214/release-1944-x64
 GDAL_INCLUDE_DIR:PATH=d:/QtProjects/QMS/GISInternals/1944_260214/release-1944-x64/include
 GDAL_LIBRARY:FILEPATH=d:/QtProjects/QMS/GISInternals/1944_260214/release-1944-x64/lib/gdal_i.lib
@@ -43,7 +43,7 @@ GISInternals_DEV_PATH:PATH=d:/QtProjects/QMS/GISInternals/1944_260214/release-19
 GIT_EXECUTABLE:FILEPATH=C:/Program Files/Git/cmd/git.exe
 JPEG_DEV_PATH:PATH=d:/QtProjects/QMS/GISInternals/1944_260214/release-1944-x64
 LIBPROJ_LIBRARY:FILEPATH=d:/QtProjects/QMS/GISInternals/1944_260214/release-1944-x64/lib/proj9.lib
-MSVC_GENERATOR:STRING=-G "Visual Studio 18 2026" -A x64
+MSVC_GENERATOR:STRING=-G Ninja  -DCMAKE_BUILD_TYPE=Release
 MSVC_VER:STRING=14.50.35717
 MSYS2_DIR:PATH=c:/msys64
 PROJ_DEV_PATH:PATH=d:/QtProjects/QMS/GISInternals/1944_260214/release-1944-x64
@@ -51,7 +51,7 @@ PROJ_INCLUDE_DIR:PATH=d:/QtProjects/QMS/GISInternals/1944_260214/release-1944-x6
 PROJ_VER0:STRING=9.7.1
 QMSDIR:PATH=d:/QtProjects/QMS
 QMSSRC:STRING=QMS4Qt6
-QMS_VERX:STRING=1.20.0.2
+QMS_VERX:STRING=1.20.1.0
 QT_DEV_PATH:PATH=c:/Qt/6.10.0/msvc2022_64
 QT_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6
 QT_QMAKE_EXECUTABLE:FILEPATH=c:/Qt/6.10.0/msvc2022_64/bin/qmake6.exe
