@@ -1,14 +1,14 @@
 Commit log created with PrepareSetup.cfg
 
-Logfile created:             2026-02-24T07:50:22Z with PrepareSetup.cfg
+Logfile created:             2026-02-24T07:51:36Z with PrepareSetup.cfg
  
 QMS script directory:        D:\QtProjects\QMS\QMS4Qt6\msvc_64\scripts
 QMS basis version:           1.20.1
-Current local branch:        dev_build
+Current local branch:        master_build
  
 Info about last commit on compilation branch:
   Common ancestor:           489e016
-  Used original branch:      maproom/dev
+  Used original branch:      maproom/master
   Author:                    Oliver Eichler
   Date:                      2026-02-24T07:41:36+01:00
   Title:                     Update version to 1.20.1

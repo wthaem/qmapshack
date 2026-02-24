@@ -4,13 +4,13 @@
 -- Loading user and general settings ...
 
 -- Used QMS version nr.: 1.20.1.0
--- Local branch:         dev_build
--- Remote branch:        wthaem/dev_build
+-- Local branch:         master_build
+-- Remote branch:        wthaem/master_build
 -- Remote URL of fork:   https://github.com/wthaem/qmapshack.git
 -- Remote URL:           https://github.com/Maproom/qmapshack.git
 -- Common ancestor:      489e0165a51808df0cbf7b94239a786096bbdb0f
--- HEAD hash:            e8cdf185
--- Git describe:         V_1.20.1-115-ge8cdf185-dirty
+-- HEAD hash:            e73e74c2
+-- Git describe:         V_1.20.1-1-ge73e74c2-dirty
 -- Author:               Oliver Eichler
 -- Title:                Update version to 1.20.1
 -- Date:                 2026-02-24T07:41:36+01:00
