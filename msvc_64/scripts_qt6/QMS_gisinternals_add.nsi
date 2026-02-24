@@ -1,0 +1,7 @@
+
+# Environment variable replacements created with CopyFilesGis.cfg using QMSUser.cfg
+
+# Program version
+!define VERSION "1.20.0"
+!define SUBVERSION "1.20.0.0"
+!define EXEFILE "1.20.0.0"

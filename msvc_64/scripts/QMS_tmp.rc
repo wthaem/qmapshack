@@ -1,0 +1,3 @@
+#define QMS_UP "qmt_rgb2pct" 
+#define QMS "qmt_rgb2pct"   
+#include d:\QtProjects\QMS\QMS4Qt6\msvc_64\scripts\QMS_resources.h  

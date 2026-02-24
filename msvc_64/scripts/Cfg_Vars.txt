@@ -1,0 +1,110 @@
+-- Found Git: C:/Program Files/Git/cmd/git.exe (found version "2.53.0.windows.1")
+-- Source/scripts directory: D:/QtProjects/QMS/QMS4Qt6/msvc_64/scripts
+-- User directory          : D:/QtProjects/QMS/QMS4Qt6/msvc_64/scripts
+-- Loading user and general settings ...
+
+-- Used QMS version nr.: 1.20.1.0
+-- Local branch:         dev_build
+-- Remote branch:        wthaem/dev_build
+-- Remote URL of fork:   https://github.com/wthaem/qmapshack.git
+-- Remote URL:           https://github.com/Maproom/qmapshack.git
+-- Common ancestor:      489e0165a51808df0cbf7b94239a786096bbdb0f
+-- HEAD hash:            e8cdf185
+-- Git describe:         V_1.20.1-115-ge8cdf185-dirty
+-- Author:               Oliver Eichler
+-- Title:                Update version to 1.20.1
+-- Date:                 2026-02-24T07:41:36+01:00
+--  
+-- Untracked:            
+--  
+-- Staged:               
+--  
+-- Unstaged&modified:    msvc_64/scripts/Cfg_Vars.txt
+--  
+-- Generating additional files in D:/QtProjects/QMS/QMS4Qt6/msvc_64/scripts.
+-- Redistribution directory: C:\Program Files\Microsoft Visual Studio\18\Community\VC\Redist\MSVC\14.50.35710\
+-- Generator-dependent build path: d:/QtProjects/QMS/QMS4Qt6/build-ninja
+-- End of run.
+
+-- Cache values
+BUILD_FOR_LOCAL_SYSTEM:BOOL=OFF
+BUILD_QMAPSHACK:BOOL=ON
+BUILD_QMAPTOOL:BOOL=ON
+CMAKE_BUILD_TYPE:STRING=Release
+CMAKE_CXX_FLAGS:STRING=/wd4996 /wd4101 /wd4005 /wd4003 /EHsc
+CMAKE_INSTALL_PREFIX:PATH=d:/QtProjects/QMS/install
+EXEFILE:STRING=1.20.1.0
+GDAL_DEV_PATH:PATH=d:/QtProjects/QMS/GISInternals/1944_260214/release-1944-x64
+GDAL_INCLUDE_DIR:PATH=d:/QtProjects/QMS/GISInternals/1944_260214/release-1944-x64/include
+GDAL_LIBRARY:FILEPATH=d:/QtProjects/QMS/GISInternals/1944_260214/release-1944-x64/lib/gdal_i.lib
+GISDATE:STRING=260214
+GISINTERNALS_VER:STRING=1944
+GISInternals_DEV_PATH:PATH=d:/QtProjects/QMS/GISInternals/1944_260214/release-1944-x64
+GIT_EXECUTABLE:FILEPATH=C:/Program Files/Git/cmd/git.exe
+JPEG_DEV_PATH:PATH=d:/QtProjects/QMS/GISInternals/1944_260214/release-1944-x64
+LIBPROJ_LIBRARY:FILEPATH=d:/QtProjects/QMS/GISInternals/1944_260214/release-1944-x64/lib/proj9.lib
+MSVC_GENERATOR:STRING=-G Ninja  -DCMAKE_BUILD_TYPE=Release
+MSVC_VER:STRING=14.50.35717
+MSYS2_DIR:PATH=c:/msys64
+PROJ_DEV_PATH:PATH=d:/QtProjects/QMS/GISInternals/1944_260214/release-1944-x64
+PROJ_INCLUDE_DIR:PATH=d:/QtProjects/QMS/GISInternals/1944_260214/release-1944-x64/include/proj9
+PROJ_VER0:STRING=9.7.1
+QMSDIR:PATH=d:/QtProjects/QMS
+QMSSRC:STRING=QMS4Qt6
+QMS_VERX:STRING=1.20.1.0
+QT_DEV_PATH:PATH=c:/Qt/6.10.0/msvc2022_64
+QT_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6
+QT_QMAKE_EXECUTABLE:FILEPATH=c:/Qt/6.10.0/msvc2022_64/bin/qmake6.exe
+QUAZIP_BZIP2:BOOL=OFF
+QUAZIP_BZIP2_STDIO:BOOL=OFF
+QUAZIP_DEV_PATH:PATH=d:/QtProjects/QMS/quazip/quazip-1.5/install
+QUAZIP_INCLUDE_DIR:PATH=d:/QtProjects/QMS/quazip/quazip-1.5/install/include
+QUAZIP_VER:STRING=1.5
+Qt6Concurrent_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6Concurrent
+Qt6Core5Compat_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6Core5Compat
+Qt6CoreTools_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6CoreTools
+Qt6Core_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6Core
+Qt6EntryPointPrivate_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6EntryPointPrivate
+Qt6ExamplesAssetDownloaderPrivate_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6ExamplesAssetDownloaderPrivate
+Qt6GuiTools_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6GuiTools
+Qt6Gui_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6Gui
+Qt6Help_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6Help
+Qt6LinguistTools_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6LinguistTools
+Qt6Network_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6Network
+Qt6OpenGLWidgets_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6OpenGLWidgets
+Qt6OpenGL_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6OpenGL
+Qt6Positioning_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6Positioning
+Qt6PrintSupport_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6PrintSupport
+Qt6QmlAssetDownloader_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6QmlAssetDownloader
+Qt6QmlIntegration_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6QmlIntegration
+Qt6QmlMeta_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6QmlMeta
+Qt6QmlModels_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6QmlModels
+Qt6QmlTools_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6QmlTools
+Qt6QmlWorkerScript_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6QmlWorkerScript
+Qt6Qml_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6Qml
+Qt6QuickTools_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6QuickTools
+Qt6QuickWidgets_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6QuickWidgets
+Qt6Quick_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6Quick
+Qt6Sql_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6Sql
+Qt6ToolsTools_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6ToolsTools
+Qt6Tools_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6Tools
+Qt6UiPlugin_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6UiPlugin
+Qt6UiTools_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6UiTools
+Qt6WebChannel_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6WebChannel
+Qt6WebEngineCoreTools_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6WebEngineCoreTools
+Qt6WebEngineCore_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6WebEngineCore
+Qt6WebEngineWidgets_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6WebEngineWidgets
+Qt6WidgetsTools_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6WidgetsTools
+Qt6Widgets_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6Widgets
+Qt6Xml_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6Xml
+Qt6ZlibPrivate_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6ZlibPrivate
+Qt6_DIR:PATH=c:/Qt/6.10.0/msvc2022_64/lib/cmake/Qt6
+QuaZip-Qt6_DIR:PATH=d:/QtProjects/QMS/quazip/quazip-1.5/install/lib/cmake/QuaZip-Qt6-1.5
+ROUTINO_DEV_PATH:PATH=d:/QtProjects/QMS/routino/routino-3.4.3/install
+ROUTINO_VER:STRING=3.4.3
+UPDATE_TRANSLATIONS:BOOL=OFF
+UPDATE_TRANSLATIONS_PURGE_OBSOLETE:BOOL=OFF
+USE_QT6DBus:BOOL=OFF
+WINDEPLOYQT_EXECUTABLE:FILEPATH=c:/Qt/6.10.0/msvc2022_64/bin/windeployqt.exe
+ZLIB_LIBRARY:FILEPATH=d:/QtProjects/QMS/GISInternals/1944_260214/release-1944-x64/lib/zlib.lib
+ZLIB_ROOT:PATH=d:/QtProjects/QMS/GISInternals/1944_260214/release-1944-x64
