@@ -3,8 +3,8 @@
 rem call this script in "scripts" directory. 
 rem Parameters: 
 rem    Package name: QMS resp. QUAZIP
-rem    name of subdirectory with user configuration, e.g. scripts_qt6
-
+rem    Name of subdirectory with user configuration, e.g. scripts_qt6
+rem    UPDATE_TRANSLATIONS: ON/OFF
 
 
 echo Starting configuration process in "%cd%" ...
@@ -15,7 +15,7 @@ rem echo %2\built_%1_add.bat
 
 call %2\built_%1_add.bat
 
-rem echo %builddir%
+echo %builddir%
 pause
 
 pushd %builddir%
@@ -23,7 +23,12 @@ pushd %builddir%
 echo       
 echo Configuring with -DCMAKE_CXX_FLAGS="/EHsc" ...
 
-cmake --fresh -G "Visual Studio 17 2022" -A x64 -S .. -B . -LA -DPKG=%1 -DQMSUSERCFG=%usercfg% -DCMAKE_CXX_FLAGS="/EHsc" -DUPDATE_TRANSLATIONS=ON -C  %scriptsdir%\CfgGisinternals.cfg
+echo msvc_generator: %msvc_generator%
+echo cmake: cmake --fresh  %msvc_generator% -S .. -B . -LA -DPKG=%1 -DQMSUSERCFG=%usercfg% -DUPDATE_TRANSLATIONS=%3 -DCMAKE_CXX_FLAGS="/EHsc" -C  %scriptsdir%\CfgGisinternals.cfg
+
+pause
+
+cmake --fresh %msvc_generator% -S .. -B . -LA -DPKG=%1 -DQMSUSERCFG=%usercfg% -DUPDATE_TRANSLATIONS=%3 -DCMAKE_CXX_FLAGS="/EHsc" -C  %scriptsdir%\CfgGisinternals.cfg
 
 pause
 

@@ -1,0 +1,36 @@
+Versions of software used in QMS:
+
+        BRouter : 1.7.8
+           GDAL : 3.12.2
+   GISInternals : 1944_260214
+        libcurl : 8.18.0
+       libexpat : 2.7.3
+          MySQL : 8.0.43.0
+        openjp2 : 2.5.4
+           proj : 9.7.1
+      qmapshack : 1.20.1.0
+             Qt : 6.10.0.0
+         QuaZip : 1.5
+        Routino : 3.4.3
+        sqlite3 : 3.40.0
+           tiff : 4.7.1
+           zlib : 1.3.1
+
+Versions of used tools and system software:
+
+             cl : 19.50.35725.0
+          CMake : 4.1.2-msvc8
+            gcc : 15.2.0
+            git : 2.53.0.windows.1
+           java : 25.0.1
+           link : 14.50.35725.0
+           MSVC : "Visual Studio Community 2026"
+   MSVC version : 18.3.11520.95
+          MSYS2 : 3.6.5-2
+           make : 4.4.1
+           nsis : 3.11
+         Python : 3.14.3
+ ResourceHacker : 5.2.8.448
+       sigcheck : 2.90
+        Windows : 10.0.26200.7922
+ Used generator : Ninja

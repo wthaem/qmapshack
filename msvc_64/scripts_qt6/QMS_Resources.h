@@ -2,8 +2,8 @@
 //QMS resource file created with CopyFilesGis.cfg using QMSUser.cfg
 
 1 VERSIONINFO
-FILEVERSION 1,17,1,0
-PRODUCTVERSION 1,17,1,0
+FILEVERSION 1,20,0,0
+PRODUCTVERSION 1,20,0,0
 FILEOS 0x4
 FILETYPE 0x1
 {
@@ -12,15 +12,15 @@ BLOCK "StringFileInfo"
 	BLOCK "040904E4"
 	{
 		VALUE "CompanyName", ""
-		VALUE "FileDescription", QMS_UP+" (Compiled with GISInternals. Used commit: 1d6f35b of fork/branch: dev_cache.)"
-		VALUE "FileVersion", "1.17.1.0"
+		VALUE "FileDescription", QMS_UP+" (Compiled with GISInternals. Used commit: a656c19 of fork/branch: wthaem/dev.)"
+		VALUE "FileVersion", "1.19.0.2"
 		VALUE "InternalName", QMS
 		VALUE "LegalCopyright", "Copyright (c) 2023, Oliver Eichler <oliver.eichler@gmx.de>"
 		VALUE "OriginalFilename", QMS +".exe"
 		VALUE "ProductName", "QMapShack"
-		VALUE "ProductVersion", "1.17.1.0"
-		VALUE "Comments", "Compiled with GISInternals. Used commit: 1d6f35b of fork/branch: dev_cache"
-		VALUE "SpecialBuild", "Compiled with GISInternals. Used commit: 1d6f35b of fork/branch: dev_cache"
+		VALUE "ProductVersion", "1.19.0.2"
+		VALUE "Comments", "Compiled with GISInternals. Used commit: a656c19 of fork/branch: wthaem/dev"
+		VALUE "SpecialBuild", "Compiled with GISInternals. Used commit: a656c19 of fork/branch: wthaem/dev"
 	}
 }
 BLOCK "VarFileInfo"

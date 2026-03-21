@@ -1,11 +1,14 @@
-Logfile created:     2025-06-07 11:13:31 with QMSCommit.py
+Logfile created:             2026-02-13 16:12:28 with QMSCommit.py
 
-QMS directory:       d:\QtProjects\QMS\QMS4Qt6
-QMS basis version:   1.17.1
-Used local branch:   dev_build
-Last commit hash:    1d6f35bf41d2b240b688c3948fd5dda5ca704940
-Last commit message: Update Routino version
-Last commit author:  wthaem
-Last commit date:    2025-06-07 10:43:10+02:00
-Remote QMS repos:    ['dev_cache', 'wthaem/dev_build', 'wthaem/dev_cache']
-Remote repo URLs:    {'wthaem': 'https://github.com/wthaem/qmapshack.git'}
+QMS directory:               d:\QtProjects\QMS\QMS4Qt6
+QMS basis version:           1.20.0
+Current local branch:        dev_build
+Branch used for compilation: dev
+
+Info about last commit on compilation branch:
+  Hash:                      a656c19fa03996b0ed728d869439103d2438d087
+  Message:                   [QMS-953] Fix geo cache symbols on map
+  Author:                    Oliver Eichler
+  Date:                      2026-02-10 07:43:21+01:00
+  Branches with same commit: ['wthaem/dev', 'wthaem/dev_build', 'wthaem/dev_cache']
+  Remote repo URLs:          {'wthaem': 'https://github.com/wthaem/qmapshack.git'}

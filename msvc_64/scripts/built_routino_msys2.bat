@@ -1,4 +1,6 @@
 
+@echo off
+
 rem Run in MSYS2 UCRT64 command prompt window and use Unix-like path syntax!
 
 rem intentionally used "built" to avoid conflict with ".gitignore"
@@ -7,24 +9,11 @@ rem Section 1.) Load user environment =========
 
 setlocal enabledelayedexpansion
 
-for /f "tokens=2 delims=:" %%a in (QMSUserCfg.dir) do (
-    echo %%a/cccc
-    set mypath=%%a
-    echo %mypath%
-    )
 
+echo Including  ./built_routino_add.bat
+call ./built_routino_add.bat
 
-
-:: Original string
-
-echo %mypath%
-
-:: Replace backslash "\" with forward slash "/"
-set modifiedpath=%mypath:\=/%
-
-echo %modifiedpath%/built_routino_add.bat
-
-call %modifiedpath%/built_routino_add.bat
+pause
 
 rem Section 2.) Compile routino ===============
 cd /d %ROUT_SRC_PATH%
@@ -51,4 +40,6 @@ copy %ROUT_SRC_PATH%\xml\routino-profiles.xml xml\profiles.xml
 copy %ROUT_SRC_PATH%\xml\routino-tagging.xml xml\tagging.xml
 copy %ROUT_SRC_PATH%\xml\routino-translations.xml xml\translations.xml
 
+echo.
+echo End of Routino build run.
 pause

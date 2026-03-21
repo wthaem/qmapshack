@@ -1,37 +1,55 @@
-rem @echo off
 
+@echo off
 
-rem Script to copy all files necessary for QMS (GISInternals version) - run from scripts directory!
+echo Script to copy all files necessary for QMS (GISInternals version)
+
+set QMSD0=%~dp0
+    
+cd /D %QMSD0%
+
+echo Switched to %cd%
 
 rem Delete all files --------------------------------------------
-del /s/q ..\Files
-mkdir ..\Files
+rmdir /s /q ..\Files
 
-
-rem Include and run user settings
-for /f "tokens=2 delims=:" %%a in (QMSUserCfg.dir) do (
-echo Include dir: %%a
-set USERDIR=%%a
+IF ERRORLEVEL 1 (
+    echo [ERROR] RMDIR failed with error code %ERRORLEVEL%.
+    exit /b %ERRORLEVEL%
+) ELSE (
+    echo RMDIR successful.
+)
 
 pause
 
-call %%a\CopyFilesGis_add.bat
-)
+mkdir ..\Files
 
-rem Copy QMapShack Files (removed bin subdir! 28.04.25 ------
-copy %QMSI_BUILD_PATH%\Release\qmapshack.exe
-copy %QMSI_BUILD_PATH%\Release\qmaptool.exe
-copy %QMSI_BUILD_PATH%\Release\qmt_map2jnx.exe
-copy %QMSI_BUILD_PATH%\Release\qmt_rgb2pct.exe
+set USERDIR=%cd%
 
+echo Starting file copy  step 1 ...
+
+pause
+
+call %cd%\CopyFilesGis_add.bat
+
+echo Starting file copy step 2 ...
+pause
+
+echo
+
+copy "%QMSI_BUILD_PATH%\qmapshack.exe"
+copy "%QMSI_BUILD_PATH%\qmaptool.exe"
+copy "%QMSI_BUILD_PATH%\qmt_map2jnx.exe"
+copy "%QMSI_BUILD_PATH%\qmt_rgb2pct.exe"
+
+copy %QMSI_QT_PATH%\bin\assistant.exe
 
 rem Copy Qt files -------------------------------------------------
 
 set PATH=%QMSI_QT_PATH%\bin;%PATH%
 
-windeployqt.exe  --force-openssl --no-translations .\qmapshack.exe .\qmt_map2jnx.exe
+windeployqt.exe  --force-openssl --no-translations .\qmapshack.exe .\qmaptool.exe .\qmt_map2jnx.exe .\qmt_rgb2pct.exe .\assistant.exe
 
-copy %QMSI_QT_PATH%\bin\assistant.exe
+pause
 
 mkdir translations
 
@@ -73,13 +91,27 @@ xcopy %QMSI_ROUT_PATH%\xml routino-xml /s /i
 rem Copy QuaZip --------------------------------------------------------
 copy %QMSI_QUAZIP_PATH%\bin\quazip1-Qt%QT%.dll
 
+rem Copy mysql 
+
+echo.
+echo.
+echo Copy mysql
+rem copy %QMSI_MYSQL_PATH%\qsqlmysql.dll
+robocopy %QMSI_MYSQL_PATH% "%cd%" /E /NJH /NJS /NFL /NDL     
+pause
+
 rem Copy MSVC Redistributables -------------------------------------
 copy %QMSI_VCREDIST_PATH%VC_redist.x64.exe
 
-rem Copy QMS translations
-xcopy %QMSI_BUILD_PATH%\src\qmapshack\*.qm translations /S 
-xcopy %QMSI_BUILD_PATH%\src\qmaptool\*.qm translations /S 
-xcopy %QMSI_BUILD_PATH%\src\qmt_rgb2pct\*.qm translations /S 
+echo Compiling all .ts files to .qm ...
+for %%g in ("qmapshack", "qmaptool", "qmt_rgb2pct") do (
+
+    for %%f in ("%QMSI_SRC_PATH%\%%g\locale\*.ts") do (
+        %QMSI_QT_PATH%\bin\lrelease.exe -silent "%%f" -qm translations\%%~nf.qm
+    )
+)
+
+pause
 
 copy ..\*.ico
 
@@ -95,10 +127,14 @@ rem Copy 3rd party software description and licence ----------------------------
 copy ..\3rdparty.txt
 copy ..\..\LICENSE 1LICENSE.txt
 
-copy %USERDIR%\QMSCommit.log
+copy %USERDIR%\UsedVersions.txt
 
 rem Copy qt.conf -----------------------------------------------------------
 copy ..\qt.conf
 
-cd ..\scripts
+..\scripts\QMSRemoveObjects.py
 pause
+
+cd ..\scripts
+
+
