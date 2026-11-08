@@ -370,7 +370,8 @@ Opened as `immutable=1` through a URI, so SQLite takes no lock: a built file nev
 
 ## Help browser — `CHelpBrowser`
 
-A `QWebEngineView` on its own off-the-record profile, whose `qthelp` handler serves `QHelpEngine::fileData()`.
+A `QWebEngineView` on its own off-the-record profile. QMapShack loads `doc/html/` from `file://` (`engine` is null) and sets Furo's
+theme; QMapTool's `qthelp` handler serves `QHelpEngine::fileData()`.
 `registerUrlScheme()` must run in both `main()`s before the `QApplication`. The destructor deletes the page
 first: a profile deleted before its page is a Qt error. Theme colours are an injected `<style>`, rewritten on a palette change, never a reload.
 
@@ -724,6 +725,10 @@ Loaded when files there are touched; read them before working on the subsystem f
 ---
 
 ## Open work
+
+### Documentation
+
+`.notes/documentation-plan.md`: generated HTML in `doc/html/` replaces `QMSHelp.qch`.
 
 Analysed designs live in `.notes/`, each wanting its own branch. De-freeze one by pointing at the
 file.

@@ -335,7 +335,7 @@ delivered from inside that loop.
 
 ## 6. The writer's loop
 
-`shots.py take <page>` opens the launcher. `doc/WRITING.md` is to be the writer's guide; it is not
+`shots.py take <page>` opens the launcher. `doc/WRITING_DOCS.md` is to be the writer's guide; it is not
 written yet.
 
 **Two sections, one selection.** Scenarios are recorded, renamed and deleted at the top; the

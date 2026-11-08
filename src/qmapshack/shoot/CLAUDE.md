@@ -10,7 +10,7 @@ never a branch of its own. A fix goes into the commit that introduced the code.
 
 The file layout is plan §1.
 
-The writer's guide is `doc/WRITING.md`: short, facts only, updated with every change a writer sees.
+The writer's guide is `doc/WRITING_DOCS.md`: short, facts only, updated with every change a writer sees.
 
 ## Build and entry
 

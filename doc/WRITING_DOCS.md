@@ -1,7 +1,8 @@
 # Writing QMapShack documentation
 
 You write a page and mark where the pictures go. You take each picture once, by pointing at it.
-QMapShack takes them all again later without you.
+QMapShack takes them all again later without you. Generating the pages from them is
+[CREATING_DOCS.md](CREATING_DOCS.md).
 
 ## Setting up
 

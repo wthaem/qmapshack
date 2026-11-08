@@ -7,7 +7,7 @@ html_title = "QMapShack documentation"
 extensions = ["myst_parser"]
 source_suffix = {".md": "markdown"}
 root_doc = "index"
-exclude_patterns = ["html", "images", "shots", "tools", "CLAUDE.md", "CREATING_DOCS.md", "WRITING.md"]
+exclude_patterns = ["html", "images", "shots", "tools", "CLAUDE.md", "CREATING_DOCS.md", "WRITING_DOCS.md"]
 
 html_theme = "furo"
 html_static_path = ["_static"]
