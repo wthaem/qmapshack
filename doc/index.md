@@ -7,5 +7,6 @@ A test of the new documentation. It holds two example pages, not yet real conten
 
 pages/concepts
 pages/test
+pages/styleguide
 genindex
 ```

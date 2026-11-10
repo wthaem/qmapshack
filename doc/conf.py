@@ -17,3 +17,20 @@ html_show_sourcelink = False
 html_permalinks_icon = "#"
 
 myst_heading_anchors = 3
+
+# WT changes: 
+myst_enable_extensions = [
+    "amsmath",
+    "attrs_inline",
+    "colon_fence",
+    "deflist",
+    "dollarmath",
+    "fieldlist",
+    "html_admonition",
+    "html_image",
+    # "linkify",
+    "replacements",
+    "smartquotes",
+    "strikethrough",
+    "substitution",
+]
